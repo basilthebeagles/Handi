@@ -9,7 +9,12 @@
 import UIKit
 
 class MealCalculatorViewController: UIViewController {
-
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,8 +28,22 @@ class MealCalculatorViewController: UIViewController {
         // Dispose of any resources that can bae recreated.
         
     }
-
     
+    
+    
+    func keyPress(pressedKey: Key){
+        //called when a key has been pressed
+        
+        
+        
+    }
 
+    func redraw(){
+        
+    }
+    
+    
+    
+    
 }
 

@@ -25,8 +25,9 @@ enum Key: Int{
     case seven
     case eight
     case nine
-    case dot
+    case clear
     case backspace
+    
     
     
     
