@@ -489,6 +489,7 @@
 				51D886611B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51D886621B838E050025E5A5 /* Build configuration list for PBXNativeTarget "HandiTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +498,7 @@
 				51D886641B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51D886651B838E050025E5A5 /* Build configuration list for PBXNativeTarget "HandiUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +507,7 @@
 				51D886671B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
