@@ -96,6 +96,9 @@ class KeypadViewController: UIViewController {
     
     
     func keyRouter(key: Key){
+        //routes the key to the correct parent class.
+        //This was somewhat hard.
+        
         
         //print("at key router" + String(key.rawValue))
         //print(self.parentViewController)

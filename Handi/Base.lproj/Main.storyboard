@@ -192,13 +192,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Meal Calculator" image="first" selectedImage="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="a" destination="2Pt-Pr-FLl" id="tiV-ka-BGn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395.5" y="-297.5"/>
+            <point key="canvasLocation" x="403.5" y="-323.5"/>
         </scene>
         <!--Currency-->
         <scene sceneID="wg7-f3-ORb">

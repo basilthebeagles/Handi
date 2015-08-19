@@ -15,11 +15,12 @@ class MealCalculatorViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-    @IBOutlet weak var a: UIView!
     
     
 
@@ -33,8 +34,7 @@ class MealCalculatorViewController: UIViewController {
     
     func keyPress(pressedKey: Key){
         //called when a key has been pressed
-        print("pressed")
-        print(pressedKey.rawValue)
+        
         
     }
 

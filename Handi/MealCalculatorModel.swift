@@ -1,5 +1,5 @@
 //
-//  MealCalculatorModle.swift
+//  MealCalculatorModel.swift
 //  Handi
 //
 //  Created by JohnJoe Stack on 19/08/2015.

@@ -18,7 +18,7 @@
 		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
 		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
 		51D8866D1B8392A10025E5A5 /* MeasureMeantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */; };
-		51EA54531B84C75B00830DB5 /* MealCalculatorModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */; };
+		51EA54531B84C75B00830DB5 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */; };
 		51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54541B84C7C400830DB5 /* FieldType.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		51D8865A1B838E050025E5A5 /* HandiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandiUITests.swift; sourceTree = "<group>"; };
 		51D8865C1B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureMeantsViewController.swift; sourceTree = "<group>"; };
-		51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModle.swift; sourceTree = "<group>"; };
+		51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModel.swift; sourceTree = "<group>"; };
 		51EA54541B84C7C400830DB5 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,7 +164,7 @@
 		51EA54511B84C33100830DB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */,
+				51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */,
-				51EA54531B84C75B00830DB5 /* MealCalculatorModle.swift in Sources */,
+				51EA54531B84C75B00830DB5 /* MealCalculatorModel.swift in Sources */,
 				51D8863D1B838E050025E5A5 /* CurrencyCalculatorViewController.swift in Sources */,
 				51D886391B838E050025E5A5 /* AppDelegate.swift in Sources */,
 				51005A701B849ACE00BE0AB1 /* KeypadViewController.swift in Sources */,
