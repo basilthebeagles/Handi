@@ -33,8 +33,8 @@ class MealCalculatorViewController: UIViewController {
     
     func keyPress(pressedKey: Key){
         //called when a key has been pressed
-        
-        
+        print("pressed")
+        print(pressedKey.rawValue)
         
     }
 

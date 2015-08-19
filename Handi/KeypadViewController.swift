@@ -30,46 +30,64 @@ class KeypadViewController: UIViewController {
     
     
     @IBAction func zeroPressed() {
-        
+        print("zero has been pressed")
+        keyRouter(Key.zero)
     }
     
     @IBAction func clearPressed() {
-        
+        keyRouter(Key.clear)
+
     }
     @IBAction func backspacePressed() {
-        
+        keyRouter(Key.backspace)
+
     }
     
     
     @IBAction func onePressed() {
+        keyRouter(Key.one)
+
             }
     
     @IBAction func twoPressed() {
-        
+        keyRouter(Key.two)
+
         
     }
     @IBAction func threePressed() {
-        
+        keyRouter(Key.three)
+
     }
     
     @IBAction func fourPressed() {
-        
+        keyRouter(Key.four)
+
     }
     
     @IBAction func fivePressed() {
+        keyRouter(Key.five)
+
+    
     }
     
     @IBAction func sixPressed() {
-        
+        keyRouter(Key.six)
+
     }
     
     @IBAction func sevenPressed() {
+        keyRouter(Key.seven)
+
     }
     
     @IBAction func eightPressed() {
+        keyRouter(Key.eight)
+
     }
     
     @IBAction func ninePressed() {
+        keyRouter(Key.nine)
+
         
     }
     
@@ -77,7 +95,17 @@ class KeypadViewController: UIViewController {
     
     
     
-    
+    func keyRouter(key: Key){
+        
+        //print("at key router" + String(key.rawValue))
+        //print(self.parentViewController)
+        if self.parentViewController!.isKindOfClass(MealCalculatorViewController){
+           
+            let parentView = self.parentViewController as! MealCalculatorViewController
+            parentView.keyPress(key)
+        }
+        
+    }
     
     //print(self.parentViewController)
     
