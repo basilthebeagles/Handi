@@ -207,8 +207,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="amountOfPeopleField" destination="Acw-xt-PHF" id="psi-yf-7Bt"/>
-                        <outlet property="perPersonPriceLabel" destination="1fy-IB-Ou1" id="n48-EU-Aju"/>
                         <outlet property="preTipBillTotalField" destination="1Md-6V-89X" id="FhP-jx-jQ6"/>
+                        <outlet property="priceLabel" destination="1fy-IB-Ou1" id="qlU-Kw-woa"/>
                         <outlet property="tipPercentageField" destination="x0h-gH-lAS" id="5vf-hC-2kA"/>
                     </connections>
                 </viewController>

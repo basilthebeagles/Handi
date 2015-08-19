@@ -12,21 +12,40 @@ class MealCalculatorViewController: UIViewController {
     
     
     
+    var model: MealCalculatorModel
     
-    @IBOutlet weak var perPersonPriceLabel: UIButton!
+    @IBOutlet weak var priceLabel: UIButton!
+    
+    
     @IBOutlet weak var preTipBillTotalField: UITextField!
     
     @IBOutlet weak var amountOfPeopleField: UITextField!
     
     @IBOutlet weak var tipPercentageField: UITextField!
     
-    var perPersonPrice: Double = 0.00
-    var finalTotalPrice: Double = 0.00
-    var preTipbillTotal: Double = 0.00
-    var tipPercentage: Double = 0.00
-    var amountOfPeople: Int = 0
-    var selectedField: FieldType = FieldType.preTipBillTotalField
-    var lastMode: Mode = Mode.combinedPerPersonTotal
+    
+    
+    
+    
+    
+    
+    convenience init() {
+        self.init()
+        
+        model = MealCalculatorModel(controller: self)
+        // ... store or user your objectId
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -34,40 +53,33 @@ class MealCalculatorViewController: UIViewController {
     
     @IBAction func perPersonPricePressed() {
         //changes mode
+        model.changeMode()
+        redraw()
         
-        if lastMode == .combinedPerPersonTotal{
-            redraw(perPersonPrice)
-            lastMode = .perPerson
-            
-            
-        }else if lastMode == .perPerson{
-            redraw(finalTotalPrice)
-            lastMode = .combinedPerPersonTotal
-            
-        }
         
         
     }
     @IBAction func preTipTotalPriceSelected() {
-        selectedField = FieldType.preTipBillTotalField
+        model.selectedField = FieldType.preTipBillTotalField
 
     }
     
     
     @IBAction func amountOfPeopleSelected() {
-        selectedField = FieldType.amountOfPeopleField
+        model.selectedField = FieldType.amountOfPeopleField
     }
     
     @IBAction func tipPercentageSelected() {
-        selectedField = FieldType.tipPercentageField
+        model.selectedField = FieldType.tipPercentageField
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-        perPersonPriceLabel.titleLabel!.numberOfLines = 1;
-        perPersonPriceLabel.titleLabel!.adjustsFontSizeToFitWidth = true;
+        priceLabel.titleLabel!.numberOfLines = 1;
+        priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true;
         //perPersonPriceLabel.titleLabel!.lineBreakMode = NSLineBreakByClipping
     }
     
@@ -92,14 +104,24 @@ class MealCalculatorViewController: UIViewController {
 
     func redraw(field: FieldType){
         
+        self.redraw()
         
-        
+        switch field{
+        case .amountOfPeopleField:
+            amountOfPeopleField.text = "placeholder"
+        case .preTipBillTotalField:
+            preTipBillTotalField.text = "placeholder"
+        case .tipPercentageField:
+            tipPercentageField.text = "placeholder"
+        default:
+        print("something went wrong")
+        }
     }
     
     
-    func redraw(value: Double){
-        let stringValue = "$"+String(value)//will make currency be decided from auto thing 
-        perPersonPriceLabel.setTitle(stringValue, forState: UIControlState.Normal)
+    func redraw(){
+        
+        priceLabel.setTitle(model.currentPriceLabelFinalString(), forState: UIControlState.Normal)
         
         
     }
