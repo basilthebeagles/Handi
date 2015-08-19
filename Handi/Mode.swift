@@ -1,5 +1,5 @@
 //
-//  fieldType.swift
+//  Mode.swift
 //  Handi
 //
 //  Created by JohnJoe Stack on 19/08/2015.
@@ -10,9 +10,7 @@ import Foundation
 
 
 
-enum FieldType{
-    case preTipBillTotalField
-    case amountOfPeopleField
-    case tipPercentageField
-    
+enum Mode{
+    case perPerson
+    case combinedPerPersonTotal//essentially total
 }
