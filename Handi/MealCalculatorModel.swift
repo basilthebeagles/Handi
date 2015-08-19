@@ -8,4 +8,12 @@
 
 import Foundation
 
-
+class MealCalculatorModel{
+    
+    init(){
+        
+    }
+    //var
+    
+    
+}

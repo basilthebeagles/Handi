@@ -29,32 +29,46 @@ class MealCalculatorViewController: UIViewController {
     var lastMode: Mode = Mode.combinedPerPersonTotal
     
     
+    
+    
+    
     @IBAction func perPersonPricePressed() {
         //changes mode
         
         if lastMode == .combinedPerPersonTotal{
+            redraw(perPersonPrice)
+            lastMode = .perPerson
+            
+            
+        }else if lastMode == .perPerson{
             redraw(finalTotalPrice)
-        }else if lastMode == .perPerson
+            lastMode = .combinedPerPersonTotal
+            
+        }
         
         
     }
     @IBAction func preTipTotalPriceSelected() {
-        
+        selectedField = FieldType.preTipBillTotalField
 
     }
     
     
     @IBAction func amountOfPeopleSelected() {
+        selectedField = FieldType.amountOfPeopleField
     }
     
     @IBAction func tipPercentageSelected() {
+        selectedField = FieldType.tipPercentageField
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        perPersonPriceLabel.titleLabel!.numberOfLines = 1;
+        perPersonPriceLabel.titleLabel!.adjustsFontSizeToFitWidth = true;
+        //perPersonPriceLabel.titleLabel!.lineBreakMode = NSLineBreakByClipping
     }
     
     
@@ -84,8 +98,8 @@ class MealCalculatorViewController: UIViewController {
     
     
     func redraw(value: Double){
-        
-        perPersonPriceLabel.setTitle(String(value), forState: UIControlState.Normal)
+        let stringValue = "$"+String(value)//will make currency be decided from auto thing 
+        perPersonPriceLabel.setTitle(stringValue, forState: UIControlState.Normal)
         
         
     }
