@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51005A701B849ACE00BE0AB1 /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51005A6F1B849ACE00BE0AB1 /* KeypadViewController.swift */; };
+		51005A731B84BCBF00BE0AB1 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51005A721B84BCBF00BE0AB1 /* Key.swift */; };
 		51D886391B838E050025E5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D886381B838E050025E5A5 /* AppDelegate.swift */; };
 		51D8863B1B838E050025E5A5 /* MealCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */; };
 		51D8863D1B838E050025E5A5 /* CurrencyCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8863C1B838E050025E5A5 /* CurrencyCalculatorViewController.swift */; };
@@ -16,6 +18,8 @@
 		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
 		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
 		51D8866D1B8392A10025E5A5 /* MeasureMeantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */; };
+		51EA54531B84C75B00830DB5 /* MealCalculatorModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */; };
+		51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54541B84C7C400830DB5 /* FieldType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51005A6F1B849ACE00BE0AB1 /* KeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadViewController.swift; sourceTree = "<group>"; };
+		51005A721B84BCBF00BE0AB1 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		51005A741B84BE0200BE0AB1 /* testpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testpad.playground; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Handi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886381B838E050025E5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCalculatorViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +58,8 @@
 		51D8865A1B838E050025E5A5 /* HandiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandiUITests.swift; sourceTree = "<group>"; };
 		51D8865C1B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureMeantsViewController.swift; sourceTree = "<group>"; };
+		51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModle.swift; sourceTree = "<group>"; };
+		51EA54541B84C7C400830DB5 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51005A711B84BC7A00BE0AB1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */,
+				51D8863C1B838E050025E5A5 /* CurrencyCalculatorViewController.swift */,
+				51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */,
+				51005A6F1B849ACE00BE0AB1 /* KeypadViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		51D8862C1B838E050025E5A5 = {
 			isa = PBXGroup;
 			children = (
+				51005A741B84BE0200BE0AB1 /* testpad.playground */,
 				51D886371B838E050025E5A5 /* Handi */,
 				51D8864E1B838E050025E5A5 /* HandiTests */,
 				51D886591B838E050025E5A5 /* HandiUITests */,
@@ -101,10 +122,10 @@
 		51D886371B838E050025E5A5 /* Handi */ = {
 			isa = PBXGroup;
 			children = (
+				51EA54511B84C33100830DB5 /* Models */,
 				51D886381B838E050025E5A5 /* AppDelegate.swift */,
-				51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */,
-				51D8863C1B838E050025E5A5 /* CurrencyCalculatorViewController.swift */,
-				51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */,
+				51EA544F1B84C2F000830DB5 /* Lib */,
+				51005A711B84BC7A00BE0AB1 /* ViewControllers */,
 				51D8863E1B838E050025E5A5 /* Main.storyboard */,
 				51D886411B838E050025E5A5 /* Assets.xcassets */,
 				51D886431B838E050025E5A5 /* LaunchScreen.storyboard */,
@@ -129,6 +150,23 @@
 				51D8865C1B838E050025E5A5 /* Info.plist */,
 			);
 			path = HandiUITests;
+			sourceTree = "<group>";
+		};
+		51EA544F1B84C2F000830DB5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				51005A721B84BCBF00BE0AB1 /* Key.swift */,
+				51EA54541B84C7C400830DB5 /* FieldType.swift */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		51EA54511B84C33100830DB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */,
+				51EA54531B84C75B00830DB5 /* MealCalculatorModle.swift in Sources */,
 				51D8863D1B838E050025E5A5 /* CurrencyCalculatorViewController.swift in Sources */,
 				51D886391B838E050025E5A5 /* AppDelegate.swift in Sources */,
+				51005A701B849ACE00BE0AB1 /* KeypadViewController.swift in Sources */,
 				51D8863B1B838E050025E5A5 /* MealCalculatorViewController.swift in Sources */,
 				51D8866D1B8392A10025E5A5 /* MeasureMeantsViewController.swift in Sources */,
+				51005A731B84BCBF00BE0AB1 /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +531,7 @@
 				51D886611B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51D886621B838E050025E5A5 /* Build configuration list for PBXNativeTarget "HandiTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +540,7 @@
 				51D886641B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51D886651B838E050025E5A5 /* Build configuration list for PBXNativeTarget "HandiUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +549,7 @@
 				51D886671B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
