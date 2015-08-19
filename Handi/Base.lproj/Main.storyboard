@@ -192,6 +192,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Meal Calculator" image="first" selectedImage="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="amountOfPeopleField" destination="Acw-xt-PHF" id="psi-yf-7Bt"/>
+                        <outlet property="perPersonPriceLabel" destination="z5r-8n-BC6" id="Yy8-AA-S0p"/>
+                        <outlet property="preTipBillTotalField" destination="1Md-6V-89X" id="FhP-jx-jQ6"/>
+                        <outlet property="tipPercentageField" destination="x0h-gH-lAS" id="5vf-hC-2kA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

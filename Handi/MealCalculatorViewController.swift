@@ -10,10 +10,18 @@ import UIKit
 
 class MealCalculatorViewController: UIViewController {
     
+    @IBOutlet weak var perPersonPriceLabel: UILabel!
     
+    @IBOutlet weak var preTipBillTotalField: UITextField!
     
+    @IBOutlet weak var amountOfPeopleField: UITextField!
     
+    @IBOutlet weak var tipPercentageField: UITextField!
     
+    var perPersonPrice: Double = 0.00
+    var preTipPillTotal: Double = 0.00
+    var tipPercentage: Double = 0.00
+    var amountOfPeople: Int = 0
     
     
     override func viewDidLoad() {
@@ -39,6 +47,8 @@ class MealCalculatorViewController: UIViewController {
     }
 
     func redraw(){
+        
+        
         
     }
     
