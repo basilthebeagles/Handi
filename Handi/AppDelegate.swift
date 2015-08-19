@@ -40,6 +40,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    /*func currentView()-> Bool{
+        //returns the current viewcontroller
+        print(6)
+        let ViewController: MealCalculatorViewController
+        
+        if let viewControllers = self.window?.rootViewController?.childViewControllers {
+            for viewController in viewControllers {
+                print("b")
+                if viewController.isKindOfClass(MealCalculatorViewController) {
+                    print("a")
+                    return true
+                }
+            }
+        }
+        return false
+    }*/
 
 
 }
