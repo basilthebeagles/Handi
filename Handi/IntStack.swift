@@ -9,14 +9,22 @@
 import Foundation
 
 
-struct IntStack {
+class IntStack {
     var items = [Int]()
-    mutating func push(item: Int) {
+    
+    
+    
+    
+    init(){
+        
+        }
+     func push(item: Int) {
         items.append(item)
     }
-    mutating func pop() -> Int {
+     func pop() -> Int {
         return items.removeLast()
     }
+    
     func returnDouble()-> Double{
         var foundation = 0.00
         var superScript = 1.00
@@ -25,5 +33,11 @@ struct IntStack {
             superScript -= 0.5
         }
         return foundation
+    }
+    
+    
+    
+     func delete(){
+        items.removeAll()
     }
 }

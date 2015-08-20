@@ -9,25 +9,69 @@
 import Foundation
 
 
-class MealCalulatorModelLogic{
-    
-    var finalTotal: Double = 0.00
-    
-    var preTipbillTotalStack: IntStack
+class MealCalculatorModelLogic{
     
     
-    var tipPercentageStack: IntStack
+    var model: MealCalculatorModel
     
-    var preTipbillTotal: Double = 0.00
+    var preTipTotalStack = IntStack()
+    var tipPercentageStack = IntStack()
+    var amountOfPeopleStack = IntStack()
     
-    var tipPercentage:Double = 0.00
+    var currentStackInUse = IntStack()
     
-    var amountOfPeople: Int = 0
-
+    init(model: MealCalculatorModel){
+        self.model = model
+    }
     
-    
-    init(){
+    func modification(key: Key, selectedField: FieldType){
+        declareCurrentStackInUse(selectedField)
         
+        
+        switch(key){
+        case .clear:
+            currentStackInUse.delete()
+        case .backspace:
+            currentStackInUse.pop()
+        default:
+            currentStackInUse.push(key.rawValue)
+            
+        }
+        
+        switch(selectedField){
+            //i know i should not need to have two identical switch statements but i dont know the
+            //right way to combine them.
+        case .amountOfPeopleField:
+            
+            model.amountOfPeople = currentStackInUse.returnDouble()
+            
+        case .preTipBillTotalField:
+            model.preTipbillTotal = currentStackInUse.returnDouble()
+            
+        case .tipPercentageField:
+            model.tipPercentage = currentStackInUse.returnDouble()
+        }
+
+        
+    }
+    
+    
+    func returnValues(){
+        
+    }
+    
+    func declareCurrentStackInUse(selectedField: FieldType){
+        switch(selectedField){
+        case .amountOfPeopleField:
+            currentStackInUse = amountOfPeopleStack
+            
+            
+        case .preTipBillTotalField:
+            currentStackInUse = preTipTotalStack
+            
+        case .tipPercentageField:
+            currentStackInUse = tipPercentageStack
+        }
     }
     
     

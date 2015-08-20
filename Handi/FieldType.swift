@@ -11,8 +11,17 @@ import Foundation
 
 
 enum FieldType{
+    
+    
+    
+    
     case preTipBillTotalField
     case amountOfPeopleField
     case tipPercentageField
+    
+    
+    init(){
+        self = .preTipBillTotalField
+    }
     
 }

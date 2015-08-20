@@ -12,6 +12,7 @@
 		51B1AE051B84E86A00415F84 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1AE041B84E86A00415F84 /* Mode.swift */; };
 		51B1AE091B8506E300415F84 /* IntStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1AE081B8506E300415F84 /* IntStack.swift */; };
 		51B1AE0B1B85075600415F84 /* MealCalculatorModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1AE0A1B85075600415F84 /* MealCalculatorModelLogic.swift */; };
+		51C5D1151B86526C00B9A397 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5D1141B86526C00B9A397 /* Method.swift */; };
 		51D886391B838E050025E5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D886381B838E050025E5A5 /* AppDelegate.swift */; };
 		51D8863B1B838E050025E5A5 /* MealCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */; };
 		51D8863D1B838E050025E5A5 /* CurrencyCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8863C1B838E050025E5A5 /* CurrencyCalculatorViewController.swift */; };
@@ -48,6 +49,7 @@
 		51B1AE041B84E86A00415F84 /* Mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		51B1AE081B8506E300415F84 /* IntStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntStack.swift; sourceTree = "<group>"; };
 		51B1AE0A1B85075600415F84 /* MealCalculatorModelLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModelLogic.swift; sourceTree = "<group>"; };
+		51C5D1141B86526C00B9A397 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Handi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886381B838E050025E5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCalculatorViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				51EA54541B84C7C400830DB5 /* FieldType.swift */,
 				51B1AE041B84E86A00415F84 /* Mode.swift */,
 				51B1AE081B8506E300415F84 /* IntStack.swift */,
+				51C5D1141B86526C00B9A397 /* Method.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				51D8863B1B838E050025E5A5 /* MealCalculatorViewController.swift in Sources */,
 				51B1AE091B8506E300415F84 /* IntStack.swift in Sources */,
 				51B1AE0B1B85075600415F84 /* MealCalculatorModelLogic.swift in Sources */,
+				51C5D1151B86526C00B9A397 /* Method.swift in Sources */,
 				51D8866D1B8392A10025E5A5 /* MeasureMeantsViewController.swift in Sources */,
 				51005A731B84BCBF00BE0AB1 /* Key.swift in Sources */,
 				51B1AE051B84E86A00415F84 /* Mode.swift in Sources */,

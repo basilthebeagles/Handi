@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MealCalculatorModel{
-    
+    var logic: MealCalculatorModelLogic
     var lastMode: Mode = Mode.combinedPerPersonTotal
     
     var finalTotal: Double = 0.00
@@ -19,14 +19,18 @@ class MealCalculatorModel{
     
     var tipPercentage: Double = 0.00
     
-    var amountOfPeople: Int = 0
+    var amountOfPeople: Double = 0.00
     
     var controller: UIViewController
     
-    var selectedField: FieldType = FieldType.preTipBillTotalField
+    var selectedField = FieldType()
+    
+    
+    
     
     init(controller: UIViewController){
         self.controller = controller
+        self.logic = MealCalculatorModelLogic(model: self)
         
     }
     //var
@@ -48,13 +52,19 @@ class MealCalculatorModel{
     
     
     func keyPress(key: Key ){
-        switch
+        
+        
+        
+        logic.modification(key, selectedField: selectedField)
+        
+        
+        
+        
     }
     
     
     
-    
-    
+     
     
     
     func currentPriceLabelFinalString()->String{

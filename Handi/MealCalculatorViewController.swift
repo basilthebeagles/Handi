@@ -61,6 +61,7 @@ class MealCalculatorViewController: UIViewController {
     }
     @IBAction func preTipTotalPriceSelected() {
         model.selectedField = FieldType.preTipBillTotalField
+        
 
     }
     
