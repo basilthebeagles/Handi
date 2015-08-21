@@ -12,7 +12,8 @@ class MealCalculatorViewController: UIViewController {
     
     
     
-    var model: MealCalculatorModel
+    var model: MealCalculatorModel!
+    
     
     @IBOutlet weak var priceLabel: UIButton!
     
@@ -29,20 +30,18 @@ class MealCalculatorViewController: UIViewController {
     
     
     
-    convenience init() {
-        self.init()
-        
-        model = MealCalculatorModel(controller: self)
-        // ... store or user your objectId
-    }
+     
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     
     
     
+    
+    
+   
+
+    
+
     
     
     
@@ -77,7 +76,7 @@ class MealCalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.model = MealCalculatorModel(controller: self)
         // Do any additional setup after loading the view, typically from a nib.
         priceLabel.titleLabel!.numberOfLines = 1;
         priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true;
@@ -97,25 +96,24 @@ class MealCalculatorViewController: UIViewController {
     func keyPress(pressedKey: Key){
         //called when a key has been pressed
         
-       
+       model.keyPress(pressedKey)
         
         
         
     }
 
-    func redraw(field: FieldType){
+    func redraw(newValue: String, field: FieldType){
         
         self.redraw()
         
         switch field{
         case .amountOfPeopleField:
-            amountOfPeopleField.text = "placeholder"
+            amountOfPeopleField.text! = newValue
         case .preTipBillTotalField:
-            preTipBillTotalField.text = "placeholder"
+            preTipBillTotalField.text! = newValue
         case .tipPercentageField:
-            tipPercentageField.text = "placeholder"
-        default:
-        print("something went wrong")
+            tipPercentageField.text! = newValue
+        
         }
     }
     

@@ -22,17 +22,34 @@ class IntStack {
         items.append(item)
     }
      func pop() -> Int {
-        return items.removeLast()
+        
+            return items.removeLast()
+        
+        
+        
     }
     
     func returnDouble()-> Double{
         var foundation = 0.00
-        var superScript = 1.00
-        for i in items{
-            foundation += Double(items[i]) * pow(100, superScript)
-            superScript -= 0.5
+        let superScript = -1.00
+        
+        for i in 0..<items.count{
+            
+             let temp = Double(Double(items[i]) * pow(100, superScript))
+            print("temp: " + String(temp))
+                foundation *= 10
+                foundation += temp
+            
+            
+            
         }
-        return foundation
+        //HACK HACK i gotta fix this
+        if foundation == 0.0{
+            return 0.00
+        }
+        else{
+           return foundation
+        }
     }
     
     

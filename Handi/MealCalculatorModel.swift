@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class MealCalculatorModel{
-    var logic: MealCalculatorModelLogic
+    
+    var logic: MealCalculatorModelLogic? = nil
     var lastMode: Mode = Mode.combinedPerPersonTotal
     
     var finalTotal: Double = 0.00
@@ -21,14 +22,14 @@ class MealCalculatorModel{
     
     var amountOfPeople: Double = 0.00
     
-    var controller: UIViewController
+    var controller: MealCalculatorViewController
     
     var selectedField = FieldType()
     
     
     
     
-    init(controller: UIViewController){
+    init(controller: MealCalculatorViewController){
         self.controller = controller
         self.logic = MealCalculatorModelLogic(model: self)
         
@@ -55,9 +56,19 @@ class MealCalculatorModel{
         
         
         
-        logic.modification(key, selectedField: selectedField)
+        let returnedTuple = logic!.modification(key, selectedField: selectedField)
+        switch(selectedField){
+        case .preTipBillTotalField:
+            preTipbillTotal = returnedTuple.0
+        case .amountOfPeopleField:
+            amountOfPeople = returnedTuple.0
+        case .tipPercentageField:
+            tipPercentage = returnedTuple.0
+            
+            
+        }
         
-        
+        controller.redraw(String(returnedTuple.0), field: returnedTuple.1)
         
         
     }
@@ -83,7 +94,8 @@ class MealCalculatorModel{
         
     
     }
-    //stringValue = "$"+String(value)//will make currency be decided from auto thing
+    
+    
     
     
 }

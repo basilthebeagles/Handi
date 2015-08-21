@@ -14,17 +14,17 @@ class MealCalculatorModelLogic{
     
     var model: MealCalculatorModel
     
-    var preTipTotalStack = IntStack()
-    var tipPercentageStack = IntStack()
-    var amountOfPeopleStack = IntStack()
+    var preTipTotalStack = FieldStack()
+    var tipPercentageStack = FieldStack()
+    var amountOfPeopleStack = FieldStack()
     
-    var currentStackInUse = IntStack()
+    var currentStackInUse = FieldStack()
     
     init(model: MealCalculatorModel){
         self.model = model
     }
     
-    func modification(key: Key, selectedField: FieldType){
+    func modification(key: Key, selectedField: FieldType)->(Double, FieldType){
         declareCurrentStackInUse(selectedField)
         
         
@@ -34,23 +34,13 @@ class MealCalculatorModelLogic{
         case .backspace:
             currentStackInUse.pop()
         default:
+            print("at function modifications switch statement default case")
+            
             currentStackInUse.push(key.rawValue)
             
         }
         
-        switch(selectedField){
-            //i know i should not need to have two identical switch statements but i dont know the
-            //right way to combine them.
-        case .amountOfPeopleField:
-            
-            model.amountOfPeople = currentStackInUse.returnDouble()
-            
-        case .preTipBillTotalField:
-            model.preTipbillTotal = currentStackInUse.returnDouble()
-            
-        case .tipPercentageField:
-            model.tipPercentage = currentStackInUse.returnDouble()
-        }
+        return (currentStackInUse.returnDouble(), selectedField)
 
         
     }
@@ -67,6 +57,7 @@ class MealCalculatorModelLogic{
             
             
         case .preTipBillTotalField:
+            print(".preTipBilletc")
             currentStackInUse = preTipTotalStack
             
         case .tipPercentageField:
