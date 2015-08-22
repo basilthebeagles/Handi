@@ -18,7 +18,7 @@ class MealCalculatorModel{
     
     var preTipbillTotal: Double = 0.00
     
-    var tipPercentage: Double = 0.125
+    var tipPercentage: Double = 12.5
     
     var amountOfPeople: Double = 1
     
