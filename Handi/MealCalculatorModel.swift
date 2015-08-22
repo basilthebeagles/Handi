@@ -12,15 +12,15 @@ import UIKit
 class MealCalculatorModel{
     
     var logic: MealCalculatorModelLogic? = nil
-    var lastMode: Mode = Mode.combinedPerPersonTotal
+    var lastMode: Mode = Mode.perPerson
     
-    var finalTotal: Double = 0.00
+    var finalTotal: Double = 00.00
     
     var preTipbillTotal: Double = 0.00
     
-    var tipPercentage: Double = 0.00
+    var tipPercentage: Double = 0.125
     
-    var amountOfPeople: Double = 0.00
+    var amountOfPeople: Double = 1
     
     var controller: MealCalculatorViewController
     
@@ -29,9 +29,11 @@ class MealCalculatorModel{
     
     
     
+    
     init(controller: MealCalculatorViewController){
         self.controller = controller
         self.logic = MealCalculatorModelLogic(model: self)
+        
         
     }
     //var
@@ -42,6 +44,7 @@ class MealCalculatorModel{
             if(lastMode == .combinedPerPersonTotal){
                 return finalTotal
             }else if(lastMode == .perPerson){
+                
                 return finalTotal / Double(amountOfPeople)
             }else{
                 return 0.00
@@ -54,32 +57,65 @@ class MealCalculatorModel{
     
     func keyPress(key: Key ){
         
-        
+        print(preTipbillTotal)
         
         let returnedTuple = logic!.modification(key, selectedField: selectedField)
         switch(selectedField){
         case .preTipBillTotalField:
             preTipbillTotal = returnedTuple.0
-        case .amountOfPeopleField:
+            
+                    case .amountOfPeopleField:
             amountOfPeople = returnedTuple.0
-        case .tipPercentageField:
+            
+                    case .tipPercentageField:
             tipPercentage = returnedTuple.0
+        default: break
+            
             
             
         }
         
-        controller.redraw(String(returnedTuple.0), field: returnedTuple.1)
-        
-        
+        if returnedTuple.0 == 0.00{
+            if selectedField == FieldType.tipPercentageField{
+                tipPercentage = 12.5
+            }else if selectedField == FieldType.amountOfPeopleField{
+                amountOfPeople = 1
+            }
+            updatePrice()
+
+             controller.redraw(nil, field: returnedTuple.1)
+            
+        }else{
+        let formattedValue = formatter(returnedTuple.0, format: returnedTuple.1)
+            updatePrice()
+
+        controller.redraw(String?(formattedValue), field: returnedTuple.1)
+        }
+
     }
     
     
-    
+    func updatePrice(){
+        finalTotal = (preTipbillTotal * (1 + (0.01 * tipPercentage)))
+    }
      
     
     
-    func currentPriceLabelFinalString()->String{
-        return "$"+String(currentPriceLabelValue)//will make this return currency depending on location
+    func formatter(valueToBeFormatted:  Double, format: FieldType)->String{
+        print(valueToBeFormatted)
+        if format == FieldType.preTipBillTotalField || format == FieldType.finalTotal{
+            return "$"+String(NSString(format: "%.2f", valueToBeFormatted) )
+        }else if format == FieldType.amountOfPeopleField{
+            return String(NSString(format: "%.0f", valueToBeFormatted))
+            
+        }else if format == FieldType.tipPercentageField{
+            return (String(NSString(format: "%.2f", valueToBeFormatted))) + "%"
+        }else{
+            return ""
+        }
+        
+        
+        
     }
     
     

@@ -11,15 +11,15 @@ import Foundation
 
 class MealCalculatorModelLogic{
     
-    
+    //find out about decimals
     var model: MealCalculatorModel
     
-    var preTipTotalStack = FieldStack()
-    var tipPercentageStack = FieldStack()
-    var amountOfPeopleStack = FieldStack()
+    var preTipTotalStack = FieldStack(maxSize: 9, startDecimalPoint: 0.01)
+    var tipPercentageStack = FieldStack(maxSize: 4, startDecimalPoint: 0.01)
+    var amountOfPeopleStack = FieldStack(maxSize: 2, startDecimalPoint: 1)
     
-    var currentStackInUse = FieldStack()
-    
+    var currentStackInUse = FieldStack(maxSize: 0, startDecimalPoint: 1)
+    //bit above is unnecessary, should fix somehow
     init(model: MealCalculatorModel){
         self.model = model
     }
@@ -34,7 +34,6 @@ class MealCalculatorModelLogic{
         case .backspace:
             currentStackInUse.pop()
         default:
-            print("at function modifications switch statement default case")
             
             currentStackInUse.push(key.rawValue)
             
@@ -62,6 +61,9 @@ class MealCalculatorModelLogic{
             
         case .tipPercentageField:
             currentStackInUse = tipPercentageStack
+        default:
+            break
+        
         }
     }
     

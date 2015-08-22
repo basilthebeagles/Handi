@@ -11,13 +11,16 @@ import Foundation
 
 class IntStack {
     var items = [Int]()
+    var startDecimalPoint: Double
     
     
     
-    
-    init(){
-        
+    init(startDecimalPoint: Double){
+        self.startDecimalPoint = startDecimalPoint
         }
+    
+    
+    
      func push(item: Int) {
         items.append(item)
     }
@@ -31,25 +34,21 @@ class IntStack {
     
     func returnDouble()-> Double{
         var foundation = 0.00
-        let superScript = -1.00
+        
         
         for i in 0..<items.count{
             
-             let temp = Double(Double(items[i]) * pow(100, superScript))
-            print("temp: " + String(temp))
+             let temp = Double(Double(items[i]) * startDecimalPoint)
+            
                 foundation *= 10
                 foundation += temp
             
             
             
         }
-        //HACK HACK i gotta fix this
-        if foundation == 0.0{
-            return 0.00
-        }
-        else{
+           
            return foundation
-        }
+        
     }
     
     

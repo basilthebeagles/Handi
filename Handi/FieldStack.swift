@@ -9,8 +9,10 @@
 import Foundation
 
 class FieldStack: IntStack{
+    
+    let maxSize: Int
     override func push(item: Int) {
-        if items.count < 11{
+        if items.count < maxSize{
             items.append(item)
         }
         else{
@@ -18,6 +20,12 @@ class FieldStack: IntStack{
         }
     }
     
+    
+    init(maxSize: Int, startDecimalPoint: Double){
+        //have max size and decimals or not etc
+        self.maxSize = maxSize
+        super.init(startDecimalPoint: startDecimalPoint)
+    }
     
     override func pop() -> Int {
         if items.count != 0{

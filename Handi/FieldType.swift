@@ -18,6 +18,7 @@ enum FieldType{
     case preTipBillTotalField
     case amountOfPeopleField
     case tipPercentageField
+    case finalTotal
     
     
     init(){
