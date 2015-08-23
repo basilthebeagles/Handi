@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		51005A701B849ACE00BE0AB1 /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51005A6F1B849ACE00BE0AB1 /* KeypadViewController.swift */; };
 		51005A731B84BCBF00BE0AB1 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51005A721B84BCBF00BE0AB1 /* Key.swift */; };
+		511196D51B88BDD500F18EB9 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 511196D41B88BDD500F18EB9 /* TODO.txt */; };
+		511196D71B88E57100F18EB9 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511196D61B88E57100F18EB9 /* Format.swift */; };
+		51B1AE051B84E86A00415F84 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1AE041B84E86A00415F84 /* Mode.swift */; };
+		51B1AE091B8506E300415F84 /* IntStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1AE081B8506E300415F84 /* IntStack.swift */; };
+		51B1AE0B1B85075600415F84 /* MealCalculatorModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B1AE0A1B85075600415F84 /* MealCalculatorModelLogic.swift */; };
+		51C4F1EB1B87A6E000EA7130 /* FieldStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C4F1EA1B87A6E000EA7130 /* FieldStack.swift */; };
+		51C5D1151B86526C00B9A397 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5D1141B86526C00B9A397 /* Method.swift */; };
 		51D886391B838E050025E5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D886381B838E050025E5A5 /* AppDelegate.swift */; };
 		51D8863B1B838E050025E5A5 /* MealCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */; };
 		51D8863D1B838E050025E5A5 /* CurrencyCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8863C1B838E050025E5A5 /* CurrencyCalculatorViewController.swift */; };
@@ -18,7 +25,7 @@
 		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
 		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
 		51D8866D1B8392A10025E5A5 /* MeasureMeantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */; };
-		51EA54531B84C75B00830DB5 /* MealCalculatorModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */; };
+		51EA54531B84C75B00830DB5 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */; };
 		51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54541B84C7C400830DB5 /* FieldType.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +49,13 @@
 /* Begin PBXFileReference section */
 		51005A6F1B849ACE00BE0AB1 /* KeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypadViewController.swift; sourceTree = "<group>"; };
 		51005A721B84BCBF00BE0AB1 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		51005A741B84BE0200BE0AB1 /* testpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = testpad.playground; sourceTree = "<group>"; };
+		511196D41B88BDD500F18EB9 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		511196D61B88E57100F18EB9 /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		51B1AE041B84E86A00415F84 /* Mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		51B1AE081B8506E300415F84 /* IntStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntStack.swift; sourceTree = "<group>"; };
+		51B1AE0A1B85075600415F84 /* MealCalculatorModelLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MealCalculatorModelLogic.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		51C4F1EA1B87A6E000EA7130 /* FieldStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldStack.swift; sourceTree = "<group>"; };
+		51C5D1141B86526C00B9A397 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Handi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886381B838E050025E5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCalculatorViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +71,7 @@
 		51D8865A1B838E050025E5A5 /* HandiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandiUITests.swift; sourceTree = "<group>"; };
 		51D8865C1B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51D8866C1B8392A10025E5A5 /* MeasureMeantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureMeantsViewController.swift; sourceTree = "<group>"; };
-		51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModle.swift; sourceTree = "<group>"; };
+		51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MealCalculatorModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		51EA54541B84C7C400830DB5 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +114,7 @@
 		51D8862C1B838E050025E5A5 = {
 			isa = PBXGroup;
 			children = (
-				51005A741B84BE0200BE0AB1 /* testpad.playground */,
+				511196D41B88BDD500F18EB9 /* TODO.txt */,
 				51D886371B838E050025E5A5 /* Handi */,
 				51D8864E1B838E050025E5A5 /* HandiTests */,
 				51D886591B838E050025E5A5 /* HandiUITests */,
@@ -157,6 +170,11 @@
 			children = (
 				51005A721B84BCBF00BE0AB1 /* Key.swift */,
 				51EA54541B84C7C400830DB5 /* FieldType.swift */,
+				51B1AE041B84E86A00415F84 /* Mode.swift */,
+				51B1AE081B8506E300415F84 /* IntStack.swift */,
+				51C4F1EA1B87A6E000EA7130 /* FieldStack.swift */,
+				51C5D1141B86526C00B9A397 /* Method.swift */,
+				511196D61B88E57100F18EB9 /* Format.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -164,7 +182,8 @@
 		51EA54511B84C33100830DB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				51EA54521B84C75B00830DB5 /* MealCalculatorModle.swift */,
+				51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */,
+				51B1AE0A1B85075600415F84 /* MealCalculatorModelLogic.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -272,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511196D51B88BDD500F18EB9 /* TODO.txt in Resources */,
 				51D886451B838E050025E5A5 /* LaunchScreen.storyboard in Resources */,
 				51D886421B838E050025E5A5 /* Assets.xcassets in Resources */,
 				51D886401B838E050025E5A5 /* Main.storyboard in Resources */,
@@ -300,13 +320,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */,
-				51EA54531B84C75B00830DB5 /* MealCalculatorModle.swift in Sources */,
+				51EA54531B84C75B00830DB5 /* MealCalculatorModel.swift in Sources */,
+				511196D71B88E57100F18EB9 /* Format.swift in Sources */,
 				51D8863D1B838E050025E5A5 /* CurrencyCalculatorViewController.swift in Sources */,
+				51C4F1EB1B87A6E000EA7130 /* FieldStack.swift in Sources */,
 				51D886391B838E050025E5A5 /* AppDelegate.swift in Sources */,
 				51005A701B849ACE00BE0AB1 /* KeypadViewController.swift in Sources */,
 				51D8863B1B838E050025E5A5 /* MealCalculatorViewController.swift in Sources */,
+				51B1AE091B8506E300415F84 /* IntStack.swift in Sources */,
+				51B1AE0B1B85075600415F84 /* MealCalculatorModelLogic.swift in Sources */,
+				51C5D1151B86526C00B9A397 /* Method.swift in Sources */,
 				51D8866D1B8392A10025E5A5 /* MeasureMeantsViewController.swift in Sources */,
 				51005A731B84BCBF00BE0AB1 /* Key.swift in Sources */,
+				51B1AE051B84E86A00415F84 /* Mode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
