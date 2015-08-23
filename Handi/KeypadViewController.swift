@@ -42,17 +42,8 @@ class KeypadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var screen: CGRect = UIScreen.mainScreen().bounds
-        //if screen.width ==
         
        
-        print(screen.width)
-        print(screen.height)
-        
-        
-        //zero.titleLabel!.font = zero.titleLabel!.font.fontWithSize()
-        
-        
 
         
         // Do any additional setup after loading the view.
@@ -147,23 +138,7 @@ class KeypadViewController: UIViewController {
     
     //print(self.parentViewController)
     
-    /*
-    func getCorrectFontSizeForScreenSize(font: Int)->Int{
-       //for some reason the value returned from this, when used as an
-        //argument for .fontwithSize gives an error of cant accept (Int)
-        
-        
-        var screen: CGRect = UIScreen.mainScreen().bounds
-        
-        var totalScreenSize = Int(screen.height) + Int(screen.width)
-        var temp = totalScreenSize / Int(13)
-        print(temp)
-        return temp
-
-        
-    }
     
-    */
     
     
     
