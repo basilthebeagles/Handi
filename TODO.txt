@@ -8,3 +8,6 @@
 8. Delete the other controllers
 7. Make sure data is retained
 8. Add clear all button
+7. Disable keyboard
+8. Maybe add extra languages
+9. Maybe add accesability
