@@ -42,10 +42,14 @@ class KeypadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let fontSizer = FontSize()
         
-       
-
+        let correctFontSize = fontSizer.correctFontSizeForScreenSize()
         
+        
+        
+        zero.titleLabel!.font = zero.titleLabel!.font.fontWithSize(correctFontSize.1)
+        //add all of them
         // Do any additional setup after loading the view.
     }
     

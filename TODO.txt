@@ -1,3 +1,4 @@
+0. Continue on with font size adjusting
 1. Comment code
 2. Create parent classes
 3. Seperate MealCcalculatorView

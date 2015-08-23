@@ -12,8 +12,8 @@ import UIKit
 
 
 struct FontSize{
-    
-    func correctFontSizeForDevice(originalFontSize: Int)-> (Int, Int){
+    /*
+    func correctFontSizeForDevice()-> (Int, Int){
         //terrible function view below function
         
         var screen: CGRect = UIScreen.mainScreen().bounds
@@ -25,25 +25,37 @@ struct FontSize{
             return (90, 71)
         }
         
-        
-    }
-    
-    
-    /*
-    func getCorrectFontSizeForScreenSize(font: Int)->Int{
-    //for some reason the value returned from this, when used as an
-    //argument for .fontwithSize gives an error of cant accept (Int)
-    
-    
-    var screen: CGRect = UIScreen.mainScreen().bounds
-    
-    var totalScreenSize = Int(screen.height) + Int(screen.width)
-    var temp = totalScreenSize / Int(13)
-    print(temp)
-    return temp
-    
-    
+       return (0, 0)
     }
     
     */
+    
+    func correctFontSizeForScreenSize()->(CGFloat, CGFloat){
+    //going to change this so it returns set values for knowns, like 71 for iphone 6 size
+    
+    
+    var screen: CGRect = UIScreen.mainScreen().bounds
+        if screen.width == 375{
+            return (CGFloat(90), CGFloat(71))
+        }
+        
+        
+        else{
+            //this is just here for when a new device is made or something
+            // and i dont update it in time 
+            // you would think to use ratios like this for all devices, but the results of the ratio
+            //dont allways look so nice
+    var totalScreenSize = screen.height + screen.width
+        
+    var temp = totalScreenSize / 14.6760563380282
+    //make sure you work out a ratio for finalValueLabel
+            
+            print(temp)
+    return (CGFloat(temp), CGFloat(temp))
+        }
+    
+    
+    }
+    
+    
 }
