@@ -14,7 +14,7 @@ class MealCalculatorModelLogic{
     //find out about decimals
     var model: MealCalculatorModel
     
-    var preTipTotalStack = FieldStack(maxSize: 9, startDecimalPoint: 0.01)
+    var preTipTotalStack = FieldStack(maxSize: 8, startDecimalPoint: 0.01)
     var tipPercentageStack = FieldStack(maxSize: 4, startDecimalPoint: 0.01)
     var amountOfPeopleStack = FieldStack(maxSize: 2, startDecimalPoint: 1)
     
