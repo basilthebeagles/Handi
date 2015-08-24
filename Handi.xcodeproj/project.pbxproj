@@ -27,6 +27,7 @@
 		51E8C4A21B8A4C4B0083A138 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E8C4A11B8A4C4B0083A138 /* FontSize.swift */; };
 		51EA54531B84C75B00830DB5 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */; };
 		51EA54551B84C7C400830DB5 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA54541B84C7C400830DB5 /* FieldType.swift */; };
+		51EDD64B1B8B864F00FD9FC2 /* iAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDD64A1B8B864F00FD9FC2 /* iAdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		51E8C4A11B8A4C4B0083A138 /* FontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		51EA54521B84C75B00830DB5 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MealCalculatorModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		51EA54541B84C7C400830DB5 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
+		51EDD64A1B8B864F00FD9FC2 /* iAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				51D8863A1B838E050025E5A5 /* MealCalculatorViewController.swift */,
 				51005A6F1B849ACE00BE0AB1 /* KeypadViewController.swift */,
+				51EDD64A1B8B864F00FD9FC2 /* iAdViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				51C5D1151B86526C00B9A397 /* Method.swift in Sources */,
 				51005A731B84BCBF00BE0AB1 /* Key.swift in Sources */,
 				51B1AE051B84E86A00415F84 /* Mode.swift in Sources */,
+				51EDD64B1B8B864F00FD9FC2 /* iAdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

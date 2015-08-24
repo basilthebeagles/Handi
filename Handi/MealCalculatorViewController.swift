@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealCalculatorViewController: UIViewController, UITextFieldDelegate {
+class MealCalculatorViewController: UIViewController {
     
     //seperate this stuff out to presentation and controller
     //also seperate out total and tip
@@ -40,17 +40,15 @@ class MealCalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func preTipTotalSelected() {
         print("pretip field selected")
-        preTipBillTotalField.resignFirstResponder()
+        
         model.selectedField = FieldType.preTipBillTotalField
-        //preTipBillTotalField.beginFloatingCursorAtPoint(<#T##point: CGPoint##CGPoint#>)
-    }
+           }
     
     
     @IBAction func amountOfPeopleSelected() {
         print("amount of people selected")
-        model.selectedField = FieldType.amountOfPeopleField
-        amountOfPeopleField.resignFirstResponder()
-        //amountOfPeopleField.endFloatingCursor()
+                model.selectedField = FieldType.amountOfPeopleField
+        
         
    }
     
@@ -59,12 +57,10 @@ class MealCalculatorViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func tipPercentageSelected() {
         print("tip percentage selected")
-        tipPercentageField.resignFirstResponder()
-        //tipPercentageField.set(CGPoint(x: 8, y: 10))//NSMakeRange(5, 10))
+        
         model.selectedField = FieldType.tipPercentageField
         
-        //tipPercentageField.endFloatingCursor()
-    }
+            }
     
    
     
@@ -86,16 +82,39 @@ class MealCalculatorViewController: UIViewController, UITextFieldDelegate {
         var fontSizer = FontSize()
         var correctFontSize = fontSizer.correctFontSizeForScreenSize()
         priceLabel.titleLabel!.font = priceLabel.titleLabel!.font.fontWithSize(correctFontSize.0)
-        preTipBillTotalField.delegate = self
-        amountOfPeopleField.delegate = self
-        tipPercentageField.delegate = self
+        
+    
+        
+        
+        
+        var dummyView: UIView = UIView(frame: CGRectMake(0, 0, 1, 1))
+        preTipBillTotalField.inputView = dummyView
+        amountOfPeopleField.inputView = dummyView
+        tipPercentageField.inputView = dummyView
+
+
+        
+        
+        
+        /*var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+    */
+    
+    //Calls this function when the tap is recognized.
+    
+        
         
         redraw()
         
         //perPersonPriceLabel.titleLabel!.lineBreakMode = NSLineBreakByClipping
     }
     
-    
+   /* func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+        print("called")
+        //resignFirstResponder()
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

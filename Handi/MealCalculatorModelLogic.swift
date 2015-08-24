@@ -15,7 +15,7 @@ class MealCalculatorModelLogic{
     var model: MealCalculatorModel
     
     var preTipTotalStack = FieldStack(maxSize: 8, startDecimalPoint: 0.01)
-    var tipPercentageStack = FieldStack(maxSize: 4, startDecimalPoint: 0.01)
+    var tipPercentageStack = FieldStack(maxSize: 3, startDecimalPoint: 0.1)
     var amountOfPeopleStack = FieldStack(maxSize: 2, startDecimalPoint: 1)
     
     var currentStackInUse = FieldStack(maxSize: 0, startDecimalPoint: 1)
