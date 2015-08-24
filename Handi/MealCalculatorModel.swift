@@ -18,7 +18,7 @@ class MealCalculatorModel{
     
     var preTipbillTotal: Double = 0.00
     
-    var tipPercentage: Double = 12.5
+    var tipPercentage: Double = 0.00
     
     var amountOfPeople: Double = 1
     
@@ -102,14 +102,34 @@ class MealCalculatorModel{
     
     
     func formatter(valueToBeFormatted:  Double, format: FieldType)->String{
-        print(valueToBeFormatted)
+        //source: http://rshankar.com/internationalization-and-localization-of-apps-in-xcode-6-and-swift/
+        
+        var numberFormatter: NSNumberFormatter {
+            let formatter = NSNumberFormatter()
+            formatter.numberStyle = .DecimalStyle
+            return formatter
+        }
+        
+        var currencyFormatter: NSNumberFormatter {
+            let formatter = NSNumberFormatter()
+            formatter.numberStyle = .CurrencyStyle
+            return formatter
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         if format == FieldType.preTipBillTotalField || format == FieldType.finalTotal{
-            return "$"+String(NSString(format: "%.2f", valueToBeFormatted) )
+            return currencyFormatter.stringFromNumber(valueToBeFormatted)!//"$"+String(NSString(format: "%.2f", valueToBeFormatted) )
         }else if format == FieldType.amountOfPeopleField{
-            return String(NSString(format: "%.0f", valueToBeFormatted))
+            return numberFormatter.stringFromNumber(valueToBeFormatted)!
             
         }else if format == FieldType.tipPercentageField{
-            return (String(NSString(format: "%.2f", valueToBeFormatted))) + "%"
+            return numberFormatter.stringFromNumber(valueToBeFormatted)! + "%"
         }else{
             return ""
         }

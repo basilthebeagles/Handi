@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealCalculatorViewController: UIViewController {
+class MealCalculatorViewController: UIViewController, UITextFieldDelegate {
     
     //seperate this stuff out to presentation and controller
     //also seperate out total and tip
@@ -27,6 +27,8 @@ class MealCalculatorViewController: UIViewController {
     
     
     
+    
+    
     @IBAction func perPersonPricePressed() {
         //changes mode
         model.changeMode()
@@ -38,6 +40,7 @@ class MealCalculatorViewController: UIViewController {
     
     @IBAction func preTipTotalSelected() {
         print("pretip field selected")
+        preTipBillTotalField.resignFirstResponder()
         model.selectedField = FieldType.preTipBillTotalField
         //preTipBillTotalField.beginFloatingCursorAtPoint(<#T##point: CGPoint##CGPoint#>)
     }
@@ -46,25 +49,31 @@ class MealCalculatorViewController: UIViewController {
     @IBAction func amountOfPeopleSelected() {
         print("amount of people selected")
         model.selectedField = FieldType.amountOfPeopleField
+        amountOfPeopleField.resignFirstResponder()
         //amountOfPeopleField.endFloatingCursor()
-    }
+        
+   }
     
     
         
 
     @IBAction func tipPercentageSelected() {
         print("tip percentage selected")
+        tipPercentageField.resignFirstResponder()
+        //tipPercentageField.set(CGPoint(x: 8, y: 10))//NSMakeRange(5, 10))
         model.selectedField = FieldType.tipPercentageField
+        
         //tipPercentageField.endFloatingCursor()
     }
     
-    
-    
-    
-    
    
     
+  /*  func textFieldDidBeginEditing(textField: UITextField) {
+        self.view.endEditing(true)
+    }
     
+   
+    */
     
     
     override func viewDidLoad() {
@@ -73,6 +82,14 @@ class MealCalculatorViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         priceLabel.titleLabel!.numberOfLines = 1;
         priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true
+        
+        var fontSizer = FontSize()
+        var correctFontSize = fontSizer.correctFontSizeForScreenSize()
+        priceLabel.titleLabel!.font = priceLabel.titleLabel!.font.fontWithSize(correctFontSize.0)
+        preTipBillTotalField.delegate = self
+        amountOfPeopleField.delegate = self
+        tipPercentageField.delegate = self
+        
         redraw()
         
         //perPersonPriceLabel.titleLabel!.lineBreakMode = NSLineBreakByClipping

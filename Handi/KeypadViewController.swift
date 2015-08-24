@@ -49,6 +49,31 @@ class KeypadViewController: UIViewController {
         
         
         zero.titleLabel!.font = zero.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        clear.titleLabel!.font = clear.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        backspace.titleLabel!.font = backspace.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        one.titleLabel!.font = one.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        two.titleLabel!.font = two.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        three.titleLabel!.font = three.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        four.titleLabel!.font = four.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        five.titleLabel!.font = five.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        six.titleLabel!.font = six.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        seven.titleLabel!.font = seven.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        eight.titleLabel!.font = eight.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        nine.titleLabel!.font = nine.titleLabel!.font.fontWithSize(correctFontSize.1)
+        
+        
+
         //add all of them
         // Do any additional setup after loading the view.
     }

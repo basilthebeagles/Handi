@@ -3,7 +3,6 @@
 2. Create parent classes
 3. Seperate MealCcalculatorView
 4. Re do algorithum for tipping
-5. Re do data in field apperence. Look at decimal formatting.
 6. Create settings bit
 7. Add IAP and ADDs
 8. Delete the other controllers
