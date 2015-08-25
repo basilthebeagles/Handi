@@ -30,7 +30,7 @@
         <!--Meal Calculator-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="main" title="Meal Calculator" id="9pv-A4-QxB" customClass="MealCalculatorViewController" customModule="Handi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" title="Meal Calculator" id="9pv-A4-QxB" customClass="MealCalculatorViewController" customModule="Bill_Splitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATG-sD-NZR"/>
                         <viewControllerLayoutGuide type="bottom" id="IxJ-bZ-vIR"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="People" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-xt-PHF">
-                                <rect key="frame" x="115" y="141" width="89.5" height="25.5"/>
+                                <rect key="frame" x="115" y="141" width="90" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Acw-xt-PHF" secondAttribute="height" multiplier="7:2" id="hqz-lj-4na"/>
                                 </constraints>
@@ -87,7 +87,7 @@
                                     <constraint firstAttribute="width" secondItem="1fy-IB-Ou1" secondAttribute="height" multiplier="335:132" id="eaQ-fr-5Ju"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="75"/>
-                                <state key="normal">
+                                <state key="normal" title="$124.52">
                                     <color key="titleColor" red="0.26274509800000001" green="0.83921568629999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -151,29 +151,10 @@
             </objects>
             <point key="canvasLocation" x="771" y="-318"/>
         </scene>
-        <!--Measurements-->
-        <scene sceneID="Wfu-wR-Gdc">
-            <objects>
-                <viewController title="Measurements" id="JYh-ho-hsq" customClass="MeasureMeantsViewController" customModule="Handi" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EiP-3p-Xe2"/>
-                        <viewControllerLayoutGuide type="bottom" id="jww-YW-bfT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eiQ-ws-Hcz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Measurements" id="ijG-eF-KwU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-xl-NmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="202.5" y="1130.2816901408451"/>
-        </scene>
         <!--keypadViewController-->
         <scene sceneID="siU-gp-lfK">
             <objects>
-                <viewController storyboardIdentifier="keyboard" title="keypadViewController" id="8dx-4g-DK0" customClass="KeypadViewController" customModule="Handi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="keyboard" title="keypadViewController" id="8dx-4g-DK0" customClass="KeypadViewController" customModule="Bill_Splitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bKD-yV-lnh"/>
                         <viewControllerLayoutGuide type="bottom" id="AIY-Zj-60I"/>

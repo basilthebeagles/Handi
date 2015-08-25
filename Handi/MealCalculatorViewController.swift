@@ -79,15 +79,19 @@ class MealCalculatorViewController: UIViewController {
         priceLabel.titleLabel!.numberOfLines = 1;
         priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true
         
-        var fontSizer = FontSize()
-        var correctFontSize = fontSizer.correctFontSizeForScreenSize()
+        let fontSizer = FontSize()
+        let correctFontSize = fontSizer.correctFontSizeForScreenSize()
         priceLabel.titleLabel!.font = priceLabel.titleLabel!.font.fontWithSize(correctFontSize.0)
         
-    
+        preTipBillTotalField.font = preTipBillTotalField.font?.fontWithSize(correctFontSize.2)
+        amountOfPeopleField.font = amountOfPeopleField.font?.fontWithSize(correctFontSize.2)
+        tipPercentageField.font = tipPercentageField.font?.fontWithSize(correctFontSize.2)
         
         
         
-        var dummyView: UIView = UIView(frame: CGRectMake(0, 0, 1, 1))
+        
+        let dummyView: UIView = UIView(frame: CGRectMake(0, 0, 1, 1))
+        
         preTipBillTotalField.inputView = dummyView
         amountOfPeopleField.inputView = dummyView
         tipPercentageField.inputView = dummyView
