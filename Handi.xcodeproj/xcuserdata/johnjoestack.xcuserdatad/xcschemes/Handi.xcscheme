@@ -106,6 +106,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Bill Splitter"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
