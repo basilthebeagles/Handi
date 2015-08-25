@@ -75,22 +75,27 @@ class MealCalculatorModel{
             
         }
         
-        if returnedTuple.0 == 0.00{
-            if selectedField == FieldType.tipPercentageField{
-                tipPercentage = 12.5
-            }else if selectedField == FieldType.amountOfPeopleField{
+        if returnedTuple.0 == 0 && selectedField == FieldType.amountOfPeopleField{
+            
                 amountOfPeople = 1
+        }
+        
+            let formattedValue: String?
+            
+            if returnedTuple.0 == 0{
+                formattedValue = nil
+            }else{
+                formattedValue = formatter(returnedTuple.0, format: returnedTuple.1)
+                
+
             }
             updatePrice()
-
-             controller.redraw(nil, field: returnedTuple.1)
             
-        }else{
-        let formattedValue = formatter(returnedTuple.0, format: returnedTuple.1)
-            updatePrice()
-
-        controller.redraw(String?(formattedValue), field: returnedTuple.1)
-        }
+            controller.redraw(String!(formattedValue), field: returnedTuple.1)
+        
+            
+        
+        
 
     }
     

@@ -14,9 +14,9 @@ class KeypadViewController: UIViewController {
     
     //var parentOfViewController: UIViewController
     
-    @IBOutlet weak var zero: UIButton!
+    @IBOutlet weak var zero: UIButton!//is actually clear
     
-    @IBOutlet weak var clear: UIButton!
+    @IBOutlet weak var clear: UIButton! // is actually 0
     
     @IBOutlet weak var backspace: UIButton!
     
@@ -84,13 +84,13 @@ class KeypadViewController: UIViewController {
     }
     
     
-    @IBAction func zeroPressed() {
+    @IBAction func zeroPressed() {//is actually c
         print("zero has been pressed")
-        keyRouter(Key.zero)
+        keyRouter(Key.clear)
     }
     
-    @IBAction func clearPressed() {
-        keyRouter(Key.clear)
+    @IBAction func clearPressed() {//is actually zero
+        keyRouter(Key.zero)
 
     }
     @IBAction func backspacePressed() {

@@ -14,7 +14,7 @@ import UIKit
 struct FontSize{
    
     
-    func correctFontSizeForScreenSize()->(CGFloat, CGFloat){
+    func correctFontSizeForScreenSize()->(CGFloat, CGFloat, CGFloat){
         
     
     var screen: CGRect = UIScreen.mainScreen().bounds
@@ -25,10 +25,11 @@ struct FontSize{
     let buttonLabelFontSize = totalScreenSize / 14.6760563380282
     
     let finalLabelFontSize = totalScreenSize / 10
-        
+    let textFieldFontSize = totalScreenSize / 41.68
+        print(textFieldFontSize)
     print(finalLabelFontSize)
     print(buttonLabelFontSize)
-    return (CGFloat(finalLabelFontSize), CGFloat(buttonLabelFontSize))
+    return (CGFloat(finalLabelFontSize), CGFloat(buttonLabelFontSize), CGFloat(textFieldFontSize))
         
     
     
