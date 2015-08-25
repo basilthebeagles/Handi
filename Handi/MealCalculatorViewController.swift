@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import iAd
 
-class MealCalculatorViewController: UIViewController {
+class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
+    
+    @IBOutlet weak var adBannerView: ADBannerView!
     
     //seperate this stuff out to presentation and controller
     //also seperate out total and tip
@@ -97,28 +100,15 @@ class MealCalculatorViewController: UIViewController {
         tipPercentageField.inputView = dummyView
 
 
-        
-        
-        
-        /*var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
-    */
-    
-    //Calls this function when the tap is recognized.
-    
-        
-        
+        self.canDisplayBannerAds = true
+        self.adBannerView.delegate = self
+        self.adBannerView.hidden = true //hide until ad loaded
         redraw()
         
-        //perPersonPriceLabel.titleLabel!.lineBreakMode = NSLineBreakByClipping
+       
     }
     
-   /* func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-        print("called")
-        //resignFirstResponder()
-    }*/
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -167,6 +157,36 @@ class MealCalculatorViewController: UIViewController {
         
     }
     
+    
+    func bannerViewWillLoadAd(banner: ADBannerView!) {
+        NSLog("bannerViewWillLoadAd")
+    }
+    
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        NSLog("bannerViewDidLoadAd")
+        self.adBannerView.hidden = false //now show banner as ad is loaded
+        print("banner getting shown")
+    }
+    
+    func bannerViewActionDidFinish(banner: ADBannerView!) {
+        NSLog("bannerViewDidLoadAd")
+        
+        //optional resume paused game code
+        
+    }
+    
+    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
+        NSLog("bannerViewActionShouldBegin")
+        
+        //optional pause game code
+        
+        return true
+    }
+    
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        NSLog("bannerView")
+    }
+
     
     
     

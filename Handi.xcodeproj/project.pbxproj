@@ -26,7 +26,6 @@
 		5196CDEB1B8CB91A00AAF479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDEA1B8CB91A00AAF479 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF41B8CB97800AAF479 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		5196CDF71B8CC7E900AAF479 /* iAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDF61B8CC7E900AAF479 /* iAdViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
 		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +67,6 @@
 		5196CDEA1B8CB91A00AAF479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5196CDF41B8CB97800AAF479 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		5196CDF61B8CC7E900AAF479 /* iAdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdViewController.swift; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Handi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886461B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51D8864B1B838E050025E5A5 /* HandiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +106,6 @@
 		51005A711B84BC7A00BE0AB1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5196CDF61B8CC7E900AAF479 /* iAdViewController.swift */,
 				5196CDE61B8CB8C200AAF479 /* KeypadViewController.swift */,
 				5196CDE41B8CB8BC00AAF479 /* MealCalculatorViewController.swift */,
 			);
@@ -329,7 +326,6 @@
 			files = (
 				5196CDDE1B8CB89F00AAF479 /* IntStack.swift in Sources */,
 				5196CDE21B8CB8A900AAF479 /* Method.swift in Sources */,
-				5196CDF71B8CC7E900AAF479 /* iAdViewController.swift in Sources */,
 				5196CDE71B8CB8C200AAF479 /* KeypadViewController.swift in Sources */,
 				5196CDE51B8CB8BC00AAF479 /* MealCalculatorViewController.swift in Sources */,
 				5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */,

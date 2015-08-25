@@ -141,6 +141,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="adBannerView" destination="SBG-o2-z8G" id="amR-OL-mpd"/>
                         <outlet property="amountOfPeopleField" destination="Acw-xt-PHF" id="psi-yf-7Bt"/>
                         <outlet property="preTipBillTotalField" destination="1Md-6V-89X" id="FhP-jx-jQ6"/>
                         <outlet property="priceLabel" destination="1fy-IB-Ou1" id="qlU-Kw-woa"/>
