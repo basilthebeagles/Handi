@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
@@ -30,7 +30,7 @@
         <!--Meal Calculator-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="main" title="Meal Calculator" id="9pv-A4-QxB" customClass="MealCalculatorViewController" customModule="Handi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" title="Meal Calculator" id="9pv-A4-QxB" customClass="MealCalculatorViewController" customModule="Bill_Splitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATG-sD-NZR"/>
                         <viewControllerLayoutGuide type="bottom" id="IxJ-bZ-vIR"/>
@@ -39,7 +39,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0h-gH-lAS" customClass="CustomUITextField" customModule="Handi" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0h-gH-lAS" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
                                 <rect key="frame" x="224" y="141" width="89.5" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="7:2" id="diZ-ZT-vSk"/>
@@ -51,7 +51,7 @@
                                     <action selector="tipPercentageSelected" destination="9pv-A4-QxB" eventType="editingDidBegin" id="W8G-Ge-0aw"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Md-6V-89X" customClass="CustomUITextField" customModule="Handi" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Md-6V-89X" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
                                 <rect key="frame" x="6" y="141" width="89.5" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="height" multiplier="7:2" id="XZr-Ud-gmZ"/>
@@ -64,7 +64,7 @@
                                     <action selector="preTipTotalSelected" destination="9pv-A4-QxB" eventType="editingDidBegin" id="kdQ-Ss-oAy"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="People" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-xt-PHF" customClass="CustomUITextField" customModule="Handi" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="People" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-xt-PHF" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
                                 <rect key="frame" x="115" y="141" width="90" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Acw-xt-PHF" secondAttribute="height" multiplier="7:2" id="hqz-lj-4na"/>
@@ -156,7 +156,7 @@
         <!--keypadViewController-->
         <scene sceneID="siU-gp-lfK">
             <objects>
-                <viewController storyboardIdentifier="keyboard" title="keypadViewController" id="8dx-4g-DK0" customClass="KeypadViewController" customModule="Handi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="keyboard" title="keypadViewController" id="8dx-4g-DK0" customClass="KeypadViewController" customModule="Bill_Splitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bKD-yV-lnh"/>
                         <viewControllerLayoutGuide type="bottom" id="AIY-Zj-60I"/>
