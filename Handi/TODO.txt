@@ -1,4 +1,4 @@
-0. turn off copy paste
+
 -
 0.5. solve warnings
 1. Comment code

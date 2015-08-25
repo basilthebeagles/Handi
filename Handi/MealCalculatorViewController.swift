@@ -21,12 +21,11 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     @IBOutlet weak var priceLabel: UIButton!
     
     
-    @IBOutlet weak var preTipBillTotalField: UITextField!
+    @IBOutlet weak var preTipBillTotalField: CustomUITextField!
     
-    @IBOutlet weak var amountOfPeopleField: UITextField!
+    @IBOutlet weak var amountOfPeopleField: CustomUITextField!
     
-    @IBOutlet weak var tipPercentageField: UITextField!
-    
+    @IBOutlet weak var tipPercentageField: CustomUITextField!
     
     
     
