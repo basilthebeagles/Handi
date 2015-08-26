@@ -11,6 +11,7 @@ import iAd
 
 class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
+    
     @IBOutlet weak var adBannerView: ADBannerView!
     
     //seperate this stuff out to presentation and controller
@@ -159,6 +160,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     func bannerViewWillLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewWillLoadAd")
+        print("loading")
     }
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {
