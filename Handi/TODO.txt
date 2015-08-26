@@ -1,3 +1,4 @@
+change git ignore
 
 fix autolayout
 0.5. solve warnings
