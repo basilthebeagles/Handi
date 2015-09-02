@@ -1,7 +1,7 @@
 change git ignore!
 maybe after doing a few other apps similer to this, re plan this and re write it a lot better
 
-fix autolayout
+fix autolayout, stop keys getting pushed of view
 
 0.5. solve warnings
 0.7. Double tap c to clear all
