@@ -1,4 +1,4 @@
-change git ignore!
+change git ignore! a
 maybe after doing a few other apps similer to this, re plan this and re write it a lot better
 
 fix autolayout, stop keys getting pushed of view
