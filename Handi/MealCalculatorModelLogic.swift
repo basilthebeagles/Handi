@@ -20,6 +20,7 @@ class MealCalculatorModelLogic{
     
     var currentStackInUse = FieldStack(maxSize: 0, startDecimalPoint: 1)
     //bit above is unnecessary, should fix somehow
+    
     init(model: MealCalculatorModel){
         self.model = model
     }
@@ -31,6 +32,9 @@ class MealCalculatorModelLogic{
         switch(key){
         case .clear:
             currentStackInUse.delete()
+            
+            
+            
         case .backspace:
             currentStackInUse.pop()
         default:

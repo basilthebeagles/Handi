@@ -58,8 +58,25 @@ class MealCalculatorModel{
     func keyPress(key: Key ){
         
         print(preTipbillTotal)
+        var clearAll = false
+        
+        
+        if logic?.currentStackInUse.returnDouble() == 0.0 && key == Key.clear{
+            logic?.preTipTotalStack.delete()
+            logic?.amountOfPeopleStack.delete()
+            logic?.tipPercentageStack.delete()
+            
+            preTipbillTotal == 0.00
+            print("here")
+            amountOfPeople == 1
+            tipPercentage == 0.00
+            clearAll = true
+        }
         
         let returnedTuple = logic!.modification(key, selectedField: selectedField)
+        print(returnedTuple.0)
+        
+        
         switch(selectedField){
         case .preTipBillTotalField:
             preTipbillTotal = returnedTuple.0
@@ -91,7 +108,17 @@ class MealCalculatorModel{
             }
             updatePrice()
             
+        if clearAll == true{
+            controller.redraw(String!(nil), field: FieldType.amountOfPeopleField)
+            controller.redraw(String!(nil), field: FieldType.preTipBillTotalField)
+            controller.redraw(String!(nil), field: FieldType.tipPercentageField)
+
+
+            
+        }else{
             controller.redraw(String!(formattedValue), field: returnedTuple.1)
+        }
+        
         
             
         
@@ -107,7 +134,7 @@ class MealCalculatorModel{
     
     
     func formatter(valueToBeFormatted:  Double, format: FieldType)->String{
-        //source: http://rshankar.com/internationalization-and-localization-of-apps-in-xcode-6-and-swift/
+        
         
         var numberFormatter: NSNumberFormatter {
             let formatter = NSNumberFormatter()
@@ -121,7 +148,7 @@ class MealCalculatorModel{
             return formatter
         }
         
-        
+        //source for above: http://rshankar.com/internationalization-and-localization-of-apps-in-xcode-6-and-swift/
         
         
         
