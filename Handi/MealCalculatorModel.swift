@@ -66,10 +66,10 @@ class MealCalculatorModel{
             logic?.amountOfPeopleStack.delete()
             logic?.tipPercentageStack.delete()
             
-            preTipbillTotal == 0.00
-            print("here")
-            amountOfPeople == 1
-            tipPercentage == 0.00
+            preTipbillTotal = 0.00
+            
+            amountOfPeople = 1
+            tipPercentage = 0.00
             clearAll = true
         }
         
@@ -106,9 +106,9 @@ class MealCalculatorModel{
                 
 
             }
-            updatePrice()
-            
+        updatePrice()
         if clearAll == true{
+
             controller.redraw(String!(nil), field: FieldType.amountOfPeopleField)
             controller.redraw(String!(nil), field: FieldType.preTipBillTotalField)
             controller.redraw(String!(nil), field: FieldType.tipPercentageField)
@@ -129,6 +129,7 @@ class MealCalculatorModel{
     
     func updatePrice(){
         finalTotal = (preTipbillTotal * (1 + (0.01 * tipPercentage)))
+        
     }
      
     

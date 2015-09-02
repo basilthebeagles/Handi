@@ -22,7 +22,7 @@ struct FontSize{
             
     let totalScreenSize = screen.height + screen.width
         
-    let buttonLabelFontSize = totalScreenSize / 14.6760563380282
+    let buttonLabelFontSize = totalScreenSize / 18//14.6760563380282
     
     let finalLabelFontSize = totalScreenSize / 10
     let textFieldFontSize = totalScreenSize / 41.68

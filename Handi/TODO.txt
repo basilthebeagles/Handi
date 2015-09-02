@@ -4,7 +4,6 @@ maybe after doing a few other apps similer to this, re plan this and re write it
 fix autolayout, stop keys getting pushed of view
 
 0.5. solve warnings
-0.7. Double tap c to clear all
 1. Comment code
 2. Create parent classes
 4. Maybe Re do algorithum for tipping
