@@ -74,8 +74,14 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
    
     */
     
+    override func viewDidAppear(animated: Bool) {
+        
+
+    }
+    
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
         self.model = MealCalculatorModel(controller: self)
         // Do any additional setup after loading the view, typically from a nib.
@@ -99,8 +105,8 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         amountOfPeopleField.inputView = dummyView
         tipPercentageField.inputView = dummyView
 
-
         self.canDisplayBannerAds = true
+
         self.adBannerView.delegate = self
         self.adBannerView.hidden = true //hide until ad loaded
         redraw()
@@ -165,6 +171,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewDidLoadAd")
+        
         self.adBannerView.hidden = false //now show banner as ad is loaded
         print("banner getting shown")
     }
@@ -185,7 +192,10 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     }
     
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        
+
         NSLog("bannerView")
+        print("ERROR iAd")
     }
 
     
