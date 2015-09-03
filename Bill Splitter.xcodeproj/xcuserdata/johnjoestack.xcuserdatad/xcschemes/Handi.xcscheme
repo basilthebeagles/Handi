@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "51D886341B838E050025E5A5"
-               BuildableName = "Bill Splitter.app"
+               BuildableName = "Bill Splitterr.app"
                BlueprintName = "Bill Splitterr"
                ReferencedContainer = "container:Bill Splitter.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51D886341B838E050025E5A5"
-            BuildableName = "Bill Splitter.app"
+            BuildableName = "Bill Splitterr.app"
             BlueprintName = "Bill Splitterr"
             ReferencedContainer = "container:Bill Splitter.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51D886341B838E050025E5A5"
-            BuildableName = "Bill Splitter.app"
+            BuildableName = "Bill Splitterr.app"
             BlueprintName = "Bill Splitterr"
             ReferencedContainer = "container:Bill Splitter.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51D886341B838E050025E5A5"
-            BuildableName = "Bill Splitter.app"
+            BuildableName = "Bill Splitterr.app"
             BlueprintName = "Bill Splitterr"
             ReferencedContainer = "container:Bill Splitter.xcodeproj">
          </BuildableReference>
