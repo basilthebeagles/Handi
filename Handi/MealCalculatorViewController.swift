@@ -10,15 +10,19 @@ import UIKit
 import iAd
 
 class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
-    
+    @IBOutlet weak var keypadBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var keyPadView: UIView!
     
     @IBOutlet weak var adBannerView: ADBannerView!
     
     //seperate this stuff out to presentation and controller
     //also seperate out total and tip
+    
     var model: MealCalculatorModel!
     
-    
+    var firstAdd: Bool!
+    var adBannerViewWidth: CGFloat!
+    var adBannerViewHeight: CGFloat!
     @IBOutlet weak var priceLabel: UIButton!
     
     
@@ -105,6 +109,14 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         amountOfPeopleField.inputView = dummyView
         tipPercentageField.inputView = dummyView
 
+        
+        
+        
+        
+          adBannerViewWidth = CGRectGetWidth(adBannerView.bounds);
+          adBannerViewHeight = CGRectGetHeight(adBannerView.bounds);
+         firstAdd = true
+        
         self.canDisplayBannerAds = true
 
         self.adBannerView.delegate = self
@@ -164,6 +176,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     }
     
     
+    
     func bannerViewWillLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewWillLoadAd")
         print("loading")
@@ -172,7 +185,20 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewDidLoadAd")
         
-        self.adBannerView.hidden = false //now show banner as ad is loaded
+        if firstAdd! == true{
+                self.view.layoutIfNeeded()
+                UIView.animateWithDuration(1, animations: {
+            print("called")
+                //self.keypadBottomConstraint.constant -= self.adBannerViewHeight!
+                self.view.layoutIfNeeded()
+                self.adBannerView.hidden = false
+                    self.firstAdd = false
+
+            })
+            
+        }
+         //now show banner as ad is loaded
+        
         print("banner getting shown")
     }
     
