@@ -87,6 +87,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
         self.model = MealCalculatorModel(controller: self)
         // Do any additional setup after loading the view, typically from a nib.
         priceLabel.titleLabel!.numberOfLines = 1;
@@ -121,6 +122,8 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
 
         self.adBannerView.delegate = self
         self.adBannerView.hidden = true //hide until ad loaded
+        self.keypadBottomConstraint.constant -= self.adBannerViewHeight!
+
         redraw()
         
        
@@ -184,19 +187,13 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewDidLoadAd")
-        
         if firstAdd! == true{
-                self.view.layoutIfNeeded()
-                UIView.animateWithDuration(1, animations: {
-            print("called")
-                //self.keypadBottomConstraint.constant -= self.adBannerViewHeight!
-                self.view.layoutIfNeeded()
-                self.adBannerView.hidden = false
-                    self.firstAdd = false
+            firstAdd = false
+            self.keypadBottomConstraint.constant += self.adBannerViewHeight!
 
-            })
-            
         }
+        self.adBannerView.hidden = false
+        
          //now show banner as ad is loaded
         
         print("banner getting shown")
@@ -218,8 +215,14 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     }
     
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        if firstAdd! == false{
+            
+            self.keypadBottomConstraint.constant -= self.adBannerViewHeight!
+            
         
-
+        }
+        self.adBannerView.hidden = true
+        
         NSLog("bannerView")
         print("ERROR iAd")
     }
