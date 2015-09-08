@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0h-gH-lAS" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="221.5" y="141" width="82.5" height="23"/>
+                                <rect key="frame" x="221.5" y="141.5" width="82.5" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="7:2" id="diZ-ZT-vSk"/>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="82:23" id="uVW-D4-VFp"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Md-6V-89X" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="16" y="141" width="82.5" height="23"/>
+                                <rect key="frame" x="16" y="141.5" width="82.5" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="height" multiplier="7:2" id="XZr-Ud-gmZ"/>
                                 </constraints>
@@ -129,31 +129,38 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SBG-o2-z8G" firstAttribute="centerX" secondItem="Acw-xt-PHF" secondAttribute="centerX" id="147-Vd-5dZ"/>
                             <constraint firstItem="Acw-xt-PHF" firstAttribute="leading" secondItem="1Md-6V-89X" secondAttribute="trailing" constant="20" id="4Jj-Ut-iNk"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-1" id="8Ot-HH-tN5"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-0.5" id="DFh-q2-ghM"/>
+                            <constraint firstItem="SBG-o2-z8G" firstAttribute="trailing" secondItem="2Pt-Pr-FLl" secondAttribute="trailing" id="DjH-Zh-75g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SBG-o2-z8G" secondAttribute="trailing" constant="-20" id="Ggy-Fl-WPS"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="GzP-ic-BKT"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="H3z-RR-iSZ"/>
                             <constraint firstItem="x0h-gH-lAS" firstAttribute="height" secondItem="1Md-6V-89X" secondAttribute="height" id="Hyu-Q8-ULQ"/>
+                            <constraint firstItem="SBG-o2-z8G" firstAttribute="leading" secondItem="2Pt-Pr-FLl" secondAttribute="leading" id="JjC-E1-No3"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="Jp5-3j-dMf"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-50" id="JrI-tR-zRy"/>
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="top" secondItem="Acw-xt-PHF" secondAttribute="bottom" constant="41" id="Kk7-P2-MY9"/>
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="LzK-4t-8L7"/>
+                            <constraint firstItem="SBG-o2-z8G" firstAttribute="centerX" secondItem="1fy-IB-Ou1" secondAttribute="centerX" id="MO3-bh-JSz"/>
                             <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="49" id="R4R-wA-zjL"/>
                             <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="49.5" id="Tkk-sd-y2n"/>
                             <constraint firstItem="Acw-xt-PHF" firstAttribute="top" secondItem="1fy-IB-Ou1" secondAttribute="bottom" constant="8" id="VJS-ZS-Dpk"/>
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="W5I-VC-eub"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SBG-o2-z8G" secondAttribute="trailing" constant="-20" id="YFD-os-U6V"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" id="ZDt-I9-tP4"/>
+                            <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="SBG-o2-z8G" secondAttribute="bottom" id="ZFF-Bc-2sB"/>
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="top" secondItem="1Md-6V-89X" secondAttribute="bottom" constant="24" id="cAk-AW-SKQ"/>
                             <constraint firstItem="1Md-6V-89X" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="dQm-0w-kLW"/>
                             <constraint firstItem="1Md-6V-89X" firstAttribute="top" secondItem="1fy-IB-Ou1" secondAttribute="bottom" constant="8" id="eWA-qE-apc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Pt-Pr-FLl" secondAttribute="trailing" constant="-20" id="emW-3E-aWy"/>
                             <constraint firstItem="Acw-xt-PHF" firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="width" constant="1" id="fVD-Tg-K9O"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1fy-IB-Ou1" secondAttribute="leading" id="fX8-uQ-aYD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SBG-o2-z8G" secondAttribute="bottom" id="fpS-w6-boN"/>
                             <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="SBG-o2-z8G" secondAttribute="bottom" id="fwj-pB-Od7"/>
                             <constraint firstItem="x0h-gH-lAS" firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="width" id="gqe-8a-d9c"/>
+                            <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="SBG-o2-z8G" secondAttribute="bottom" id="iE2-eE-OWk"/>
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="top" secondItem="x0h-gH-lAS" secondAttribute="bottom" constant="24" id="jDP-If-GOX"/>
                             <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="SBG-o2-z8G" secondAttribute="bottom" id="jHd-8a-cji"/>
                             <constraint firstItem="x0h-gH-lAS" firstAttribute="leading" secondItem="Acw-xt-PHF" secondAttribute="trailing" constant="20" id="n2m-nW-etC"/>
@@ -177,16 +184,24 @@
                                 <exclude reference="y2X-mX-uaD"/>
                                 <exclude reference="8Ot-HH-tN5"/>
                                 <exclude reference="DFh-q2-ghM"/>
+                                <exclude reference="DjH-Zh-75g"/>
                                 <exclude reference="Ggy-Fl-WPS"/>
+                                <exclude reference="GzP-ic-BKT"/>
                                 <exclude reference="H3z-RR-iSZ"/>
+                                <exclude reference="JjC-E1-No3"/>
                                 <exclude reference="Jp5-3j-dMf"/>
                                 <exclude reference="JrI-tR-zRy"/>
+                                <exclude reference="MO3-bh-JSz"/>
                                 <exclude reference="YFD-os-U6V"/>
                                 <exclude reference="ZDt-I9-tP4"/>
+                                <exclude reference="fpS-w6-boN"/>
                                 <exclude reference="u2T-W9-zCT"/>
                                 <exclude reference="w3p-cc-cc2"/>
+                                <exclude reference="x1j-g9-qgW"/>
                                 <exclude reference="Tkk-sd-y2n"/>
+                                <exclude reference="ZFF-Bc-2sB"/>
                                 <exclude reference="fwj-pB-Od7"/>
+                                <exclude reference="jHd-8a-cji"/>
                                 <exclude reference="nlK-Sg-liH"/>
                                 <exclude reference="oTV-kM-1e9"/>
                                 <exclude reference="x94-05-dlS"/>
