@@ -21,8 +21,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     var model: MealCalculatorModel!
     
     var firstAdd: Bool!
-    var adBannerViewWidth: CGFloat!
-    var adBannerViewHeight: CGFloat!
+    
     @IBOutlet weak var priceLabel: UIButton!
     
     
@@ -114,15 +113,14 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         
         
-          adBannerViewWidth = CGRectGetWidth(adBannerView.bounds);
-          adBannerViewHeight = CGRectGetHeight(adBannerView.bounds);
+        
          firstAdd = true
         
         self.canDisplayBannerAds = true
 
         self.adBannerView.delegate = self
         self.adBannerView.hidden = true //hide until ad loaded
-        self.keypadBottomConstraint.constant -= self.adBannerViewHeight!
+        self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
 
         redraw()
         
@@ -189,10 +187,12 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         NSLog("bannerViewDidLoadAd")
         if firstAdd! == true{
             firstAdd = false
-            self.keypadBottomConstraint.constant += self.adBannerViewHeight!
+            self.keypadBottomConstraint.constant += self.adBannerView.frame.height
 
         }
-        self.adBannerView.hidden = false
+        print(adBannerView.frame.size
+        )
+                self.adBannerView.hidden = false
         
          //now show banner as ad is loaded
         
@@ -216,11 +216,11 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
         if firstAdd! == false{
-            
-            self.keypadBottomConstraint.constant -= self.adBannerViewHeight!
+            self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
             
         
         }
+       
         self.adBannerView.hidden = true
         
         NSLog("bannerView")
