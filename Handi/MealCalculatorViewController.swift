@@ -32,7 +32,21 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     @IBOutlet weak var tipPercentageField: CustomUITextField!
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+            let newViewController = segue.destinationViewController
+        if newViewController.isKindOfClass(SettingsViewController){
+             self.canDisplayBannerAds = false
+            let temp = newViewController as! SettingsViewController
+                temp.previousViewController = self
+            
+        }
+       
+        
+        
+    }
     
     
     @IBAction func perPersonPricePressed() {
@@ -88,6 +102,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         super.viewDidLoad()
 
         self.model = MealCalculatorModel(controller: self)
+        self.navigationController?.navigationBarHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         priceLabel.titleLabel!.numberOfLines = 1;
         priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true
@@ -114,11 +129,10 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         
         
-         firstAdd = true
-        
+        firstAdd = true
+        self.adBannerView.delegate = self
         self.canDisplayBannerAds = true
 
-        self.adBannerView.delegate = self
         self.adBannerView.hidden = true //hide until ad loaded
         self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
 
@@ -177,17 +191,17 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     }
     
     
-    
+   
     func bannerViewWillLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewWillLoadAd")
         print("loading")
     }
-    
+
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewDidLoadAd")
         if firstAdd! == true{
-            firstAdd = false
-            self.keypadBottomConstraint.constant += self.adBannerView.frame.height
+            firstAdd! = false
+            self.keypadBottomConstraint.constant += (self.adBannerView.frame.height) 
 
         }
         print(adBannerView.frame.size
@@ -205,7 +219,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         //optional resume paused game code
         
     }
-    
+
     func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
         NSLog("bannerViewActionShouldBegin")
         
@@ -213,9 +227,9 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         return true
     }
-    
+
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        if firstAdd! == false{
+        if firstAdd! == false{//TODO do fancy optional thing here
             self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
             
         

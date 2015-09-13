@@ -28,6 +28,7 @@
 		5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */; };
 		5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF41B8CB97800AAF479 /* Main.storyboard */; };
 		5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */; settings = {ASSET_TAGS = (); }; };
+		51A7E8F01BA4925900CDE771 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E8EF1BA4925900CDE771 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
 		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5196CDF41B8CB97800AAF479 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedUITextFieldController.swift; sourceTree = "<group>"; };
+		51A7E8EF1BA4925900CDE771 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Bill Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886461B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51D8864B1B838E050025E5A5 /* Bill Splitter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bill Splitter.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				5196CDE61B8CB8C200AAF479 /* KeypadViewController.swift */,
 				5196CDE41B8CB8BC00AAF479 /* MealCalculatorViewController.swift */,
 				5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */,
+				51A7E8EF1BA4925900CDE771 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				5196CDE51B8CB8BC00AAF479 /* MealCalculatorViewController.swift in Sources */,
 				5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */,
 				5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */,
+				51A7E8F01BA4925900CDE771 /* SettingsViewController.swift in Sources */,
 				5196CDE31B8CB8A900AAF479 /* Mode.swift in Sources */,
 				5196CDDF1B8CB89F00AAF479 /* Key.swift in Sources */,
 				5196CDD91B8CB89300AAF479 /* FontSize.swift in Sources */,

@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0h-gH-lAS" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="221.5" y="141.5" width="82.5" height="23"/>
+                                <rect key="frame" x="221.5" y="141" width="82.5" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="7:2" id="diZ-ZT-vSk"/>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="82:23" id="uVW-D4-VFp"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Md-6V-89X" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="16" y="141.5" width="82.5" height="23"/>
+                                <rect key="frame" x="16" y="141" width="82.5" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="height" multiplier="7:2" id="XZr-Ud-gmZ"/>
                                 </constraints>
@@ -71,12 +71,11 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="canPerfomAction:" destination="9pv-A4-QxB" eventType="primaryActionTriggered" id="seG-AP-uzy"/>
                                     <action selector="preTipTotalSelected" destination="9pv-A4-QxB" eventType="editingDidBegin" id="kdQ-Ss-oAy"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="People" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Acw-xt-PHF" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="118" y="141" width="84" height="23"/>
+                                <rect key="frame" x="118" y="141" width="83.5" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Acw-xt-PHF" secondAttribute="height" multiplier="7:2" constant="1.25" id="hqz-lj-4na"/>
                                 </constraints>
@@ -98,7 +97,7 @@
                                     <constraint firstAttribute="width" secondItem="1fy-IB-Ou1" secondAttribute="height" multiplier="335:132" id="eaQ-fr-5Ju"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="75"/>
-                                <state key="normal" title="£125.00">
+                                <state key="normal" title="£135.64">
                                     <color key="titleColor" red="0.26274509800000001" green="0.83921568629999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -106,7 +105,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBG-o2-z8G">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="518" width="320" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dlY-3j-npm"/>
                                     <constraint firstAttribute="width" constant="320" id="pAe-Tk-BKr"/>
@@ -126,6 +125,17 @@
                                     <segue destination="8dx-4g-DK0" kind="embed" identifier="MealCalculator" id="69b-zN-qoo"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKc-mq-MEZ">
+                                <rect key="frame" x="2" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="b4f-F5-Keg"/>
+                                    <constraint firstAttribute="height" constant="20" id="oZE-Ee-8Py"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Settings"/>
+                                <connections>
+                                    <segue destination="2vc-Xg-LVt" kind="presentation" id="7rU-gf-hKu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -134,7 +144,9 @@
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-1" id="8Ot-HH-tN5"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-0.5" id="DFh-q2-ghM"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="trailing" secondItem="2Pt-Pr-FLl" secondAttribute="trailing" id="DjH-Zh-75g"/>
+                            <constraint firstItem="VKc-mq-MEZ" firstAttribute="top" secondItem="ATG-sD-NZR" secondAttribute="bottom" id="E9e-f3-jnJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SBG-o2-z8G" secondAttribute="trailing" constant="-20" id="Ggy-Fl-WPS"/>
+                            <constraint firstItem="VKc-mq-MEZ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="GyQ-cr-UTP"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="GzP-ic-BKT"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="H3z-RR-iSZ"/>
                             <constraint firstItem="x0h-gH-lAS" firstAttribute="height" secondItem="1Md-6V-89X" secondAttribute="height" id="Hyu-Q8-ULQ"/>
@@ -170,6 +182,7 @@
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="top" secondItem="Acw-xt-PHF" secondAttribute="bottom" constant="24" id="ppL-op-4rX"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-0.5" id="u2T-W9-zCT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1fy-IB-Ou1" secondAttribute="trailing" id="uEA-MM-4y4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VKc-mq-MEZ" secondAttribute="trailing" constant="278" id="vGX-q3-Ayv"/>
                             <constraint firstItem="x0h-gH-lAS" firstAttribute="top" secondItem="1fy-IB-Ou1" secondAttribute="bottom" constant="8" id="vdq-NE-063"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" id="w3p-cc-cc2"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="-1" id="x1j-g9-qgW"/>
@@ -180,6 +193,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="vGX-q3-Ayv"/>
                                 <exclude reference="Kk7-P2-MY9"/>
                                 <exclude reference="y2X-mX-uaD"/>
                                 <exclude reference="8Ot-HH-tN5"/>
@@ -208,7 +222,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Meal Calculator" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="nUP-gL-Kxq"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -223,7 +237,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="-318"/>
+            <point key="canvasLocation" x="1306" y="-329"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="c3I-YB-P5e">
+            <objects>
+                <viewController title="Settings" id="2vc-Xg-LVt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c5d-vz-smw"/>
+                        <viewControllerLayoutGuide type="bottom" id="BDI-Qx-Auo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMd-nt-1H1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-0c-qnf">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="m3Y-xn-0fm">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0NF-Hg-1gt"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="leading" secondItem="zMd-nt-1H1" secondAttribute="leadingMargin" constant="-20" id="AQu-5p-Pa6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MZR-0c-qnf" secondAttribute="trailing" constant="-20" id="ASa-Ow-2xD"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="PNb-A2-UQw"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="Rga-xB-Auf"/>
+                            <constraint firstItem="BDI-Qx-Auo" firstAttribute="top" secondItem="MZR-0c-qnf" secondAttribute="bottom" constant="504" id="W7c-bM-32z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AQu-5p-Pa6"/>
+                                <exclude reference="ASa-Ow-2xD"/>
+                                <exclude reference="PNb-A2-UQw"/>
+                                <exclude reference="Rga-xB-Auf"/>
+                                <exclude reference="W7c-bM-32z"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="S1R-eP-dnB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR5-gZ-4ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1676" y="-337"/>
         </scene>
         <!--keypadViewController-->
         <scene sceneID="siU-gp-lfK">
@@ -466,6 +526,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="Settings" width="64" height="64"/>
     </resources>
 </document>
