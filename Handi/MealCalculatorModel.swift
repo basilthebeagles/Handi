@@ -31,21 +31,21 @@ class MealCalculatorModel{
     
     
     init(controller: MealCalculatorViewController){
-        self.controller = controller
-        self.logic = MealCalculatorModelLogic(model: self)
+        self.controller = controller //sets view conttroller object
+        self.logic = MealCalculatorModelLogic(model: self)//sets logic (loads of algorithums) object
         
         
     }
     //var
     
     
-    var currentPriceLabelValue: Double{
+    var currentPriceLabelValue: Double{//stored property
         get{
-            if(lastMode == .combinedPerPersonTotal){
+            if(lastMode == .combinedPerPersonTotal){//returns total meal price inc tip
                 return finalTotal
             }else if(lastMode == .perPerson){
                 
-                return finalTotal / Double(amountOfPeople)
+                return finalTotal / Double(amountOfPeople)//returns price per person
             }else{
                 return 0.00
             }
@@ -55,13 +55,14 @@ class MealCalculatorModel{
     
     
     
-    func keyPress(key: Key ){
+    func keyPress(key: Key ){//called when a numpad key has been pressed
         
         print(preTipbillTotal)
         var clearAll = false
         
         
         if logic?.currentStackInUse.returnDouble() == 0.0 && key == Key.clear{
+            //resets all the values to zero as clear has been double pressed (means clear all)
             logic?.preTipTotalStack.delete()
             logic?.amountOfPeopleStack.delete()
             logic?.tipPercentageStack.delete()
@@ -78,6 +79,8 @@ class MealCalculatorModel{
         
         
         switch(selectedField){
+            //asaigns the new value, that has been changed by a keypad press, to the
+            //correct var
         case .preTipBillTotalField:
             preTipbillTotal = returnedTuple.0
             
@@ -93,25 +96,28 @@ class MealCalculatorModel{
         }
         
         if returnedTuple.0 == 0 && selectedField == FieldType.amountOfPeopleField{
-            
+            //ensures that there is never 0 people, as this is impossible
+            //and dividing by 0 is nasty
                 amountOfPeople = 1
         }
         
-            let formattedValue: String?
+            let formattedValue: String?//this is a optional as passing the text box
+        //a nil value resets it and prints the placeholder value
             
-            if returnedTuple.0 == 0{
+            if returnedTuple.0 == 0{//if zero keep as nil and put up placeholder
                 formattedValue = nil
-            }else{
+            }else{//or format the value to the correct format
                 formattedValue = formatter(returnedTuple.0, format: returnedTuple.1)
                 
 
             }
-        updatePrice()
+        updatePrice()//updates the stored property of the final price (big green thing)
+        
         if clearAll == true{
-
-            controller.redraw(String!(nil), field: FieldType.amountOfPeopleField)
-            controller.redraw(String!(nil), field: FieldType.preTipBillTotalField)
-            controller.redraw(String!(nil), field: FieldType.tipPercentageField)
+            //redraws all the values with a placeholder
+            controller.redraw(String!(formattedValue), field: FieldType.amountOfPeopleField)
+            controller.redraw(String!(formattedValue), field: FieldType.preTipBillTotalField)
+            controller.redraw(String!(formattedValue), field: FieldType.tipPercentageField)
 
 
             
@@ -128,6 +134,7 @@ class MealCalculatorModel{
     
     
     func updatePrice(){
+        //creates a final total price including tip
         finalTotal = (preTipbillTotal * (1 + (0.01 * tipPercentage)))
         
     }
@@ -173,6 +180,8 @@ class MealCalculatorModel{
     
     
     func changeMode(){
+        //there is a mode where the price per person can be displayed or the total can be displayed, this 
+        //handles that
         if(lastMode == .combinedPerPersonTotal){
             lastMode = .perPerson
         }

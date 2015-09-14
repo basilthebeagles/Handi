@@ -12,7 +12,7 @@ import UIKit
 
 
 struct FontSize{
-   
+   //this function creates a nice sized font, depending on the screen size of a device
     
     func correctFontSizeForScreenSize()->(CGFloat, CGFloat, CGFloat){
         

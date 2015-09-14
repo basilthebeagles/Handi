@@ -15,6 +15,7 @@ class CustomUITextField: UITextField {
     override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
         if action == "paste:" || action == "cut:" || action == "replace...:" {
             return false
+            //ovverides the iOS can peform action function, allowing us to prevent pasting, cutting and replacing being preformed
         }
         return super.canPerformAction(action, withSender: sender)
     }

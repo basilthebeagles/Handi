@@ -266,6 +266,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MZR-0c-qnf" secondAttribute="trailing" constant="-20" id="ASa-Ow-2xD"/>
                             <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="PNb-A2-UQw"/>
                             <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="Rga-xB-Auf"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="Vaw-ft-GAS"/>
                             <constraint firstItem="BDI-Qx-Auo" firstAttribute="top" secondItem="MZR-0c-qnf" secondAttribute="bottom" constant="504" id="W7c-bM-32z"/>
                         </constraints>
                         <variation key="default">
@@ -274,6 +275,7 @@
                                 <exclude reference="ASa-Ow-2xD"/>
                                 <exclude reference="PNb-A2-UQw"/>
                                 <exclude reference="Rga-xB-Auf"/>
+                                <exclude reference="Vaw-ft-GAS"/>
                                 <exclude reference="W7c-bM-32z"/>
                             </mask>
                         </variation>

@@ -50,14 +50,17 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     
     @IBAction func perPersonPricePressed() {
-        //changes mode
+        //called when total text is touched
+        //which means the user wants the mode changed
+        
         model.changeMode()
-        redraw()
+        redraw()//redraws the total text
         
         
     }
     
-    
+    //following functions are called when their text fields are selected
+    //they will change the selected field to themselves
     @IBAction func preTipTotalSelected() {
         print("pretip field selected")
         
@@ -103,12 +106,13 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
 
         self.model = MealCalculatorModel(controller: self)
         self.navigationController?.navigationBarHidden = true
-        // Do any additional setup after loading the view, typically from a nib.
+         
         priceLabel.titleLabel!.numberOfLines = 1;
         priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true
         
         let fontSizer = FontSize()
         let correctFontSize = fontSizer.correctFontSizeForScreenSize()
+        
         priceLabel.titleLabel!.font = priceLabel.titleLabel!.font.fontWithSize(correctFontSize.0)
         
         preTipBillTotalField.font = preTipBillTotalField.font?.fontWithSize(correctFontSize.2)
@@ -116,7 +120,8 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         tipPercentageField.font = tipPercentageField.font?.fontWithSize(correctFontSize.2)
         
         
-        
+        //these lines here allow me to assaign a dummy view to the text fields
+        //which then allows me to prevent pasting in to them
         
         let dummyView: UIView = UIView(frame: CGRectMake(0, 0, 1, 1))
         
@@ -164,11 +169,11 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
 
     func redraw(newValue: String?, field: FieldType){
         
-        self.redraw()
+        self.redraw()//redraws the total field
         
         
         
-        
+        //changes the correct textfield to its new values
         switch field{
         case .amountOfPeopleField:
             amountOfPeopleField.text = newValue
@@ -183,7 +188,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     
     func redraw(){
-        
+        //changes the total field to the correct new value and format
         priceLabel.setTitle(model.formatter(model.currentPriceLabelValue, format: FieldType.finalTotal
             ), forState: UIControlState.Normal)
         
@@ -199,8 +204,10 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
 
     func bannerViewDidLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewDidLoadAd")
+        
         if firstAdd! == true{
             firstAdd! = false
+            //if this is a new valid add then make space on screen
             self.keypadBottomConstraint.constant += (self.adBannerView.frame.height) 
 
         }
@@ -229,15 +236,16 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     }
 
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        //if there has been an add error and adds have been displayed hide the adbar
         if firstAdd! == false{//TODO do fancy optional thing here
-            self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
-            
+            //self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
+            firstAdd! == true
         
         }
        
         self.adBannerView.hidden = true
         
-        NSLog("bannerView")
+        
         print("ERROR iAd")
     }
 

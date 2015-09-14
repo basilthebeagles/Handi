@@ -47,7 +47,7 @@ class KeypadViewController: UIViewController {
         let correctFontSize = fontSizer.correctFontSizeForScreenSize()
         
         
-        
+        //changes all the buttons to the correct fontsize
         zero.titleLabel!.font = zero.titleLabel!.font.fontWithSize(correctFontSize.1)
         
         clear.titleLabel!.font = clear.titleLabel!.font.fontWithSize(correctFontSize.1)
@@ -74,7 +74,7 @@ class KeypadViewController: UIViewController {
         
         
 
-        //add all of them
+       
         // Do any additional setup after loading the view.
     }
     
@@ -157,6 +157,7 @@ class KeypadViewController: UIViewController {
         
         //print("at key router" + String(key.rawValue))
         //print(self.parentViewController)
+        //fancy stuff that makes this class kind of modular i think?
         if self.parentViewController!.isKindOfClass(MealCalculatorViewController){
            
             let parentView = self.parentViewController as! MealCalculatorViewController
