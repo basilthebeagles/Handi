@@ -238,8 +238,9 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
         //if there has been an add error and adds have been displayed hide the adbar
         if firstAdd! == false{//TODO do fancy optional thing here
-            //self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
-            firstAdd! == true
+            self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
+            print("called")
+            firstAdd! = true
         
         }
        
@@ -250,7 +251,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     }
 
     
-    
+
     
 }
 

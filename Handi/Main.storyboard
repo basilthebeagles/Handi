@@ -251,7 +251,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-0c-qnf">
+                            <navigationBar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-0c-qnf">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Settings" id="m3Y-xn-0fm">
@@ -259,23 +259,47 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-JU-EhX">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="yVj-xQ-gpJ"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="leading" secondItem="zMd-nt-1H1" secondAttribute="leading" id="7Xb-8b-lwI"/>
                             <constraint firstItem="MZR-0c-qnf" firstAttribute="leading" secondItem="zMd-nt-1H1" secondAttribute="leadingMargin" constant="-20" id="AQu-5p-Pa6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MZR-0c-qnf" secondAttribute="trailing" constant="-20" id="ASa-Ow-2xD"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="JOD-Ww-kGi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MZR-0c-qnf" secondAttribute="trailing" constant="-20" id="LUu-g1-iiX"/>
                             <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="PNb-A2-UQw"/>
                             <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="Rga-xB-Auf"/>
+                            <constraint firstItem="BDI-Qx-Auo" firstAttribute="top" secondItem="MZR-0c-qnf" secondAttribute="bottom" constant="504" id="SY3-VO-633"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="centerX" secondItem="zMd-nt-1H1" secondAttribute="centerX" id="SiL-bh-VEo"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="U78-LM-5hH"/>
                             <constraint firstItem="MZR-0c-qnf" firstAttribute="top" secondItem="c5d-vz-smw" secondAttribute="bottom" id="Vaw-ft-GAS"/>
                             <constraint firstItem="BDI-Qx-Auo" firstAttribute="top" secondItem="MZR-0c-qnf" secondAttribute="bottom" constant="504" id="W7c-bM-32z"/>
+                            <constraint firstAttribute="trailing" secondItem="MZR-0c-qnf" secondAttribute="trailing" id="a1w-Fm-eTm"/>
+                            <constraint firstItem="BDI-Qx-Auo" firstAttribute="top" secondItem="MZR-0c-qnf" secondAttribute="bottom" constant="504" id="abG-Fs-xfu"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="leading" secondItem="zMd-nt-1H1" secondAttribute="leadingMargin" constant="-20" id="cQa-Ax-mnh"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="leading" secondItem="zMd-nt-1H1" secondAttribute="leadingMargin" constant="-20" id="gJn-Nt-DRF"/>
+                            <constraint firstItem="MZR-0c-qnf" firstAttribute="centerX" secondItem="zMd-nt-1H1" secondAttribute="centerX" id="uzN-4P-WIv"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="7Xb-8b-lwI"/>
                                 <exclude reference="AQu-5p-Pa6"/>
                                 <exclude reference="ASa-Ow-2xD"/>
+                                <exclude reference="LUu-g1-iiX"/>
                                 <exclude reference="PNb-A2-UQw"/>
                                 <exclude reference="Rga-xB-Auf"/>
+                                <exclude reference="U78-LM-5hH"/>
                                 <exclude reference="Vaw-ft-GAS"/>
+                                <exclude reference="a1w-Fm-eTm"/>
+                                <exclude reference="gJn-Nt-DRF"/>
+                                <exclude reference="uzN-4P-WIv"/>
+                                <exclude reference="SY3-VO-633"/>
                                 <exclude reference="W7c-bM-32z"/>
                             </mask>
                         </variation>
