@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="x0h-gH-lAS" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="221.5" y="141" width="82.5" height="23"/>
+                                <rect key="frame" x="222" y="141" width="82" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="7:2" id="diZ-ZT-vSk"/>
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="82:23" id="uVW-D4-VFp"/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill" textAlignment="center" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="1Md-6V-89X" customClass="CustomUITextField" customModule="Bill_Splitter" customModuleProvider="target">
-                                <rect key="frame" x="16" y="141" width="82.5" height="23"/>
+                                <rect key="frame" x="16" y="141" width="82" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="height" multiplier="7:2" id="XZr-Ud-gmZ"/>
                                 </constraints>
@@ -91,8 +91,8 @@
                                     <action selector="amountOfPeopleSelected" destination="9pv-A4-QxB" eventType="editingDidBegin" id="RuQ-CT-D3g"/>
                                 </connections>
                             </textField>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBG-o2-z8G">
-                                <rect key="frame" x="0.0" y="568" width="320" height="50"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBG-o2-z8G">
+                                <rect key="frame" x="0.0" y="568" width="320" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dlY-3j-npm"/>
                                     <constraint firstAttribute="width" constant="320" id="pAe-Tk-BKr"/>
@@ -127,11 +127,11 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="Settings"/>
                                 <connections>
-                                    <segue destination="2vc-Xg-LVt" kind="presentation" id="7rU-gf-hKu"/>
+                                    <segue destination="rTr-lx-0gY" kind="show" id="xHu-av-M90"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-Pr-FLl">
-                                <rect key="frame" x="0.0" y="187" width="320" height="381"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-Pr-FLl">
+                                <rect key="frame" x="-4" y="187" width="328" height="381"/>
                                 <connections>
                                     <segue destination="8dx-4g-DK0" kind="embed" identifier="MealCalculator" id="69b-zN-qoo"/>
                                 </connections>
@@ -162,6 +162,7 @@
                             <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" constant="49.5" id="Tkk-sd-y2n"/>
                             <constraint firstItem="Acw-xt-PHF" firstAttribute="top" secondItem="1fy-IB-Ou1" secondAttribute="bottom" constant="8" id="VJS-ZS-Dpk"/>
                             <constraint firstItem="2Pt-Pr-FLl" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="W5I-VC-eub"/>
+                            <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" id="W5c-sx-ref"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SBG-o2-z8G" secondAttribute="trailing" constant="-20" id="YFD-os-U6V"/>
                             <constraint firstItem="SBG-o2-z8G" firstAttribute="top" secondItem="2Pt-Pr-FLl" secondAttribute="bottom" id="ZDt-I9-tP4"/>
                             <constraint firstItem="IxJ-bZ-vIR" firstAttribute="top" secondItem="SBG-o2-z8G" secondAttribute="bottom" id="ZFF-Bc-2sB"/>
@@ -201,13 +202,6 @@
                                 <exclude reference="vGX-q3-Ayv"/>
                                 <exclude reference="Kk7-P2-MY9"/>
                                 <exclude reference="y2X-mX-uaD"/>
-                                <exclude reference="Tkk-sd-y2n"/>
-                                <exclude reference="ZFF-Bc-2sB"/>
-                                <exclude reference="fwj-pB-Od7"/>
-                                <exclude reference="jHd-8a-cji"/>
-                                <exclude reference="nlK-Sg-liH"/>
-                                <exclude reference="oTV-kM-1e9"/>
-                                <exclude reference="x94-05-dlS"/>
                                 <exclude reference="8Ot-HH-tN5"/>
                                 <exclude reference="DFh-q2-ghM"/>
                                 <exclude reference="DjH-Zh-75g"/>
@@ -225,16 +219,27 @@
                                 <exclude reference="w3p-cc-cc2"/>
                                 <exclude reference="x1j-g9-qgW"/>
                                 <exclude reference="yBN-Eb-gj7"/>
+                                <exclude reference="Tkk-sd-y2n"/>
+                                <exclude reference="ZFF-Bc-2sB"/>
+                                <exclude reference="fwj-pB-Od7"/>
+                                <exclude reference="iE2-eE-OWk"/>
+                                <exclude reference="jHd-8a-cji"/>
+                                <exclude reference="nlK-Sg-liH"/>
+                                <exclude reference="oTV-kM-1e9"/>
+                                <exclude reference="x94-05-dlS"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="nUP-gL-Kxq"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="adBannerView" destination="SBG-o2-z8G" id="oen-xh-gik"/>
+                        <outlet property="adBannerViewTopConstraint" destination="W5c-sx-ref" id="9f8-Kw-3Nr"/>
                         <outlet property="amountOfPeopleField" destination="Acw-xt-PHF" id="psi-yf-7Bt"/>
                         <outlet property="keyPadView" destination="2Pt-Pr-FLl" id="wpd-yj-61l"/>
+                        <outlet property="keypadBottomConstraint" destination="BkC-C3-xr2" id="FNy-wK-OYJ"/>
                         <outlet property="preTipBillTotalField" destination="1Md-6V-89X" id="FhP-jx-jQ6"/>
                         <outlet property="priceLabel" destination="1fy-IB-Ou1" id="qlU-Kw-woa"/>
                         <outlet property="tipPercentageField" destination="x0h-gH-lAS" id="5vf-hC-2kA"/>
@@ -244,9 +249,70 @@
             </objects>
             <point key="canvasLocation" x="1445" y="-328"/>
         </scene>
+        <!--Options-->
+        <scene sceneID="25L-bP-LHT">
+            <objects>
+                <tableViewController id="eku-A8-Xbm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iyi-Co-Skt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="qxW-xl-aWm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Obx-4l-9fJ">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Obx-4l-9fJ" id="30w-ls-4Oa">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gKM-ls-hzP">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gKM-ls-hzP" id="R8j-dO-nIy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="V0P-ZX-Yld">
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0P-ZX-Yld" id="gCd-cP-RFY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="eku-A8-Xbm" id="os6-oX-NzE"/>
+                            <outlet property="delegate" destination="eku-A8-Xbm" id="nxG-qE-fvz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Options" id="zbo-j6-Fhm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wdt-Oa-1zR">
+                            <connections>
+                                <segue destination="OuS-l4-hhv" kind="unwind" unwindAction="prepareForUnwind:" id="5ja-bX-vk2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="2vc-Xg-LVt" kind="show" id="Zoh-dy-lSZ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3e-LJ-h9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OuS-l4-hhv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2215" y="-1016"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="c3I-YB-P5e">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR5-gZ-4ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="czR-OA-YP7" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController title="Settings" id="2vc-Xg-LVt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c5d-vz-smw"/>
@@ -256,11 +322,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-0c-qnf">
+                            <navigationBar autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-0c-qnf">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Settings" id="m3Y-xn-0fm">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0NF-Hg-1gt"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="0NF-Hg-1gt">
+                                            <connections>
+                                                <segue destination="czR-OA-YP7" kind="unwind" unwindAction="prepareForUnwind:" id="udE-P8-05E"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -316,10 +386,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="S1R-eP-dnB"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HR5-gZ-4ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981" y="-328"/>
         </scene>
@@ -332,11 +401,11 @@
                         <viewControllerLayoutGuide type="bottom" id="AIY-Zj-60I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OfE-7a-vnj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="381"/>
+                        <rect key="frame" x="0.0" y="0.0" width="328" height="381"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7g-Yd-SS0">
-                                <rect key="frame" x="16" y="240" width="96" height="83.5"/>
+                                <rect key="frame" x="16" y="240" width="99" height="95.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="C">
@@ -347,7 +416,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtF-jF-Xdh">
-                                <rect key="frame" x="16" y="160" width="96" height="82"/>
+                                <rect key="frame" x="16" y="160" width="99" height="82"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="1">
@@ -358,7 +427,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buX-Cc-8ed">
-                                <rect key="frame" x="112" y="160" width="96" height="82.5"/>
+                                <rect key="frame" x="114" y="160" width="97" height="82.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="2">
@@ -369,7 +438,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBy-dl-UW2">
-                                <rect key="frame" x="208" y="189" width="96" height="82"/>
+                                <rect key="frame" x="210" y="189" width="99" height="82"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="3">
@@ -380,7 +449,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3la-Qg-O3t">
-                                <rect key="frame" x="207" y="284" width="96" height="96"/>
+                                <rect key="frame" x="212" y="284" width="99" height="96"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="⌫">
@@ -391,7 +460,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTV-b1-HR4">
-                                <rect key="frame" x="16" y="0.0" width="96" height="95.5"/>
+                                <rect key="frame" x="16" y="0.0" width="99" height="95.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="7">
@@ -402,7 +471,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AX-Nx-9qz">
-                                <rect key="frame" x="208" y="0.0" width="96" height="95.5"/>
+                                <rect key="frame" x="213" y="0.0" width="99" height="95.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="9">
@@ -413,7 +482,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOC-Vv-GN7">
-                                <rect key="frame" x="16" y="82" width="96" height="82.5"/>
+                                <rect key="frame" x="16" y="82" width="99" height="82.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="4">
@@ -424,7 +493,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmb-cG-2Co">
-                                <rect key="frame" x="112" y="82" width="96" height="82.5"/>
+                                <rect key="frame" x="114" y="82" width="97" height="82.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="5">
@@ -435,7 +504,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yO-Mj-rGp">
-                                <rect key="frame" x="207" y="82" width="96" height="82.5"/>
+                                <rect key="frame" x="212" y="82" width="99" height="82.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="6">
@@ -446,7 +515,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttp-2L-sXS">
-                                <rect key="frame" x="112" y="0.0" width="96" height="95.5"/>
+                                <rect key="frame" x="114" y="0.0" width="99" height="95.5"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="8">
@@ -457,7 +526,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEq-1o-09q">
-                                <rect key="frame" x="112" y="241" width="96" height="83"/>
+                                <rect key="frame" x="114" y="241" width="97" height="95"/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
                                 <state key="normal" title="0">
@@ -561,6 +630,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFA-wt-byX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1695" y="189.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XcL-2w-dAh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rTr-lx-0gY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mX2-px-S5C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eku-A8-Xbm" kind="relationship" relationship="rootViewController" id="Y5s-Kg-a32"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJq-0r-Xb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="-1140"/>
         </scene>
     </scenes>
     <resources>

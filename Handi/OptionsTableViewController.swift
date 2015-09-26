@@ -1,34 +1,32 @@
 //
-//  SettingsViewController.swift
+//  SettingsTableViewController.swift
 //  Bill Splitter
 //
-//  Created by JohnJoe Stack on 12/09/2015.
+//  Created by JohnJoe Stack on 26/09/2015.
 //  Copyright © 2015 FStack. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-//WIP
+class OptionsTableViewController: UIViewController{
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-    
-    var previousViewController: MealCalculatorViewController?
-    
-    
-    
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        
         // Dispose of any resources that can be recreated.
     }
     
 
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

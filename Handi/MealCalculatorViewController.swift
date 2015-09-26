@@ -10,8 +10,11 @@ import UIKit
 import iAd
 
 class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
-    //@IBOutlet weak var keypadBottomConstraint: NSLayoutConstraint!
     
+   
+    @IBOutlet weak var adBannerViewTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var keypadBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var keyPadView: UIView!
     
     @IBOutlet weak var adBannerView: ADBannerView!
@@ -37,16 +40,17 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-            let newViewController = segue.destinationViewController
-        if newViewController.isKindOfClass(SettingsViewController){
-             self.canDisplayBannerAds = false
-            let temp = newViewController as! SettingsViewController
-                temp.previousViewController = self
+            self.canDisplayBannerAds = false
             
         }
        
         
         
+    
+    
+    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
+        self.canDisplayBannerAds = true
     }
     
     
@@ -134,14 +138,14 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         
         
-        
         firstAdd = true
         self.adBannerView.delegate = self
         self.canDisplayBannerAds = true
 
         self.adBannerView.hidden = true //hide until ad loaded
        // self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
-
+        
+        self.keypadBottomConstraint.constant += (self.adBannerView.frame.height)
         redraw()
         
        
@@ -154,6 +158,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         // Dispose of any resources that can bae recreated.
         
     }
+    
     
     
     
@@ -209,11 +214,20 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         if firstAdd! == true{
             firstAdd! = false
             //change 0, 0 to current x, y
-            keyPadView.frame = CGRectMake(0 , 0, self.view.frame.width, self.view.frame.height - self.adBannerView.frame.height)
+            
+            
+            
+           
+                //if this is a new valid add then make space on screen
 
-            //if this is a new valid add then make space on screen
-            //self.keypadBottomConstraint.constant += (self.adBannerView.frame.height)
-
+                
+            
+                    
+            
+            
+            
+            
+            
         }
         print(adBannerView.frame.size
         )
@@ -241,14 +255,10 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
 
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
         //if there has been an add error and adds have been displayed hide the adbar
-        if firstAdd! == false{//TODO do fancy optional thing here
-          //  self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
-            print("called")
-            firstAdd! = true
         
-        }
+        
+      self.adBannerView.hidden = true
        
-        self.adBannerView.hidden = true
         
         
         print("ERROR iAd")
