@@ -8,10 +8,13 @@
 
 import UIKit
 
-class OptionsViewController: UIViewController {
+class OptionsViewController: UITableViewController {
 //WIP
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
         // Do any additional setup after loading the view.
     }
     
@@ -30,6 +33,8 @@ class OptionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+        
 
     /*
     // MARK: - Navigation
