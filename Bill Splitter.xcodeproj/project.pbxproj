@@ -75,6 +75,7 @@
 		5196CDF41B8CB97800AAF479 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedUITextFieldController.swift; sourceTree = "<group>"; };
 		51A7E8EF1BA4925900CDE771 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bill Splitterr-Bridging-Header.h"; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Bill Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886461B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51D8864B1B838E050025E5A5 /* Bill Splitter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bill Splitter.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +192,7 @@
 				5196CDD41B8CB89300AAF479 /* FontSize.swift */,
 				5196CDD51B8CB89300AAF479 /* FontSizeGetter.swift */,
 				5196CDD61B8CB89300AAF479 /* Format.swift */,
+				51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 		51D8862D1B838E050025E5A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = FStack;
 				TargetAttributes = {
@@ -474,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Handi/Info.plist;
@@ -482,6 +486,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.f-stack.billsplitter";
 				PRODUCT_NAME = "Bill Splitter";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handi/Bill Splitterr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -490,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Handi/Info.plist;
@@ -498,6 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.f-stack.billsplitter";
 				PRODUCT_NAME = "Bill Splitter";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handi/Bill Splitterr-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
