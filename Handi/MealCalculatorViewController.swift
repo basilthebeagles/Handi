@@ -139,16 +139,18 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         
         firstAdd = true
+        
+        
         self.adBannerView.delegate = self
         self.canDisplayBannerAds = true
 
         self.adBannerView.hidden = true //hide until ad loaded
-       // self.keypadBottomConstraint.constant -= self.adBannerView.frame.height
+        
         
         self.keypadBottomConstraint.constant += (self.adBannerView.frame.height)
         redraw()
         
-       
+        
     }
     
    
