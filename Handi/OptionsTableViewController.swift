@@ -8,11 +8,11 @@
 
 import UIKit
 
-class OptionsTableViewController: UIViewController{
+class OptionsTableViewController: UIViewController, UITableViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         
         // Do any additional setup after loading the view.
     }
@@ -22,10 +22,18 @@ class OptionsTableViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-
+  
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("row touched")
+        
+    }
     
     
     
+    
+    func rateApp(){
+    UIApplication.sharedApplication().openURL(NSURL(string : "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=\\()&onlyLatestVersion=true&pageNumber=0&sortOrdering=1)")!);
+    }
     
     
     /*

@@ -336,5 +336,68 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Handi/OptionsTableViewController.swift"
+            timestampString = "465155314.838952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "OptionsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bill_Splitter.OptionsTableViewController.__deallocating_deinit"
+                  moduleName = "Bill Splitter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnjoestack/Documents/Development/Handi/Handi/OptionsTableViewController.swift"
+                  timestampString = "465155314.867887"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bill_Splitter.OptionsTableViewController.init (Bill_Splitter.OptionsTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Bill_Splitter.OptionsTableViewController"
+                  moduleName = "Bill Splitter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnjoestack/Documents/Development/Handi/Handi/OptionsTableViewController.swift"
+                  timestampString = "465155314.868061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bill_Splitter.OptionsTableViewController.init (Bill_Splitter.OptionsTableViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Bill_Splitter.OptionsTableViewController&gt;"
+                  moduleName = "Bill Splitter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnjoestack/Documents/Development/Handi/Handi/OptionsTableViewController.swift"
+                  timestampString = "465155314.868167"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
