@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5109783D1B8B84F500EB5B70 /* iAd.framework */; };
-		51194A181BB6FF9A00FBF0BC /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51194A171BB6FF9A00FBF0BC /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		513781651B8CD7780089D77E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 513781641B8CD7780089D77E /* Default-568h@2x.png */; };
+		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		516D11351BBB0E0200D7005D /* OptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11341BBB0E0200D7005D /* OptionsModel.swift */; settings = {ASSET_TAGS = (); }; };
 		5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDCA1B8CB7C200AAF479 /* TODO.txt */; };
 		5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */; };
 		5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */; };
@@ -29,7 +30,6 @@
 		5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */; };
 		5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF41B8CB97800AAF479 /* Main.storyboard */; };
 		5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */; settings = {ASSET_TAGS = (); }; };
-		51A7E8F01BA4925900CDE771 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A7E8EF1BA4925900CDE771 /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
 		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
 /* End PBXBuildFile section */
@@ -53,8 +53,9 @@
 
 /* Begin PBXFileReference section */
 		5109783D1B8B84F500EB5B70 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		51194A171BB6FF9A00FBF0BC /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
 		513781641B8CD7780089D77E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Handi/Default-568h@2x.png"; sourceTree = "<group>"; };
+		516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
+		516D11341BBB0E0200D7005D /* OptionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsModel.swift; sourceTree = "<group>"; };
 		5196CDCA1B8CB7C200AAF479 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Handi/TODO.txt; sourceTree = "<group>"; };
 		5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModel.swift; sourceTree = "<group>"; };
 		5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModelLogic.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5196CDF41B8CB97800AAF479 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedUITextFieldController.swift; sourceTree = "<group>"; };
-		51A7E8EF1BA4925900CDE771 /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bill Splitterr-Bridging-Header.h"; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Bill Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886461B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,11 +115,10 @@
 		51005A711B84BC7A00BE0AB1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */,
 				5196CDE61B8CB8C200AAF479 /* KeypadViewController.swift */,
 				5196CDE41B8CB8BC00AAF479 /* MealCalculatorViewController.swift */,
 				5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */,
-				51A7E8EF1BA4925900CDE771 /* OptionsViewController.swift */,
-				51194A171BB6FF9A00FBF0BC /* OptionsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +201,7 @@
 			children = (
 				5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */,
 				5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */,
+				516D11341BBB0E0200D7005D /* OptionsModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -342,18 +342,18 @@
 			files = (
 				5196CDDE1B8CB89F00AAF479 /* IntStack.swift in Sources */,
 				5196CDE21B8CB8A900AAF479 /* Method.swift in Sources */,
+				516D11351BBB0E0200D7005D /* OptionsModel.swift in Sources */,
 				5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */,
 				5196CDE71B8CB8C200AAF479 /* KeypadViewController.swift in Sources */,
 				5196CDE51B8CB8BC00AAF479 /* MealCalculatorViewController.swift in Sources */,
 				5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */,
-				51194A181BB6FF9A00FBF0BC /* OptionsTableViewController.swift in Sources */,
 				5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */,
-				51A7E8F01BA4925900CDE771 /* OptionsViewController.swift in Sources */,
 				5196CDE31B8CB8A900AAF479 /* Mode.swift in Sources */,
 				5196CDDF1B8CB89F00AAF479 /* Key.swift in Sources */,
 				5196CDD91B8CB89300AAF479 /* FontSize.swift in Sources */,
 				5196CDDA1B8CB89300AAF479 /* FontSizeGetter.swift in Sources */,
 				5196CDD11B8CB82700AAF479 /* AppDelegate.swift in Sources */,
+				516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */,
 				5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */,
 				5196CDD81B8CB89300AAF479 /* FieldType.swift in Sources */,
 				5196CDD71B8CB89300AAF479 /* FieldStack.swift in Sources */,
