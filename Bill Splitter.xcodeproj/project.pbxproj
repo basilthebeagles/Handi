@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5109783D1B8B84F500EB5B70 /* iAd.framework */; };
-		513781651B8CD7780089D77E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 513781641B8CD7780089D77E /* Default-568h@2x.png */; };
 		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		516D11351BBB0E0200D7005D /* OptionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11341BBB0E0200D7005D /* OptionsModel.swift */; settings = {ASSET_TAGS = (); }; };
 		5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDCA1B8CB7C200AAF479 /* TODO.txt */; };
 		5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */; };
 		5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */; };
@@ -30,32 +28,14 @@
 		5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */; };
 		5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF41B8CB97800AAF479 /* Main.storyboard */; };
 		5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */; settings = {ASSET_TAGS = (); }; };
-		51D886501B838E050025E5A5 /* HandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8864F1B838E050025E5A5 /* HandiTests.swift */; };
-		51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D8865A1B838E050025E5A5 /* HandiUITests.swift */; };
+		51EA48FC1BBD693B00690992 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EA48FB1BBD693B00690992 /* StoreKit.framework */; };
+		51EA48FE1BBD6B0400690992 /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		51EA49021BBD71C800690992 /* PlistHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA49011BBD71C800690992 /* PlistHandler.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		51D8864C1B838E050025E5A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51D8862D1B838E050025E5A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51D886341B838E050025E5A5;
-			remoteInfo = Handi;
-		};
-		51D886571B838E050025E5A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51D8862D1B838E050025E5A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51D886341B838E050025E5A5;
-			remoteInfo = Handi;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5109783D1B8B84F500EB5B70 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		513781641B8CD7780089D77E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Handi/Default-568h@2x.png"; sourceTree = "<group>"; };
 		516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
-		516D11341BBB0E0200D7005D /* OptionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsModel.swift; sourceTree = "<group>"; };
 		5196CDCA1B8CB7C200AAF479 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Handi/TODO.txt; sourceTree = "<group>"; };
 		5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModel.swift; sourceTree = "<group>"; };
 		5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModelLogic.swift; sourceTree = "<group>"; };
@@ -78,12 +58,9 @@
 		51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bill Splitterr-Bridging-Header.h"; sourceTree = "<group>"; };
 		51D886351B838E050025E5A5 /* Bill Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D886461B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51D8864B1B838E050025E5A5 /* Bill Splitter.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bill Splitter.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51D8864F1B838E050025E5A5 /* HandiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandiTests.swift; sourceTree = "<group>"; };
-		51D886511B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51D886561B838E050025E5A5 /* Bill Splitterr.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bill Splitterr.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51D8865A1B838E050025E5A5 /* HandiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandiUITests.swift; sourceTree = "<group>"; };
-		51D8865C1B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51EA48FB1BBD693B00690992 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandler.swift; sourceTree = "<group>"; };
+		51EA49011BBD71C800690992 /* PlistHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,20 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51D886481B838E050025E5A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51D886531B838E050025E5A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				51EA48FC1BBD693B00690992 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,12 +90,10 @@
 		51D8862C1B838E050025E5A5 = {
 			isa = PBXGroup;
 			children = (
+				51EA48FB1BBD693B00690992 /* StoreKit.framework */,
 				5196CDCA1B8CB7C200AAF479 /* TODO.txt */,
-				513781641B8CD7780089D77E /* Default-568h@2x.png */,
 				5109783D1B8B84F500EB5B70 /* iAd.framework */,
 				51D886371B838E050025E5A5 /* Handi */,
-				51D8864E1B838E050025E5A5 /* HandiTests */,
-				51D886591B838E050025E5A5 /* HandiUITests */,
 				51D886361B838E050025E5A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				51D886351B838E050025E5A5 /* Bill Splitter.app */,
-				51D8864B1B838E050025E5A5 /* Bill Splitter.xctest */,
-				51D886561B838E050025E5A5 /* Bill Splitterr.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,24 +121,6 @@
 			path = Handi;
 			sourceTree = "<group>";
 		};
-		51D8864E1B838E050025E5A5 /* HandiTests */ = {
-			isa = PBXGroup;
-			children = (
-				51D8864F1B838E050025E5A5 /* HandiTests.swift */,
-				51D886511B838E050025E5A5 /* Info.plist */,
-			);
-			path = HandiTests;
-			sourceTree = "<group>";
-		};
-		51D886591B838E050025E5A5 /* HandiUITests */ = {
-			isa = PBXGroup;
-			children = (
-				51D8865A1B838E050025E5A5 /* HandiUITests.swift */,
-				51D8865C1B838E050025E5A5 /* Info.plist */,
-			);
-			path = HandiUITests;
-			sourceTree = "<group>";
-		};
 		51EA544F1B84C2F000830DB5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +134,7 @@
 				5196CDD51B8CB89300AAF479 /* FontSizeGetter.swift */,
 				5196CDD61B8CB89300AAF479 /* Format.swift */,
 				51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */,
+				51EA49011BBD71C800690992 /* PlistHandler.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -201,7 +144,7 @@
 			children = (
 				5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */,
 				5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */,
-				516D11341BBB0E0200D7005D /* OptionsModel.swift */,
+				51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -226,42 +169,6 @@
 			productReference = 51D886351B838E050025E5A5 /* Bill Splitter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		51D8864A1B838E050025E5A5 /* Bill SplitterrTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 51D886621B838E050025E5A5 /* Build configuration list for PBXNativeTarget "Bill SplitterrTests" */;
-			buildPhases = (
-				51D886471B838E050025E5A5 /* Sources */,
-				51D886481B838E050025E5A5 /* Frameworks */,
-				51D886491B838E050025E5A5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				51D8864D1B838E050025E5A5 /* PBXTargetDependency */,
-			);
-			name = "Bill SplitterrTests";
-			productName = HandiTests;
-			productReference = 51D8864B1B838E050025E5A5 /* Bill Splitter.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		51D886551B838E050025E5A5 /* Bill SplitterrUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 51D886651B838E050025E5A5 /* Build configuration list for PBXNativeTarget "Bill SplitterrUITests" */;
-			buildPhases = (
-				51D886521B838E050025E5A5 /* Sources */,
-				51D886531B838E050025E5A5 /* Frameworks */,
-				51D886541B838E050025E5A5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				51D886581B838E050025E5A5 /* PBXTargetDependency */,
-			);
-			name = "Bill SplitterrUITests";
-			productName = HandiUITests;
-			productReference = 51D886561B838E050025E5A5 /* Bill Splitterr.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,14 +182,11 @@
 					51D886341B838E050025E5A5 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 49LLUV7BVY;
-					};
-					51D8864A1B838E050025E5A5 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 51D886341B838E050025E5A5;
-					};
-					51D886551B838E050025E5A5 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 51D886341B838E050025E5A5;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -300,8 +204,6 @@
 			projectRoot = "";
 			targets = (
 				51D886341B838E050025E5A5 /* Bill Splitterr */,
-				51D8864A1B838E050025E5A5 /* Bill SplitterrTests */,
-				51D886551B838E050025E5A5 /* Bill SplitterrUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,23 +215,8 @@
 			files = (
 				5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */,
 				5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */,
-				513781651B8CD7780089D77E /* Default-568h@2x.png in Resources */,
 				5196CDEB1B8CB91A00AAF479 /* Assets.xcassets in Resources */,
 				5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51D886491B838E050025E5A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51D886541B838E050025E5A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,17 +229,18 @@
 			files = (
 				5196CDDE1B8CB89F00AAF479 /* IntStack.swift in Sources */,
 				5196CDE21B8CB8A900AAF479 /* Method.swift in Sources */,
-				516D11351BBB0E0200D7005D /* OptionsModel.swift in Sources */,
 				5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */,
 				5196CDE71B8CB8C200AAF479 /* KeypadViewController.swift in Sources */,
 				5196CDE51B8CB8BC00AAF479 /* MealCalculatorViewController.swift in Sources */,
 				5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */,
 				5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */,
+				51EA49021BBD71C800690992 /* PlistHandler.swift in Sources */,
 				5196CDE31B8CB8A900AAF479 /* Mode.swift in Sources */,
 				5196CDDF1B8CB89F00AAF479 /* Key.swift in Sources */,
 				5196CDD91B8CB89300AAF479 /* FontSize.swift in Sources */,
 				5196CDDA1B8CB89300AAF479 /* FontSizeGetter.swift in Sources */,
 				5196CDD11B8CB82700AAF479 /* AppDelegate.swift in Sources */,
+				51EA48FE1BBD6B0400690992 /* PurchaseHandler.swift in Sources */,
 				516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */,
 				5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */,
 				5196CDD81B8CB89300AAF479 /* FieldType.swift in Sources */,
@@ -360,36 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51D886471B838E050025E5A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				51D886501B838E050025E5A5 /* HandiTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51D886521B838E050025E5A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				51D8865B1B838E050025E5A5 /* HandiUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		51D8864D1B838E050025E5A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 51D886341B838E050025E5A5 /* Bill Splitterr */;
-			targetProxy = 51D8864C1B838E050025E5A5 /* PBXContainerItemProxy */;
-		};
-		51D886581B838E050025E5A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 51D886341B838E050025E5A5 /* Bill Splitterr */;
-			targetProxy = 51D886571B838E050025E5A5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		51D8865D1B838E050025E5A5 /* Debug */ = {
@@ -481,7 +340,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Handi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.f-stack.billsplitter";
 				PRODUCT_NAME = "Bill Splitter";
@@ -500,63 +359,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Handi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.f-stack.billsplitter";
 				PRODUCT_NAME = "Bill Splitter";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Handi/Bill Splitterr-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		51D886631B838E050025E5A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HandiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.basilthebeagles.HandiTests;
-				PRODUCT_NAME = "Bill Splitter";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bill Splitterr.app/Bill Splitterr";
-			};
-			name = Debug;
-		};
-		51D886641B838E050025E5A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = HandiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.basilthebeagles.HandiTests;
-				PRODUCT_NAME = "Bill Splitter";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bill Splitterr.app/Bill Splitterr";
-			};
-			name = Release;
-		};
-		51D886661B838E050025E5A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HandiUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.basilthebeagles.HandiUITests;
-				PRODUCT_NAME = "Bill Splitterr";
-				TEST_TARGET_NAME = Handi;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		51D886671B838E050025E5A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = HandiUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.basilthebeagles.HandiUITests;
-				PRODUCT_NAME = "Bill Splitterr";
-				TEST_TARGET_NAME = Handi;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -577,24 +386,6 @@
 			buildConfigurations = (
 				51D886601B838E050025E5A5 /* Debug */,
 				51D886611B838E050025E5A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		51D886621B838E050025E5A5 /* Build configuration list for PBXNativeTarget "Bill SplitterrTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				51D886631B838E050025E5A5 /* Debug */,
-				51D886641B838E050025E5A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		51D886651B838E050025E5A5 /* Build configuration list for PBXNativeTarget "Bill SplitterrUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				51D886661B838E050025E5A5 /* Debug */,
-				51D886671B838E050025E5A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

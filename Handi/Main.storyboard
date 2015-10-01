@@ -326,8 +326,8 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="SWu-V6-TmP"/>
                                                     <exclude reference="Bvr-wl-f3X"/>
+                                                    <exclude reference="SWu-V6-TmP"/>
                                                     <exclude reference="aTT-LM-3hd"/>
                                                     <exclude reference="kDR-xh-uZt"/>
                                                 </mask>

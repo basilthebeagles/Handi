@@ -59,6 +59,8 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         }else if indexPath.section == 1{
             print("row 1")
             cell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
+           
+            
         }else if indexPath.section == 2{
             print("row 2")
             cell = tableView.dequeueReusableCellWithIdentifier("supportCell", forIndexPath: indexPath)
