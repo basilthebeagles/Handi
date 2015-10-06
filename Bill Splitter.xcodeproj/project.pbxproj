@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5109783D1B8B84F500EB5B70 /* iAd.framework */; };
+		5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158B8FD1BC432520025B14C /* TableViewCellController.swift */; settings = {ASSET_TAGS = (); }; };
 		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDCA1B8CB7C200AAF479 /* TODO.txt */; };
 		5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		5109783D1B8B84F500EB5B70 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		5158B8FD1BC432520025B14C /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 		516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
 		5196CDCA1B8CB7C200AAF479 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Handi/TODO.txt; sourceTree = "<group>"; };
 		5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModel.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				5196CDE61B8CB8C200AAF479 /* KeypadViewController.swift */,
 				5196CDE41B8CB8BC00AAF479 /* MealCalculatorViewController.swift */,
 				5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */,
+				5158B8FD1BC432520025B14C /* TableViewCellController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */,
 				5196CDD81B8CB89300AAF479 /* FieldType.swift in Sources */,
 				5196CDD71B8CB89300AAF479 /* FieldStack.swift in Sources */,
+				5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

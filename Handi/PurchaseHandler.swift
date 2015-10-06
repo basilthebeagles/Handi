@@ -8,7 +8,7 @@
 
 import Foundation
 import StoreKit
-
+//source: http://www.appcoda.com/in-app-purchase-tutorial/
 
 class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequestDelegate{
     
@@ -19,7 +19,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     init(productID: String){
         
         super.init()
-    self.productIDs!.append(productID)        //"com.f_stack.billsplitter.remove_ads"
+    self.productIDs.append(productID)        //"com.f_stack.billsplitter.remove_ads"
         
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
         
@@ -31,11 +31,12 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     
     func requestProductInfo() {
         if SKPaymentQueue.canMakePayments() {
-            let productIdentifiers = NSSet(array: productIDs!)
+            let productIdentifiers = NSSet(array: productIDs)
             let productRequest = SKProductsRequest(productIdentifiers: productIdentifiers as! Set<String>)
             
             productRequest.delegate = self
             productRequest.start()
+            print("requesting")
         }
         else {
             //todo: handle some stuff here
@@ -46,10 +47,11 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
        @objc func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
         if response.products.count != 0 {
             for product in response.products {
+                print("adding to product array")
                 productsArray.append(product)
             }
-            
-            
+            self.buyProduct()
+            //self.showActions()
         }
         else {
             //todo handle more stuff here
@@ -60,14 +62,43 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             //handle this
             //the provided product identifiers are not correct/do not exist
             print(response.invalidProductIdentifiers.description)
+            print("invalid product id")
         }
     }
+    
+    
+    
+    /*func showActions() {
+        if transactionInProgress {
+            
+            //handle this, probably make an UIAlertAction to tell user something allready in progress
+            return
+        }
+        
+        let actionSheetController = UIAlertController(title: "IAPDemo", message: "What do you want to do?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.Default) { (action) -> Void in
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+            
+        }
+        
+        actionSheetController.addAction(buyAction)
+        actionSheetController.addAction(cancelAction)
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+    */
+    
+    
     
     func buyProduct(){
         self.transactionInProgress = true
         let payment = SKPayment(product: self.productsArray[0] as SKProduct)
         SKPaymentQueue.defaultQueue().addPayment(payment)
-        //self.transactionInProgress = true
+        self.transactionInProgress = true
     }
     
        @objc func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
@@ -78,7 +109,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 transactionInProgress = false
                 
-                
+            case SKPaymentTransactionState.Restored
                 
             case SKPaymentTransactionState.Failed:
                 print("Transaction Failed");
@@ -92,7 +123,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         }
     }
     
-    var productIDs: [String]? = nil
+    var productIDs: [String] = []
     
     var productsArray: Array<SKProduct!> = []
     //"com.f_stack.billsplitter.remove_ads"
