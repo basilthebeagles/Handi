@@ -50,6 +50,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
                 print("adding to product array")
                 productsArray.append(product)
             }
+            print("doing self.buyProduct")
             self.buyProduct()
             //self.showActions()
         }
@@ -103,13 +104,18 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     
        @objc func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
+            print(transaction.error)
             switch transaction.transactionState {
             case SKPaymentTransactionState.Purchased:
                 print("Transaction completed successfully.")
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 transactionInProgress = false
                 
-            case SKPaymentTransactionState.Restored
+            case SKPaymentTransactionState.Restored:
+                SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+                transactionInProgress = false
+                
+                print("?????")
                 
             case SKPaymentTransactionState.Failed:
                 print("Transaction Failed");
@@ -118,6 +124,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
 
                 
             default:
+                print("printing default")
                 print(transaction.transactionState.rawValue)
             }
         }

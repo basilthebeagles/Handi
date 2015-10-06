@@ -355,8 +355,41 @@
                                             <outlet property="disableAdvertsSwitch" destination="vbq-gk-MCX" id="cWM-RB-ISb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rateOurAppCell" textLabel="uEU-6c-hN0" style="IBUITableViewCellStyleDefault" id="ElG-ZN-eY4" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="restorePurchasesCell" id="eDE-SL-hUX" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eDE-SL-hUX" id="Tsu-Zm-8dX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dc-kg-xCu">
+                                                    <rect key="frame" x="263" y="6" width="51" height="31"/>
+                                                    <animations/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restore Purchases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNr-zd-s2O">
+                                                    <rect key="frame" x="14" y="11" width="144" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="2Dc-kg-xCu" firstAttribute="trailing" secondItem="Tsu-Zm-8dX" secondAttribute="trailingMargin" id="9cV-Xb-naR"/>
+                                                <constraint firstItem="2Dc-kg-xCu" firstAttribute="top" secondItem="Tsu-Zm-8dX" secondAttribute="topMargin" constant="-2" id="tyk-DX-pJp"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="9cV-Xb-naR"/>
+                                                    <exclude reference="tyk-DX-pJp"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rateOurAppCell" textLabel="uEU-6c-hN0" style="IBUITableViewCellStyleDefault" id="ElG-ZN-eY4" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="137.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ElG-ZN-eY4" id="a2h-xl-TPh">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -376,7 +409,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="supportCell" textLabel="TjL-W0-bHv" style="IBUITableViewCellStyleDefault" id="iG0-HB-OoL" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="137.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iG0-HB-OoL" id="tes-qZ-zvd">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>

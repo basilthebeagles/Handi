@@ -73,14 +73,17 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
             cell = tableView.dequeueReusableCellWithIdentifier("disableAdvertsCell", forIndexPath: indexPath)
         }else if indexPath.section == 1{
             print("row 1")
-            cell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
+            cell = tableView.dequeueReusableCellWithIdentifier("restorePurchasesCell", forIndexPath: indexPath)
            
             
         }else if indexPath.section == 2{
             print("row 2")
-            cell = tableView.dequeueReusableCellWithIdentifier("supportCell", forIndexPath: indexPath)
-        }else{
-            cell = tableView.dequeueReusableCellWithIdentifier("ERROR", forIndexPath: indexPath)        }
+            cell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
+        }else if indexPath.section == 3{
+               cell = tableView.dequeueReusableCellWithIdentifier("supportCell", forIndexPath: indexPath)   }
+        else{
+            cell = tableView.dequeueReusableCellWithIdentifier("ERROR", forIndexPath: indexPath)
+        }
         
         // Configure the cell...
         
