@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5109783D1B8B84F500EB5B70 /* iAd.framework */; };
+		5110AFBA1BCA952F00C8EABF /* PurchaseHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFB91BCA952F00C8EABF /* PurchaseHandlerType.swift */; settings = {ASSET_TAGS = (); }; };
+		5110AFBC1BCA960800C8EABF /* MakePurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFBB1BCA960800C8EABF /* MakePurchaseModel.swift */; settings = {ASSET_TAGS = (); }; };
+		5110AFBE1BCA961B00C8EABF /* RestorePurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFBD1BCA961B00C8EABF /* RestorePurchaseModel.swift */; settings = {ASSET_TAGS = (); }; };
 		5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158B8FD1BC432520025B14C /* TableViewCellController.swift */; settings = {ASSET_TAGS = (); }; };
 		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDCA1B8CB7C200AAF479 /* TODO.txt */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		5109783D1B8B84F500EB5B70 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		5110AFB91BCA952F00C8EABF /* PurchaseHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandlerType.swift; sourceTree = "<group>"; };
+		5110AFBB1BCA960800C8EABF /* MakePurchaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakePurchaseModel.swift; sourceTree = "<group>"; };
+		5110AFBD1BCA961B00C8EABF /* RestorePurchaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePurchaseModel.swift; sourceTree = "<group>"; };
 		5158B8FD1BC432520025B14C /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 		516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
 		5196CDCA1B8CB7C200AAF479 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Handi/TODO.txt; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 				5196CDD61B8CB89300AAF479 /* Format.swift */,
 				51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */,
 				51EA49011BBD71C800690992 /* PlistHandler.swift */,
+				5110AFB91BCA952F00C8EABF /* PurchaseHandlerType.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -148,6 +155,8 @@
 				5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */,
 				5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */,
 				51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */,
+				5110AFBB1BCA960800C8EABF /* MakePurchaseModel.swift */,
+				5110AFBD1BCA961B00C8EABF /* RestorePurchaseModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -233,9 +242,11 @@
 				5196CDDE1B8CB89F00AAF479 /* IntStack.swift in Sources */,
 				5196CDE21B8CB8A900AAF479 /* Method.swift in Sources */,
 				5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */,
+				5110AFBC1BCA960800C8EABF /* MakePurchaseModel.swift in Sources */,
 				5196CDE71B8CB8C200AAF479 /* KeypadViewController.swift in Sources */,
 				5196CDE51B8CB8BC00AAF479 /* MealCalculatorViewController.swift in Sources */,
 				5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */,
+				5110AFBE1BCA961B00C8EABF /* RestorePurchaseModel.swift in Sources */,
 				5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */,
 				51EA49021BBD71C800690992 /* PlistHandler.swift in Sources */,
 				5196CDE31B8CB8A900AAF479 /* Mode.swift in Sources */,
@@ -249,6 +260,7 @@
 				5196CDD81B8CB89300AAF479 /* FieldType.swift in Sources */,
 				5196CDD71B8CB89300AAF479 /* FieldStack.swift in Sources */,
 				5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */,
+				5110AFBA1BCA952F00C8EABF /* PurchaseHandlerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

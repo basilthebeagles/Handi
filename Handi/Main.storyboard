@@ -6,26 +6,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Helvetica.ttc">
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-            <string>Helvetica</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--Meal Calculator-->
         <scene sceneID="hNz-n2-bh7">
@@ -47,7 +27,7 @@
                                     <constraint firstAttribute="width" secondItem="x0h-gH-lAS" secondAttribute="height" multiplier="82:23" id="uVW-D4-VFp"/>
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -65,7 +45,7 @@
                                     <constraint firstAttribute="width" secondItem="1Md-6V-89X" secondAttribute="height" multiplier="7:2" id="XZr-Ud-gmZ"/>
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -83,7 +63,7 @@
                                     <constraint firstAttribute="width" secondItem="Acw-xt-PHF" secondAttribute="height" multiplier="7:2" constant="1.25" id="hqz-lj-4na"/>
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -116,7 +96,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1fy-IB-Ou1" secondAttribute="height" multiplier="335:132" id="eaQ-fr-5Ju"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="75"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                 <state key="normal" title="£135.64">
                                     <color key="titleColor" red="0.26274509800000001" green="0.83921568629999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -294,10 +274,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-Z5-4ei">
-                                <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="SZj-Z5-4ei">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="disableAdvertsCell" id="Ob4-63-87i" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>
@@ -355,14 +336,14 @@
                                             <outlet property="disableAdvertsSwitch" destination="vbq-gk-MCX" id="cWM-RB-ISb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="restorePurchasesCell" id="eDE-SL-hUX" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="restorePurchasesCell" id="eDE-SL-hUX">
                                         <rect key="frame" x="0.0" y="93.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eDE-SL-hUX" id="Tsu-Zm-8dX">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dc-kg-xCu">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dc-kg-xCu">
                                                     <rect key="frame" x="263" y="6" width="51" height="31"/>
                                                     <animations/>
                                                 </switch>
@@ -376,7 +357,9 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
+                                                <constraint firstItem="2Dc-kg-xCu" firstAttribute="top" secondItem="Tsu-Zm-8dX" secondAttribute="topMargin" constant="-2" id="5lo-xq-0jv"/>
                                                 <constraint firstItem="2Dc-kg-xCu" firstAttribute="trailing" secondItem="Tsu-Zm-8dX" secondAttribute="trailingMargin" id="9cV-Xb-naR"/>
+                                                <constraint firstItem="2Dc-kg-xCu" firstAttribute="trailing" secondItem="Tsu-Zm-8dX" secondAttribute="trailingMargin" id="Ehi-1x-Q4l"/>
                                                 <constraint firstItem="2Dc-kg-xCu" firstAttribute="top" secondItem="Tsu-Zm-8dX" secondAttribute="topMargin" constant="-2" id="tyk-DX-pJp"/>
                                             </constraints>
                                             <variation key="default">
@@ -388,19 +371,19 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="rateOurAppCell" textLabel="uEU-6c-hN0" style="IBUITableViewCellStyleDefault" id="ElG-ZN-eY4" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rateOurAppCell" textLabel="877-Ll-4rP" style="IBUITableViewCellStyleDefault" id="diE-hc-WPI">
                                         <rect key="frame" x="0.0" y="137.5" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ElG-ZN-eY4" id="a2h-xl-TPh">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diE-hc-WPI" id="oEW-7J-c38">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rate our app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEU-6c-hN0">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rate Our App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="877-Ll-4rP">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -408,19 +391,19 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="supportCell" textLabel="TjL-W0-bHv" style="IBUITableViewCellStyleDefault" id="iG0-HB-OoL" customClass="TableViewCellController" customModule="Bill_Splitter" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="getSupportCell" textLabel="J2F-8f-NVJ" style="IBUITableViewCellStyleDefault" id="n9d-OQ-8wV">
                                         <rect key="frame" x="0.0" y="181.5" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iG0-HB-OoL" id="tes-qZ-zvd">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n9d-OQ-8wV" id="JGa-RR-fC6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TjL-W0-bHv">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J2F-8f-NVJ">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -431,8 +414,8 @@
                                 </prototypes>
                                 <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="2vc-Xg-LVt" id="Uae-JW-BA5"/>
-                                    <outlet property="delegate" destination="2vc-Xg-LVt" id="XNg-4w-cJ0"/>
+                                    <outlet property="dataSource" destination="2vc-Xg-LVt" id="H9d-bA-bR3"/>
+                                    <outlet property="delegate" destination="2vc-Xg-LVt" id="df7-zf-JbM"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -501,9 +484,6 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
-                    <connections>
-                        <outlet property="view" destination="SZj-Z5-4ei" id="bBq-lH-Xc5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR5-gZ-4ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="czR-OA-YP7" userLabel="Exit" sceneMemberID="exit"/>
@@ -526,7 +506,7 @@
                                 <rect key="frame" x="16" y="240" width="99" height="101"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="C">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -538,7 +518,7 @@
                                 <rect key="frame" x="16" y="160" width="99" height="82"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -550,7 +530,7 @@
                                 <rect key="frame" x="114" y="160" width="97" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -562,7 +542,7 @@
                                 <rect key="frame" x="210" y="189" width="99" height="82"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -574,7 +554,7 @@
                                 <rect key="frame" x="212" y="284" width="99" height="101"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="⌫">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -586,7 +566,7 @@
                                 <rect key="frame" x="16" y="0.0" width="103" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -598,7 +578,7 @@
                                 <rect key="frame" x="219" y="0.0" width="103" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="9">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -610,7 +590,7 @@
                                 <rect key="frame" x="16" y="82" width="99" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -622,7 +602,7 @@
                                 <rect key="frame" x="114" y="82" width="97" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -634,7 +614,7 @@
                                 <rect key="frame" x="212" y="82" width="99" height="83"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -646,7 +626,7 @@
                                 <rect key="frame" x="118" y="0.0" width="102" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -658,7 +638,7 @@
                                 <rect key="frame" x="114" y="241" width="97" height="101"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>

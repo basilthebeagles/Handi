@@ -49,7 +49,11 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        if section == 0{
+            return 2
+        }else{
+            return 1
+        }
     }
 
     
@@ -60,29 +64,40 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("tableview bit")
+        //print(indexPath.row)
+        
+        print("row:")
+        
         print(indexPath.row)
-        print(indexPath.section)
-        
-        
         
         var cell: UITableViewCell
-
+        
         
         if indexPath.section == 0{
-            print("row 0")
-            cell = tableView.dequeueReusableCellWithIdentifier("disableAdvertsCell", forIndexPath: indexPath)
-        }else if indexPath.section == 1{
-            print("row 1")
-            cell = tableView.dequeueReusableCellWithIdentifier("restorePurchasesCell", forIndexPath: indexPath)
-           
+            print("section 0")
+            if indexPath.row == 0{
+                
             
-        }else if indexPath.section == 2{
-            print("row 2")
+            cell = tableView.dequeueReusableCellWithIdentifier("disableAdvertsCell", forIndexPath: indexPath)
+            }else{
+                cell = tableView.dequeueReusableCellWithIdentifier("restorePurchasesCell", forIndexPath: indexPath)
+            }
+            
+            
+        }else if indexPath.section == 1{
+            print("section 2")
+            
+            
             cell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
-        }else if indexPath.section == 3{
-               cell = tableView.dequeueReusableCellWithIdentifier("supportCell", forIndexPath: indexPath)   }
+        }
+            
         else{
-            cell = tableView.dequeueReusableCellWithIdentifier("ERROR", forIndexPath: indexPath)
+            print("section 3")
+            
+            
+            cell = tableView.dequeueReusableCellWithIdentifier("getSupportCell", forIndexPath: indexPath)
+
+
         }
         
         // Configure the cell...

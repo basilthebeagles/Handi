@@ -12,6 +12,8 @@ import StoreKit
 
 class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequestDelegate{
     
+    let type: PurchaseHandlerType
+    
     var selectedProductIndex: Int!
     
     var transactionInProgress = false
@@ -19,12 +21,17 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     init(productID: String){
         
         super.init()
-    self.productIDs.append(productID)        //"com.f_stack.billsplitter.remove_ads"
-        
+        self.productIDs.append(productID)        //"com.f_stack.billsplitter.remove_ads"
+        type = PurchaseHandlerType.purchase
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
         
     }
     
+    override init(){
+        super.init()
+        type = PurchaseHandlerType.restorePurchases
+        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+    }
     
     
     
@@ -102,10 +109,18 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         self.transactionInProgress = true
     }
     
+    
+    func restorePayments(){
+        self.transactionInProgress = true
+        SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
+        self.transactionInProgress = true
+    }
+    
        @objc func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             print(transaction.error)
             switch transaction.transactionState {
+                
             case SKPaymentTransactionState.Purchased:
                 print("Transaction completed successfully.")
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
