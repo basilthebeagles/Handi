@@ -24,6 +24,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         sections = 3
+        print("called view did load")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.optionsTableViewController = self
         if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]!{
@@ -63,7 +64,9 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        print(sections)
         return sections
+        
     }
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

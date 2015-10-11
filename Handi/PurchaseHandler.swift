@@ -32,7 +32,6 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         self.creator = creator
         type = PurchaseHandlerType.restorePurchases
         super.init()
-        
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
     }
     
@@ -120,6 +119,12 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             case SKPaymentTransactionState.Restored:
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 print("purchases restored")
+                print(transaction.payment.productIdentifier)
+                
+                creator.purchase = AvailablePurchases(rawValue: transaction.payment.productIdentifier)
+                
+                
+                
                 transactionInProgress = false
                 creator.transactionSuccess()
                 
