@@ -39,13 +39,13 @@ class TableViewCellController: UITableViewCell {
     @IBAction func restorePurchasesSwitchSwitched(sender: AnyObject) {
         
         if makePurchaseModel == nil{
-            makePurchaseModel! = MakePurchaseModel(purchaseHandlerType: PurchaseHandlerType.restorePurchases, viewController: self)
+            makePurchaseModel = MakePurchaseModel(purchaseHandlerType: PurchaseHandlerType.restorePurchases, viewController: self)
         }
         
         if restorePurchasesSwitch.on == true{
             
             
-            makePurchaseModel!.getInAppPurchase(AvailablePurchases.RemoveAds)
+            makePurchaseModel!.getInAppPurchase(nil)
             
             
         }

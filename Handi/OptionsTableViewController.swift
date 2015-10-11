@@ -25,6 +25,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         sections = 3
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.optionsTableViewController = self
         if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]!{
             removeAdsPurchased()
         }
@@ -32,10 +33,12 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         
     }
 
+    @IBOutlet weak var tableView: UITableView!
     
     func removeAdsPurchased(){
         sections -= 1
         inAppPurchaseSection -= 1
+        tableView!.reloadData()
     }
    
     

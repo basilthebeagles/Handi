@@ -29,7 +29,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     }
     
     init(creator: MakePurchaseModel){
-        self.creator! = creator
+        self.creator = creator
         type = PurchaseHandlerType.restorePurchases
         super.init()
         
@@ -65,14 +65,15 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             print("doing self.buyProduct")
             //return true
             //self.showActions()
-            if type == .restorePurchases{
-                self.restorePurchases()
-            }else if type == .purchase{
+             if type == .purchase{
                 self.buyProduct()
             }
         }
         else {
             //todo handle more stuff here
+            if type == .restorePurchases{
+                self.restorePurchases()
+            }
             print("There are no available in app purchases.")
         }
     
@@ -101,6 +102,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     
     
     func restorePurchases(){
+        print("restoring")
         self.transactionInProgress = true
         SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
     }
@@ -117,7 +119,9 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
                 creator.transactionSuccess()
             case SKPaymentTransactionState.Restored:
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+                print("purchases restored")
                 transactionInProgress = false
+                creator.transactionSuccess()
                 
                 
             case SKPaymentTransactionState.Failed:

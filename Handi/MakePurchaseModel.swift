@@ -70,6 +70,10 @@ class MakePurchaseModel{
     func transactionSuccess(){
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: purchase!.rawValue)
         
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.mealCalculatorViewController!.canDisplayBannerAds = false
+        appDelegate.optionsTableViewController.removeAdsPurchased()
+
         
     }
     

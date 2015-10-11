@@ -12,12 +12,12 @@ import iAd
 class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
    
-    @IBOutlet weak var adBannerViewTopConstraint: NSLayoutConstraint!
+   
     
     @IBOutlet weak var keypadBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var keyPadView: UIView!
     
-    @IBOutlet weak var adBannerView: ADBannerView!
+    
     
     //seperate this stuff out to presentation and controller
     //also seperate out total and tip
@@ -112,7 +112,9 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
         appDelegate.currentViewController = self
+        appDelegate.mealCalculatorViewController = self
         
         self.model = MealCalculatorModel(controller: self)
         self.navigationController?.navigationBarHidden = true
@@ -140,22 +142,18 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         tipPercentageField.inputView = dummyView
 
         
-        self.adBannerView.delegate = self
         
-        if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]!{
+        if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]! == true{
             self.canDisplayBannerAds = false
-            adBannerView.removeFromSuperview()
         }else{
         firstAdd = true
         
         
-        
+        print("banner ads can be dsiplayed")
         self.canDisplayBannerAds = true
 
-        self.adBannerView.hidden = true //hide until ad loaded
         
         
-        self.keypadBottomConstraint.constant += (self.adBannerView.frame.height)
         }
         redraw()
         
@@ -231,7 +229,6 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
             
         }
         
-                self.adBannerView.hidden = false
         
          //now show banner as ad is loaded
         
@@ -257,7 +254,6 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         //if there has been an add error and adds have been displayed hide the adbar
         
         
-      self.adBannerView.hidden = true
        
         
         
