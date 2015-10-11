@@ -14,12 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     //var mealCalculatorControllerObject: MealCalculatorViewController?
     var currentViewController: UIViewController?
-    var inAppPurchases = Dictionary<AvailablePurchases, String>()
+    var inAppPurchases = Dictionary<AvailablePurchases, Bool>()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        for i in AvailablePurchases.allValues{
+            if NSUserDefaults.standardUserDefaults().boolForKey(i.rawValue){
+                inAppPurchases[i] = true
+            }else{
+                inAppPurchases[i] = false
+            }
+        }
         
         
         
@@ -48,19 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func checkPurchasedInAppPurchases() -> Dictionary<AvailablePurchases, String>{
-        
-        for i in AvailablePurchases.allValues{
-            if NSUserDefaults.standardUserDefaults().boolForKey(i){
-                inAppPurchases.
-            }
-        }
-        
-        NSUserDefaults.standardUserDefaults().boolForKey("MySecondGameGreenShip")
-        
-        
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "MySecondGameGreenShip")
-    }
+    
     
 
 

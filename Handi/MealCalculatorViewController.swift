@@ -140,19 +140,23 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         tipPercentageField.inputView = dummyView
 
         
+        self.adBannerView.delegate = self
         
-        
-        
+        if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]!{
+            self.canDisplayBannerAds = false
+            adBannerView.removeFromSuperview()
+        }else{
         firstAdd = true
         
         
-        self.adBannerView.delegate = self
+        
         self.canDisplayBannerAds = true
 
         self.adBannerView.hidden = true //hide until ad loaded
         
         
         self.keypadBottomConstraint.constant += (self.adBannerView.frame.height)
+        }
         redraw()
         
         
@@ -220,24 +224,13 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         if firstAdd! == true{
             firstAdd! = false
-            //change 0, 0 to current x, y
-            
-            
-            
-           
-                //if this is a new valid add then make space on screen
-
-                
-            
-                    
             
             
             
             
             
         }
-        print(adBannerView.frame.size
-        )
+        
                 self.adBannerView.hidden = false
         
          //now show banner as ad is loaded

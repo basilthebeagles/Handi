@@ -10,6 +10,11 @@ import UIKit
 
 class OptionsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    
+    
+    var inAppPurchaseSection = 0
+    var sections = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,14 +23,20 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        sections = 3
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        if appDelegate.
+        if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]!{
+            removeAdsPurchased()
+        }
         
         
     }
 
     
+    func removeAdsPurchased(){
+        sections -= 1
+        inAppPurchaseSection -= 1
+    }
    
     
     
@@ -49,12 +60,12 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return sections
     }
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0{
+        if section == inAppPurchaseSection{
             return 2
         }else{
             return 1
@@ -78,7 +89,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         var cell: UITableViewCell
         
         
-        if indexPath.section == 0{
+        if indexPath.section == inAppPurchaseSection{
             print("section 0")
             if indexPath.row == 0{
                 
@@ -89,20 +100,22 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
             }
             
             
-        }else if indexPath.section == 1{
+        }else if indexPath.section == inAppPurchaseSection + 1{
             print("section 2")
             
             
             cell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
         }
             
-        else{
+        else if indexPath.section == inAppPurchaseSection + 2{
             print("section 3")
             
             
             cell = tableView.dequeueReusableCellWithIdentifier("getSupportCell", forIndexPath: indexPath)
 
 
+        }else{
+        cell = tableView.dequeueReusableCellWithIdentifier("getSupportCell", forIndexPath: indexPath)
         }
         
         // Configure the cell...

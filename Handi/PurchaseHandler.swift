@@ -19,7 +19,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     var transactionInProgress = false
     
     init(productID: String, creator: MakePurchaseModel){
-        self.creator! = creator
+        self.creator = creator
         type = PurchaseHandlerType.purchase
         super.init()
         self.productIDs.append(productID)        //"com.f_stack.billsplitter.remove_ads"
@@ -81,7 +81,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             //the provided product identifiers are not correct/do not exist
             print(response.invalidProductIdentifiers.description)
             print("invalid product id")
-            creator.errorHandler(InAppPurchaseErrorStrings.genericError.rawValue)
+            creator.errorHandler(InAppPurchaseErrorStrings.noInAppPurchasesAvailable.rawValue)
         }
         //return false
     }
@@ -129,7 +129,6 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             default:
                 print("printing default")
                 print(transaction.transactionState.rawValue)
-                creator.errorHandler(InAppPurchaseErrorStrings.genericTransactionFailed.rawValue)
             }
         }
     }

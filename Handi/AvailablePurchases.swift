@@ -14,6 +14,6 @@ enum AvailablePurchases: String{
     
     
     
-    static let allValues = [RemoveAds.rawValue]
+    static let allValues = [RemoveAds]
 
 }

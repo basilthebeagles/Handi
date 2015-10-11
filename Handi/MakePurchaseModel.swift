@@ -7,67 +7,98 @@
 //
 
 import Foundation
-
+import UIKit
 
 
 class MakePurchaseModel{
     
     var purchaseHandler: PurchaseHandler?
     
-    var viewController: TableViewCellController
+    var encounteredError = false
     
     var alertController = AlertController()
-    var purchase: AvailablePurchases?
-    //purchaseHandler.requestProductInfo()
-    init(controller: TableViewCellController, purchaseHandlerType: PurchaseHandlerType){
-        viewController = controller
+    var purchase: AvailablePurchases!
+    var viewController: TableViewCellController!
+    
+    var purchaseHandlerType: PurchaseHandlerType!
+    
+    init(purchaseHandlerType: PurchaseHandlerType, viewController : TableViewCellController){
         
+        self.purchaseHandlerType = purchaseHandlerType
+        self.viewController = viewController
         
     }
     
     
-    func getInAppPurchase(purchase: AvailablePurchases?) -> Bool{
-        
+   
+    
+    
+    
     
         
-       
+
+        
+        
+    func getInAppPurchase(purchase: AvailablePurchases?){
+        
+        
+        
+        
         
         if purchase == nil{
             
-            purchaseHandler! = PurchaseHandler(creator: self)
+            purchaseHandler = PurchaseHandler(creator: self)
         }else{
-            self.purchase! = purchase!
-            purchaseHandler! = PurchaseHandler(productID: purchase!.rawValue, creator: self)
+            self.purchase = purchase!
+            purchaseHandler = PurchaseHandler(productID: purchase!.rawValue, creator: self)
         }
         
         if purchaseHandler!.transactionInProgress == true{
             errorHandler("A transaction is allready in progress, please try again later")
+            encounteredError = true
         }
         
         
-        purchaseHandler?.requestProductInfo()
+        purchaseHandler!.requestProductInfo()
         
-            
-            
         
-        }
         
+        
+    }
+    
     
     func transactionSuccess(){
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: purchase!.rawValue)
+        
         
     }
-        
+    
+    
+    
+    
+    
+    
+    
     func errorHandler(error: String){
-        alertController.createAlert("Error", message: error, options: ["Ok"])
-    }
-    
         
-        
+        if encounteredError == false{
+            if purchaseHandlerType! == .restorePurchases{
+                
+                viewController!.restorePurchasesSwitch.on = false
+                
+                
+            }else if purchaseHandlerType! == .purchase{
+                viewController!.disableAdvertsSwitch.on = false
+            }
             
+            encounteredError = true
+        }else{
+            
+        }
         
+        alertController.createAlert("Error", message: error, options: ["Ok"])
         
     }
-    
     
     
     
@@ -75,3 +106,6 @@ class MakePurchaseModel{
     
     
 }
+
+
+
