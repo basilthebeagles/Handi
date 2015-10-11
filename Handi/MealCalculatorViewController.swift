@@ -40,7 +40,9 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-            self.canDisplayBannerAds = false
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.currentViewController = segue.destinationViewController
             
         }
        
@@ -108,7 +110,10 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.currentViewController = self
+        
         self.model = MealCalculatorModel(controller: self)
         self.navigationController?.navigationBarHidden = true
          

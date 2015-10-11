@@ -12,10 +12,17 @@ class TableViewCellController: UITableViewCell {
 
     @IBOutlet weak var disableAdvertsSwitch: UISwitch!
     
+    @IBOutlet weak var restorePurchasesSwitch: UISwitch!
+    
+    var makePurchaseModel: MakePurchaseModel?
+    var restorePurchaseModel: RestorePurchasesModel?
     
     @IBAction func disableAdvertsSwitchSwitched(sender: AnyObject) {
         
-        print("switched")
+        if makePurchaseModel == nil{
+            makePurchaseModel! = MakePurchaseModel(controller: self, purchase: AvailablePurchases.RemoveAds)
+        }
+        
         
         if disableAdvertsSwitch.on == true{
             
@@ -28,6 +35,15 @@ class TableViewCellController: UITableViewCell {
         
         
     }
+    
+    @IBAction func restorePurchasesSwitchSwitched(sender: AnyObject) {
+        if restorePurchaseModel == nil{
+            restorePurchaseModel! = RestorePurchasesModel(controller: self)
+        }
+        
+        
+    }
+    
     
     
     

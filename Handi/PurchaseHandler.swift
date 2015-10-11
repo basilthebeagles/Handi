@@ -15,21 +15,24 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     let type: PurchaseHandlerType
     
     var selectedProductIndex: Int!
-    
+    var creator: MakePurchaseModel!
     var transactionInProgress = false
     
-    init(productID: String){
-        
+    init(productID: String, creator: MakePurchaseModel){
+        self.creator! = creator
+        type = PurchaseHandlerType.purchase
         super.init()
         self.productIDs.append(productID)        //"com.f_stack.billsplitter.remove_ads"
-        type = PurchaseHandlerType.purchase
+        
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
         
     }
     
-    override init(){
-        super.init()
+    init(creator: MakePurchaseModel){
+        self.creator! = creator
         type = PurchaseHandlerType.restorePurchases
+        super.init()
+        
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
     }
     
@@ -37,6 +40,8 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     
     
     func requestProductInfo() {
+        
+        
         if SKPaymentQueue.canMakePayments() {
             let productIdentifiers = NSSet(array: productIDs)
             let productRequest = SKProductsRequest(productIdentifiers: productIdentifiers as! Set<String>)
@@ -47,19 +52,24 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         }
         else {
             //todo: handle some stuff here
-            print("Cannot perform In App Purchases.")
+            creator.errorHandler(InAppPurchaseErrorStrings.userCanNotMakePayments.rawValue)
         }
     }
     
-       @objc func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+       @objc func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse)  {
         if response.products.count != 0 {
             for product in response.products {
                 print("adding to product array")
                 productsArray.append(product)
             }
             print("doing self.buyProduct")
-            self.buyProduct()
+            //return true
             //self.showActions()
+            if type == .restorePurchases{
+                self.restorePurchases()
+            }else if type == .purchase{
+                self.buyProduct()
+            }
         }
         else {
             //todo handle more stuff here
@@ -71,34 +81,14 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             //the provided product identifiers are not correct/do not exist
             print(response.invalidProductIdentifiers.description)
             print("invalid product id")
+            creator.errorHandler(InAppPurchaseErrorStrings.genericError.rawValue)
         }
+        //return false
     }
     
     
     
-    /*func showActions() {
-        if transactionInProgress {
-            
-            //handle this, probably make an UIAlertAction to tell user something allready in progress
-            return
-        }
-        
-        let actionSheetController = UIAlertController(title: "IAPDemo", message: "What do you want to do?", preferredStyle: UIAlertControllerStyle.ActionSheet)
-        
-        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.Default) { (action) -> Void in
-            
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-            
-        }
-        
-        actionSheetController.addAction(buyAction)
-        actionSheetController.addAction(cancelAction)
-        
-        self.presentViewController(actionSheetController, animated: true, completion: nil)
-    }
-    */
+    
     
     
     
@@ -110,10 +100,9 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     }
     
     
-    func restorePayments(){
+    func restorePurchases(){
         self.transactionInProgress = true
         SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
-        self.transactionInProgress = true
     }
     
        @objc func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
@@ -125,22 +114,22 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
                 print("Transaction completed successfully.")
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 transactionInProgress = false
-                
+                creator.transactionSuccess()
             case SKPaymentTransactionState.Restored:
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 transactionInProgress = false
                 
-                print("?????")
                 
             case SKPaymentTransactionState.Failed:
                 print("Transaction Failed");
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 transactionInProgress = false
-
+                creator.errorHandler(InAppPurchaseErrorStrings.genericTransactionFailed.rawValue)
                 
             default:
                 print("printing default")
                 print(transaction.transactionState.rawValue)
+                creator.errorHandler(InAppPurchaseErrorStrings.genericTransactionFailed.rawValue)
             }
         }
     }

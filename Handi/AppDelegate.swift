@@ -13,7 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     //var mealCalculatorControllerObject: MealCalculatorViewController?
-
+    var currentViewController: UIViewController?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -47,22 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    /*func currentView()-> Bool{
-        //returns the current viewcontroller
-        print(6)
-        let ViewController: MealCalculatorViewController
-        
-        if let viewControllers = self.window?.rootViewController?.childViewControllers {
-            for viewController in viewControllers {
-                print("b")
-                if viewController.isKindOfClass(MealCalculatorViewController) {
-                    print("a")
-                    return true
-                }
-            }
-        }
-        return false
-    }*/
+    
 
 
 }
