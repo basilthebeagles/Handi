@@ -11,4 +11,9 @@ import Foundation
 
 enum AvailablePurchases: String{
     case RemoveAds = "com.f_stack.billsplitter.remove_ads"
+    
+    
+    
+    static let allValues = [RemoveAds.rawValue]
+
 }

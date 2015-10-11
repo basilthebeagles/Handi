@@ -18,6 +18,11 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if appDelegate.
+        
+        
     }
 
     
