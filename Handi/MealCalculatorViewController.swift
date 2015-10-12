@@ -9,7 +9,7 @@
 import UIKit
 import iAd
 
-class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
+class MealCalculatorViewController: UIViewController {
     
    
    
@@ -52,7 +52,6 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
-        self.canDisplayBannerAds = true
     }
     
     
@@ -61,6 +60,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         //which means the user wants the mode changed
         
         model.changeMode()
+        
         redraw()//redraws the total text
         
         
@@ -145,6 +145,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]! == true{
             self.canDisplayBannerAds = false
+            print("no adds")
         }else{
         firstAdd = true
         
@@ -212,7 +213,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
     
     
    
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
+   /* func bannerViewWillLoadAd(banner: ADBannerView!) {
         NSLog("bannerViewWillLoadAd")
         print("loading")
     }
@@ -259,7 +260,7 @@ class MealCalculatorViewController: UIViewController, ADBannerViewDelegate {
         
         print("ERROR iAd")
     }
-
+*/
     
 
     

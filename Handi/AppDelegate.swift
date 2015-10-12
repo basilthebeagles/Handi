@@ -24,16 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        for i in AvailablePurchases.allValues{
-            if NSUserDefaults.standardUserDefaults().boolForKey(i.rawValue){
-                inAppPurchases[i] = true
-                print("purchased")
-            }else{
-                inAppPurchases[i] = false
-            }
-        }
+       
         
-        
+        updateInAppPurchases()
         
         return true
     }
@@ -61,7 +54,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+    func updateInAppPurchases(){
+        
+        for i in AvailablePurchases.allValues{
+            if NSUserDefaults.standardUserDefaults().boolForKey(i.rawValue){
+                inAppPurchases[i] = true
+                print("purchased")
+            }else{
+                inAppPurchases[i] = false
+            }
+        }
+    }
 
 
 }

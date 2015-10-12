@@ -70,11 +70,13 @@ class MakePurchaseModel{
     func transactionSuccess(){
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: purchase!.rawValue)
         
+        print("woohoo success")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.updateInAppPurchases()
         appDelegate.mealCalculatorViewController!.canDisplayBannerAds = false
-        appDelegate.optionsTableViewController.removeAdsPurchased()
+        appDelegate.optionsTableViewController.removeAdsPurchased(true)
 
-        
+        alertController.createAlert("Thank You!", message: "Ads have now been removed.", options: ["OK"])
     }
     
     

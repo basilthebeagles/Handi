@@ -23,23 +23,34 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        sections = 3
         print("called view did load")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.optionsTableViewController = self
+         sections = 3
         if appDelegate.inAppPurchases[AvailablePurchases.RemoveAds]!{
-            removeAdsPurchased()
+            removeAdsPurchased(false)
+            print("removing ads")
         }
+       
         
         
     }
 
-    @IBOutlet weak var tableView: UITableView!
     
-    func removeAdsPurchased(){
-        sections -= 1
-        inAppPurchaseSection -= 1
-        tableView!.reloadData()
+    @IBOutlet weak var myTableView: UITableView!
+    
+    func removeAdsPurchased(firstTime: Bool){
+        print("removing stuff tableView")
+        print("old sections")
+        print(sections)
+        sections = sections - 1
+        print("new sections")
+        print(sections)
+        inAppPurchaseSection = inAppPurchaseSection - 1
+        if firstTime == true{
+            print("first time")
+            myTableView!.reloadData()
+        }
     }
    
     
@@ -64,6 +75,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
      func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        print("printing sections")
         print(sections)
         return sections
         
@@ -91,6 +103,8 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         print("row:")
         
         print(indexPath.row)
+        print("sections: " )
+        print(sections)
         
         var cell: UITableViewCell
         

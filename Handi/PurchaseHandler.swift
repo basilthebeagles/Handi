@@ -13,7 +13,7 @@ import StoreKit
 class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequestDelegate{
     
     let type: PurchaseHandlerType
-    
+    var restoredSuccessfully = false
     var selectedProductIndex: Int!
     var creator: MakePurchaseModel!
     var transactionInProgress = false
@@ -72,8 +72,9 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
             //todo handle more stuff here
             if type == .restorePurchases{
                 self.restorePurchases()
-            }
+            }else{
             print("There are no available in app purchases.")
+            }
         }
     
         if response.invalidProductIdentifiers.count != 0 {
@@ -106,6 +107,29 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
     }
     
+    
+    
+    
+    
+     func paymentQueue(queue: SKPaymentQueue,
+        restoreCompletedTransactionsFailedWithError error: NSError){
+            
+          print("Error restoring transactions.")
+            
+            
+            
+            
+            
+    }
+    
+    func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue) {
+        print("finished")
+        if restoredSuccessfully == false{
+            creator.errorHandler(InAppPurchaseErrorStrings.noPurchasesFound)
+        }
+    }
+    
+    
        @objc func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             print(transaction.error)
@@ -120,6 +144,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 print("purchases restored")
                 print(transaction.payment.productIdentifier)
+                restoredSuccessfully = true
                 
                 creator.purchase = AvailablePurchases(rawValue: transaction.payment.productIdentifier)
                 
