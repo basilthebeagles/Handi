@@ -91,7 +91,30 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     
-    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        print("called")
+        print(indexPath.section)
+        if indexPath.section == inAppPurchaseSection + 1{
+            
+            let email = "foo@bar.com"
+            let url = NSURL(string: "mailto:\(email)")
+            UIApplication.sharedApplication().openURL(url!)
+            
+            
+            
+        }else if indexPath.section == inAppPurchaseSection + 2{
+            print("section 3")
+            
+            
+            let appReviewLink = "//itunes.apple.com/app/idYOUR_APP_ID"
+            let url = NSURL(string: "itms-apps:\(appReviewLink)")
+            UIApplication.sharedApplication().openURL(url!)
+            
+            
+            
+        }
+        
+    }
     
     
     

@@ -22,6 +22,7 @@ class MakePurchaseModel{
     
     var purchaseHandlerType: PurchaseHandlerType!
     
+    
     init(purchaseHandlerType: PurchaseHandlerType, viewController : TableViewCellController){
         
         self.purchaseHandlerType = purchaseHandlerType
@@ -49,13 +50,16 @@ class MakePurchaseModel{
             
             purchaseHandler = PurchaseHandler(creator: self)
         }else{
+            
             self.purchase = purchase!
+            print(self.purchase!.rawValue)
             purchaseHandler = PurchaseHandler(productID: purchase!.rawValue, creator: self)
         }
         
         if purchaseHandler!.transactionInProgress == true{
             errorHandler("A transaction is allready in progress, please try again later")
             encounteredError = true
+            
         }
         
         
@@ -68,7 +72,8 @@ class MakePurchaseModel{
     
     
     func transactionSuccess(){
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: purchase!.rawValue)
+        print("here")
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "com.f_stack.billsplitter.remove_ads")//temp hardcoding purchase!.rawValue)
         
         print("woohoo success")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

@@ -113,7 +113,9 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     
      func paymentQueue(queue: SKPaymentQueue,
         restoreCompletedTransactionsFailedWithError error: NSError){
-            
+            transactionInProgress = false
+            creator.errorHandler(InAppPurchaseErrorStrings.genericRestorePurchasesFailed.rawValue)
+
           print("Error restoring transactions.")
             
             
@@ -125,7 +127,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue) {
         print("finished")
         if restoredSuccessfully == false{
-            creator.errorHandler(InAppPurchaseErrorStrings.noPurchasesFound)
+            creator.errorHandler(InAppPurchaseErrorStrings.noPurchasesFound.rawValue)
         }
     }
     
