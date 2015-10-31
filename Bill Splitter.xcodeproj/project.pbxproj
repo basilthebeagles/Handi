@@ -15,6 +15,7 @@
 		5110AFC41BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFC31BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift */; settings = {ASSET_TAGS = (); }; };
 		5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158B8FD1BC432520025B14C /* TableViewCellController.swift */; settings = {ASSET_TAGS = (); }; };
 		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		51911B1B1BDE4772005B4934 /* SendMailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911B1A1BDE4772005B4934 /* SendMailHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDCA1B8CB7C200AAF479 /* TODO.txt */; };
 		5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */; };
 		5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */; };
@@ -22,8 +23,6 @@
 		5196CDD71B8CB89300AAF479 /* FieldStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDD21B8CB89300AAF479 /* FieldStack.swift */; };
 		5196CDD81B8CB89300AAF479 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDD31B8CB89300AAF479 /* FieldType.swift */; };
 		5196CDD91B8CB89300AAF479 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDD41B8CB89300AAF479 /* FontSize.swift */; };
-		5196CDDA1B8CB89300AAF479 /* FontSizeGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDD51B8CB89300AAF479 /* FontSizeGetter.swift */; };
-		5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDD61B8CB89300AAF479 /* Format.swift */; };
 		5196CDDE1B8CB89F00AAF479 /* IntStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDDC1B8CB89F00AAF479 /* IntStack.swift */; };
 		5196CDDF1B8CB89F00AAF479 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDDD1B8CB89F00AAF479 /* Key.swift */; };
 		5196CDE21B8CB8A900AAF479 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDE01B8CB8A900AAF479 /* Method.swift */; };
@@ -36,7 +35,6 @@
 		5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */; settings = {ASSET_TAGS = (); }; };
 		51EA48FC1BBD693B00690992 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EA48FB1BBD693B00690992 /* StoreKit.framework */; };
 		51EA48FE1BBD6B0400690992 /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */; settings = {ASSET_TAGS = (); }; };
-		51EA49021BBD71C800690992 /* PlistHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA49011BBD71C800690992 /* PlistHandler.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +46,7 @@
 		5110AFC31BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseErrorStrings.swift; sourceTree = "<group>"; };
 		5158B8FD1BC432520025B14C /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 		516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
+		51911B1A1BDE4772005B4934 /* SendMailHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMailHandler.swift; sourceTree = "<group>"; };
 		5196CDCA1B8CB7C200AAF479 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Handi/TODO.txt; sourceTree = "<group>"; };
 		5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModel.swift; sourceTree = "<group>"; };
 		5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModelLogic.swift; sourceTree = "<group>"; };
@@ -55,8 +54,6 @@
 		5196CDD21B8CB89300AAF479 /* FieldStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldStack.swift; sourceTree = "<group>"; };
 		5196CDD31B8CB89300AAF479 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
 		5196CDD41B8CB89300AAF479 /* FontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
-		5196CDD51B8CB89300AAF479 /* FontSizeGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSizeGetter.swift; sourceTree = "<group>"; };
-		5196CDD61B8CB89300AAF479 /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		5196CDDC1B8CB89F00AAF479 /* IntStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntStack.swift; sourceTree = "<group>"; };
 		5196CDDD1B8CB89F00AAF479 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		5196CDE01B8CB8A900AAF479 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
@@ -72,7 +69,6 @@
 		51D886461B838E050025E5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA48FB1BBD693B00690992 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseHandler.swift; sourceTree = "<group>"; };
-		51EA49011BBD71C800690992 /* PlistHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,14 +140,12 @@
 				5196CDD21B8CB89300AAF479 /* FieldStack.swift */,
 				5196CDD31B8CB89300AAF479 /* FieldType.swift */,
 				5196CDD41B8CB89300AAF479 /* FontSize.swift */,
-				5196CDD51B8CB89300AAF479 /* FontSizeGetter.swift */,
-				5196CDD61B8CB89300AAF479 /* Format.swift */,
 				51B2D9531BB82E5F003E8E40 /* Bill Splitterr-Bridging-Header.h */,
-				51EA49011BBD71C800690992 /* PlistHandler.swift */,
 				5110AFB91BCA952F00C8EABF /* PurchaseHandlerType.swift */,
 				5110AFBF1BCA99A700C8EABF /* AvailablePurchases.swift */,
 				5110AFC11BCA9C5D00C8EABF /* AlertController.swift */,
 				5110AFC31BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift */,
+				51911B1A1BDE4772005B4934 /* SendMailHandler.swift */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -253,13 +247,10 @@
 				5196CDE71B8CB8C200AAF479 /* KeypadViewController.swift in Sources */,
 				5110AFC41BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift in Sources */,
 				5196CDE51B8CB8BC00AAF479 /* MealCalculatorViewController.swift in Sources */,
-				5196CDDB1B8CB89300AAF479 /* Format.swift in Sources */,
 				5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */,
-				51EA49021BBD71C800690992 /* PlistHandler.swift in Sources */,
 				5196CDE31B8CB8A900AAF479 /* Mode.swift in Sources */,
 				5196CDDF1B8CB89F00AAF479 /* Key.swift in Sources */,
 				5196CDD91B8CB89300AAF479 /* FontSize.swift in Sources */,
-				5196CDDA1B8CB89300AAF479 /* FontSizeGetter.swift in Sources */,
 				5196CDD11B8CB82700AAF479 /* AppDelegate.swift in Sources */,
 				51EA48FE1BBD6B0400690992 /* PurchaseHandler.swift in Sources */,
 				5110AFC21BCA9C5D00C8EABF /* AlertController.swift in Sources */,
@@ -267,6 +258,7 @@
 				5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */,
 				5196CDD81B8CB89300AAF479 /* FieldType.swift in Sources */,
 				5196CDD71B8CB89300AAF479 /* FieldStack.swift in Sources */,
+				51911B1B1BDE4772005B4934 /* SendMailHandler.swift in Sources */,
 				5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */,
 				5110AFBA1BCA952F00C8EABF /* PurchaseHandlerType.swift in Sources */,
 			);

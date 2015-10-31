@@ -91,13 +91,18 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("called")
         print(indexPath.section)
         if indexPath.section == inAppPurchaseSection + 1{
             
-            let email = "foo@bar.com"
-            let url = NSURL(string: "mailto:\(email)")
+            
+            
+            var tempCell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
+            tempCell.selected = false
+            
+            let appReviewLink = "//itunes.apple.com/app/id1033311922"
+            let url = NSURL(string: "itms-apps:\(appReviewLink)")
             UIApplication.sharedApplication().openURL(url!)
             
             
@@ -105,12 +110,19 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         }else if indexPath.section == inAppPurchaseSection + 2{
             print("section 3")
             
-            
-            let appReviewLink = "//itunes.apple.com/app/idYOUR_APP_ID"
-            let url = NSURL(string: "itms-apps:\(appReviewLink)")
-            UIApplication.sharedApplication().openURL(url!)
+            var tempCell = tableView.dequeueReusableCellWithIdentifier("getSupportCell", forIndexPath: indexPath)
             
             
+            var mailHandler = SendMailHandler()
+            self.addChildViewController(mailHandler)
+            
+            let subject: String? = "Support: Split My Bill"
+            let body: String? = nil
+            let recipients: [String]? = ["support@f-stack.com"]
+            
+            mailHandler.launchEmail(subject, emailBody: body, emailRecipients: recipients)
+            tempCell.selected = false
+
             
         }
         
