@@ -15,14 +15,15 @@ struct FontSize{
    //this function creates a nice sized font, depending on the screen size of a device
     
     func correctFontSizeForScreenSize()->(CGFloat, CGFloat, CGFloat){
-        
+        //returns correct font size for different fields, depending on screen size.
+        //the values i have choosen are ones that i think look best.
     
     var screen: CGRect = UIScreen.mainScreen().bounds
        
             
     let totalScreenSize = screen.height + screen.width
         
-    let buttonLabelFontSize = totalScreenSize / 18//14.6760563380282
+    let buttonLabelFontSize = totalScreenSize / 18
     
     let finalLabelFontSize = totalScreenSize / 10
     let textFieldFontSize = totalScreenSize / 41.68

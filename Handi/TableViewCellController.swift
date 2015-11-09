@@ -10,20 +10,20 @@ import UIKit
 
 class TableViewCellController: UITableViewCell {
 
-    @IBOutlet weak var disableAdvertsSwitch: UISwitch!
+    @IBOutlet weak var disableAdvertsSwitch: UISwitch! //references to IB switches
     
     @IBOutlet weak var restorePurchasesSwitch: UISwitch!
     
-    var makePurchaseModel: MakePurchaseModel!
+    var makePurchaseModel: MakePurchaseModel! //model for interacting in app purchases.
     
-    
+    //called when the disableAdverts switch has been switched
     @IBAction func disableAdvertsSwitchSwitched(sender: AnyObject) {
         
-        if makePurchaseModel == nil{
+        if makePurchaseModel == nil{//if no model has been set construct a new one
             makePurchaseModel = MakePurchaseModel(purchaseHandlerType: PurchaseHandlerType.purchase, viewController: self)
         }
         
-        
+        //if the switch is on then attempt to purchase an IAP
         if disableAdvertsSwitch.on == true{
             
             
@@ -35,7 +35,7 @@ class TableViewCellController: UITableViewCell {
         
         
     }
-    
+    //called when restorePurchases switch has been switched
     @IBAction func restorePurchasesSwitchSwitched(sender: AnyObject) {
         
         if makePurchaseModel == nil{
@@ -44,7 +44,7 @@ class TableViewCellController: UITableViewCell {
         
         if restorePurchasesSwitch.on == true{
             
-            
+            //attempts to restore purchases
             makePurchaseModel!.getInAppPurchase(nil)
             
             

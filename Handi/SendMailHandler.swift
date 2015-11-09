@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import MessageUI
-//credit: http://stackoverflow.com/a/25984329
+//credit: http://stackoverflow.com/a/25984329 although i have heavily modified this
 class SendMailHandler: UIViewController, MFMailComposeViewControllerDelegate {
     
     func launchEmail(emailSubject: String?, emailBody: String?, emailRecipients: [String]?) {
@@ -26,7 +26,7 @@ class SendMailHandler: UIViewController, MFMailComposeViewControllerDelegate {
         
         let mc: MFMailComposeViewController = MFMailComposeViewController()
         mc.mailComposeDelegate = self
-        
+        //if values have been set then adds them to the email, otherwise leaves them empty
         if let subject = emailSubject{
             mc.setSubject(subject)
         }
@@ -43,11 +43,13 @@ class SendMailHandler: UIViewController, MFMailComposeViewControllerDelegate {
         
         
         self.presentViewController(mc, animated: true, completion: nil)
+        //presents the email box thing
     }
     
     
     func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError?) {
-        
+        //these are called depending on what the user does with the email
+        //i dont require the use of any of these
         switch result.rawValue {
         case MFMailComposeResultCancelled.rawValue:
             print("Mail cancelled")

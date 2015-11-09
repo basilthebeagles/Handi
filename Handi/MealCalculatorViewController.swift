@@ -13,22 +13,22 @@ class MealCalculatorViewController: UIViewController {
     
    
    
-    
+    //variable that represents the value of a constraint, IE distance between to IB objects
     @IBOutlet weak var keypadBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var keyPadView: UIView!
+    @IBOutlet weak var keyPadView: UIView!//view object of the keypadViewController
     
     
     
-    //seperate this stuff out to presentation and controller
+    //TODO seperate this stuff out to presentation and controller
     //also seperate out total and tip
     
     var model: MealCalculatorModel!
     
-    var firstAdd: Bool!
+    var firstAdd: Bool!//represents wether an ad has been displayed
     
     @IBOutlet weak var priceLabel: UIButton!
     
-    
+    //these all represent textField objects in IB
     @IBOutlet weak var preTipBillTotalField: CustomUITextField!
     
     @IBOutlet weak var amountOfPeopleField: CustomUITextField!
@@ -42,6 +42,7 @@ class MealCalculatorViewController: UIViewController {
         
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //sets the currentViewController to the viewcontroller that is being switched to
         appDelegate.currentViewController = segue.destinationViewController
             
         }
@@ -123,8 +124,12 @@ class MealCalculatorViewController: UIViewController {
         priceLabel.titleLabel!.adjustsFontSizeToFitWidth = true
         
         let fontSizer = FontSize()
+        //is a tuple which has different font size values, which are meant to be set for
+        //different objects
         let correctFontSize = fontSizer.correctFontSizeForScreenSize()
         
+        
+        //sets the font size to the correct size for the screen size
         priceLabel.titleLabel!.font = priceLabel.titleLabel!.font.fontWithSize(correctFontSize.0)
         
         preTipBillTotalField.font = preTipBillTotalField.font?.fontWithSize(correctFontSize.2)
@@ -136,7 +141,7 @@ class MealCalculatorViewController: UIViewController {
         //which then allows me to prevent pasting in to them
         
         let dummyView: UIView = UIView(frame: CGRectMake(0, 0, 1, 1))
-        
+        //having their imputview as an empty view prevents the keyboard from coming up
         preTipBillTotalField.inputView = dummyView
         amountOfPeopleField.inputView = dummyView
         tipPercentageField.inputView = dummyView

@@ -14,7 +14,7 @@ import UIKit
 struct AlertController {
     
  
-    
+    //when called you can create an alert box to your choosing
     func createAlert(title: String, message: String, options: [String]){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var viewController = appDelegate.currentViewController

@@ -12,17 +12,12 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
     
     
-    var inAppPurchaseSection = 0
-    var sections = 0
+    var inAppPurchaseSection = 0//sets which tableview section is the IAP section
+    var sections = 0//number of sections
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         print("called view did load")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.optionsTableViewController = self
@@ -40,6 +35,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var myTableView: UITableView!
     
     func removeAdsPurchased(firstTime: Bool){
+        //removes in app purchase section so users can not buy it again
         print("removing stuff tableView")
         print("old sections")
         print(sections)
@@ -82,7 +78,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
     }
 
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // returns the number of rows in a section to the delegate.
         if section == inAppPurchaseSection{
             return 2
         }else{
@@ -92,6 +88,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //provides a value that tells us what section/row has been selected
         print("called")
         print(indexPath.section)
         if indexPath.section == inAppPurchaseSection + 1{
@@ -100,7 +97,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
             
             var tempCell = tableView.dequeueReusableCellWithIdentifier("rateOurAppCell", forIndexPath: indexPath)
             tempCell.selected = false
-            
+            //opens link to the apps revew section i appstore
             let appReviewLink = "//itunes.apple.com/app/id1033311922"
             let url = NSURL(string: "itms-apps:\(appReviewLink)")
             UIApplication.sharedApplication().openURL(url!)
@@ -112,7 +109,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
             
             var tempCell = tableView.dequeueReusableCellWithIdentifier("getSupportCell", forIndexPath: indexPath)
             
-            
+            //creates a support email template for the user to fill out
             var mailHandler = SendMailHandler()
             self.addChildViewController(mailHandler)
             
@@ -142,7 +139,7 @@ class OptionsTableViewController: UIViewController, UITableViewDelegate, UITable
         print(sections)
         
         var cell: UITableViewCell
-        
+        //returns the correct cell for section number
         
         if indexPath.section == inAppPurchaseSection{
             print("section 0")

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit  // don't forget this
+import UIKit
 //credit: http://stackoverflow.com/questions/29596043/how-to-disable-pasting-in-a-textfield-in-swift
 
 

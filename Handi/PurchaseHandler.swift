@@ -8,7 +8,7 @@
 
 import Foundation
 import StoreKit
-//source: http://www.appcoda.com/in-app-purchase-tutorial/
+//source: http://www.appcoda.com/in-app-purchase-tutorial/ i have made modifications
 
 class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequestDelegate{
     
@@ -19,7 +19,8 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
     var transactionInProgress = false
     
     init(productID: String, creator: MakePurchaseModel){
-        self.creator = creator
+        self.creator = creator//is class that created this, unfortunately it can only be a certain class.
+        //I will change this
         type = PurchaseHandlerType.purchase
         super.init()
         self.productIDs.append(productID)        //"com.f_stack.billsplitter.remove_ads"
@@ -44,19 +45,20 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         if SKPaymentQueue.canMakePayments() {
             let productIdentifiers = NSSet(array: productIDs)
             let productRequest = SKProductsRequest(productIdentifiers: productIdentifiers as! Set<String>)
-            
+            //creates a request to see if the IAP product identifiers are available for purchase.
             productRequest.delegate = self
             productRequest.start()
             print("requesting")
         }
         else {
-            //todo: handle some stuff here
+            
             creator.errorHandler(InAppPurchaseErrorStrings.userCanNotMakePayments.rawValue)
         }
     }
     
        @objc func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse)  {
         if response.products.count != 0 {
+            //called when the purchases specified are available
             for product in response.products {
                 print("adding to product array")
                 productsArray.append(product)
@@ -70,6 +72,8 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         }
         else {
             //todo handle more stuff here
+            //happens when nothing is returned. This can happen as no purchases have been specified.
+            //This happens via the restore purchases route.
             if type == .restorePurchases{
                 self.restorePurchases()
             }else{
@@ -98,6 +102,7 @@ class PurchaseHandler: NSObject, SKPaymentTransactionObserver, SKProductsRequest
         let payment = SKPayment(product: self.productsArray[0] as SKProduct)
         SKPaymentQueue.defaultQueue().addPayment(payment)
         self.transactionInProgress = true
+        
     }
     
     
