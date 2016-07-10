@@ -8,25 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5109783D1B8B84F500EB5B70 /* iAd.framework */; };
-		5110AFBA1BCA952F00C8EABF /* PurchaseHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFB91BCA952F00C8EABF /* PurchaseHandlerType.swift */; };
-		5110AFBC1BCA960800C8EABF /* MakePurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFBB1BCA960800C8EABF /* MakePurchaseModel.swift */; };
-		5110AFC01BCA99A700C8EABF /* AvailablePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFBF1BCA99A700C8EABF /* AvailablePurchases.swift */; };
-		5110AFC21BCA9C5D00C8EABF /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFC11BCA9C5D00C8EABF /* AlertController.swift */; };
-		5110AFC41BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFC31BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift */; };
-		5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158B8FD1BC432520025B14C /* TableViewCellController.swift */; };
-		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; };
-		5187B98A1D32C10700C7604D /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B9861D32C09100C7604D /* StartApp.framework */; };
-		5187B98B1D32C10F00C7604D /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5187B9851D32C09100C7604D /* StartApp.bundle */; };
-		5187B98D1D32C13C00C7604D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B98C1D32C13C00C7604D /* CoreTelephony.framework */; };
-		5187B98F1D32C14300C7604D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B98E1D32C14300C7604D /* SystemConfiguration.framework */; };
-		5187B9911D32C14A00C7604D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B9901D32C14A00C7604D /* CoreGraphics.framework */; };
-		5187B9931D32C15100C7604D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B9921D32C15100C7604D /* AdSupport.framework */; };
-		5187B9951D32C15700C7604D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B9941D32C15700C7604D /* QuartzCore.framework */; };
-		5187B9971D32C15D00C7604D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B9961D32C15D00C7604D /* CoreMedia.framework */; };
-		5187B9991D32C16400C7604D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B9981D32C16400C7604D /* AVFoundation.framework */; };
-		5187B99B1D32C17E00C7604D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5187B99A1D32C17E00C7604D /* libz.tbd */; };
-		5187B99D1D32C4CF00C7604D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF41B8CB97800AAF479 /* Main.storyboard */; };
-		51911B1B1BDE4772005B4934 /* SendMailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911B1A1BDE4772005B4934 /* SendMailHandler.swift */; };
+		5110AFBA1BCA952F00C8EABF /* PurchaseHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFB91BCA952F00C8EABF /* PurchaseHandlerType.swift */; settings = {ASSET_TAGS = (); }; };
+		5110AFBC1BCA960800C8EABF /* MakePurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFBB1BCA960800C8EABF /* MakePurchaseModel.swift */; settings = {ASSET_TAGS = (); }; };
+		5110AFC01BCA99A700C8EABF /* AvailablePurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFBF1BCA99A700C8EABF /* AvailablePurchases.swift */; settings = {ASSET_TAGS = (); }; };
+		5110AFC21BCA9C5D00C8EABF /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFC11BCA9C5D00C8EABF /* AlertController.swift */; settings = {ASSET_TAGS = (); }; };
+		5110AFC41BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110AFC31BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift */; settings = {ASSET_TAGS = (); }; };
+		5158B8FE1BC432520025B14C /* TableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5158B8FD1BC432520025B14C /* TableViewCellController.swift */; settings = {ASSET_TAGS = (); }; };
+		516D11331BBB0D3300D7005D /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		51911B1B1BDE4772005B4934 /* SendMailHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51911B1A1BDE4772005B4934 /* SendMailHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDCA1B8CB7C200AAF479 /* TODO.txt */; };
 		5196CDCD1B8CB7E700AAF479 /* MealCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */; };
 		5196CDCF1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDCE1B8CB7F800AAF479 /* MealCalculatorModelLogic.swift */; };
@@ -42,9 +31,10 @@
 		5196CDE71B8CB8C200AAF479 /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5196CDE61B8CB8C200AAF479 /* KeypadViewController.swift */; };
 		5196CDEB1B8CB91A00AAF479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDEA1B8CB91A00AAF479 /* Assets.xcassets */; };
 		5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF21B8CB97200AAF479 /* LaunchScreen.storyboard */; };
-		5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */; };
+		5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5196CDF41B8CB97800AAF479 /* Main.storyboard */; };
+		5198798F1B9760F800624BF6 /* CustomizedUITextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5198798E1B9760F800624BF6 /* CustomizedUITextFieldController.swift */; settings = {ASSET_TAGS = (); }; };
 		51EA48FC1BBD693B00690992 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EA48FB1BBD693B00690992 /* StoreKit.framework */; };
-		51EA48FE1BBD6B0400690992 /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */; };
+		51EA48FE1BBD6B0400690992 /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA48FD1BBD6B0400690992 /* PurchaseHandler.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,17 +46,6 @@
 		5110AFC31BCAAB6800C8EABF /* InAppPurchaseErrorStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseErrorStrings.swift; sourceTree = "<group>"; };
 		5158B8FD1BC432520025B14C /* TableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellController.swift; sourceTree = "<group>"; };
 		516D11321BBB0D3300D7005D /* OptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
-		5187B9851D32C09100C7604D /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
-		5187B9861D32C09100C7604D /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
-		5187B98C1D32C13C00C7604D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		5187B98E1D32C14300C7604D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		5187B9901D32C14A00C7604D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5187B9921D32C15100C7604D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		5187B9941D32C15700C7604D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		5187B9961D32C15D00C7604D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		5187B9981D32C16400C7604D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		5187B99A1D32C17E00C7604D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		5187B99C1D32C1E300C7604D /* <Handi>-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "<Handi>-Bridging-Header.h"; sourceTree = "<group>"; };
 		51911B1A1BDE4772005B4934 /* SendMailHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMailHandler.swift; sourceTree = "<group>"; };
 		5196CDCA1B8CB7C200AAF479 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Handi/TODO.txt; sourceTree = "<group>"; };
 		5196CDCC1B8CB7E700AAF479 /* MealCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCalculatorModel.swift; sourceTree = "<group>"; };
@@ -97,15 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5187B99B1D32C17E00C7604D /* libz.tbd in Frameworks */,
-				5187B9991D32C16400C7604D /* AVFoundation.framework in Frameworks */,
-				5187B9971D32C15D00C7604D /* CoreMedia.framework in Frameworks */,
-				5187B9951D32C15700C7604D /* QuartzCore.framework in Frameworks */,
-				5187B9931D32C15100C7604D /* AdSupport.framework in Frameworks */,
-				5187B9911D32C14A00C7604D /* CoreGraphics.framework in Frameworks */,
-				5187B98F1D32C14300C7604D /* SystemConfiguration.framework in Frameworks */,
-				5187B98D1D32C13C00C7604D /* CoreTelephony.framework in Frameworks */,
-				5187B98A1D32C10700C7604D /* StartApp.framework in Frameworks */,
 				5109783E1B8B84F500EB5B70 /* iAd.framework in Frameworks */,
 				51EA48FC1BBD693B00690992 /* StoreKit.framework in Frameworks */,
 			);
@@ -129,17 +99,6 @@
 		51D8862C1B838E050025E5A5 = {
 			isa = PBXGroup;
 			children = (
-				5187B99C1D32C1E300C7604D /* <Handi>-Bridging-Header.h */,
-				5187B99A1D32C17E00C7604D /* libz.tbd */,
-				5187B9981D32C16400C7604D /* AVFoundation.framework */,
-				5187B9961D32C15D00C7604D /* CoreMedia.framework */,
-				5187B9941D32C15700C7604D /* QuartzCore.framework */,
-				5187B9921D32C15100C7604D /* AdSupport.framework */,
-				5187B9901D32C14A00C7604D /* CoreGraphics.framework */,
-				5187B98E1D32C14300C7604D /* SystemConfiguration.framework */,
-				5187B98C1D32C13C00C7604D /* CoreTelephony.framework */,
-				5187B9851D32C09100C7604D /* StartApp.bundle */,
-				5187B9861D32C09100C7604D /* StartApp.framework */,
 				51EA48FB1BBD693B00690992 /* StoreKit.framework */,
 				5196CDCA1B8CB7C200AAF479 /* TODO.txt */,
 				5109783D1B8B84F500EB5B70 /* iAd.framework */,
@@ -266,11 +225,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5187B99D1D32C4CF00C7604D /* Main.storyboard in Resources */,
-				5187B98B1D32C10F00C7604D /* StartApp.bundle in Resources */,
 				5196CDF31B8CB97200AAF479 /* LaunchScreen.storyboard in Resources */,
 				5196CDCB1B8CB7C200AAF479 /* TODO.txt in Resources */,
 				5196CDEB1B8CB91A00AAF479 /* Assets.xcassets in Resources */,
+				5196CDF51B8CB97800AAF479 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,18 +355,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Handi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.f-stack.billsplitter";
 				PRODUCT_NAME = "Bill Splitter";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "<Handi>-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handi/Bill Splitterr-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,19 +374,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Handi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.f-stack.billsplitter";
 				PRODUCT_NAME = "Bill Splitter";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "<Handi>-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OBJC_BRIDGING_HEADER = "Handi/Bill Splitterr-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
