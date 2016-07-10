@@ -28,6 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         updateInAppPurchases()
         
+        
+        var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
+        sdk.appID = "206667877"
+        sdk.devID = "106273201"
+        
+        sdk.showSplashAd()
+    
+        
         return true
     }
 
