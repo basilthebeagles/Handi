@@ -14,7 +14,7 @@ Features:
 
 This is an app that I programmed in Swift. Whilst the abstract logic of the app is clearly simple, creating a UI and integrating the app with the iOS ecosystem and APIs involved some moderate complexity. 
 
-Overall, it had arund 730 downloads. Clearly, it suited customer needs. The app store page had a view:download ratio of approximately 50%.
+Overall, it had around 730 downloads. Clearly, it suited customer needs. The app store page had a view:download ratio of approximately 50%.
 
 Screenshots: https://imgur.com/a/8lL5U8M 
 
